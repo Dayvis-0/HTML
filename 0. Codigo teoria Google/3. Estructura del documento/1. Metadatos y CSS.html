@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="sp">
+    
+    <head>
+        <title>Metadatos y CSS</title>
+        <meta charset="UTF-8">
+        <!-- Hace que el sitio sea responsivo, comenzando por hacer que el ancho del contenido 
+         se el ancho de la pantalla-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>Hola mundo</h1>
+        <style>
+            @import "style.css" layer(firstLayer);
+
+            :root {
+                --theme-color: #226DAA;
+            }
+
+            head { display: block;}
+            head * { display: none;}
+        </style>
+    </body>
+
+</html>
