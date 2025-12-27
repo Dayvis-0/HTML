@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Links</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Links</h1>
+        <!--El elemento (o elemento de anchaje), con su atributo href, crea un hipervinculo a
+        páginas web, archivos, direcciones de correo electrónico, ubicaciones en la misma 
+        página o cualquier cosa que una URL pueda abordar-->
+        <h2>Most used attributes</h2>
+        <h3>href</h3>
+        <!--La URL a la que apunta el hipervinculo. Los enlaces no se limitan a URL basadas en 
+        HTTP; pueden usar cualquier esquema URL compatible con los navegadorres.-->
+        <p>You can reach Michel at:</p>
+        <ul>
+            <li><a href="https://github.com">Web site</a></li>
+            <li><a href="mailto:m.amdeyvis@gmail.com">Email</a></li>
+            <li><a href="tel:+51987184268">Phone</a></li>
+            <li><a href="sms:+51987184268">SMS</a></li>
+        </ul>
+        <h3>target</h3>
+        <!--Donde mostrar la URL enlazada, com nombre de un contexto de navegación (una pestaña,
+        ventana o <iframe>).-->
+        <a href="https://github.com" target="_blank">Open in new tab</a>
+        <a href="6.pdf" target="_blank">Show PDF</a>
+        <h3>download</h3>
+        <!--Hace que el navegador considere la URL enlazada como una descarga. Puede usarse con 
+        o sin un valor de nombre del archivo-->
+        <a href="6.pdf" download>Donwload PDF</a>
+        <a href="1.jpeg" download="image.jpeg">Dowload image</a>
+        <h2>Important attributes for accesibility</h2>
+        <h3>rel</h3>
+        <!--La relación de la URL vinculada como tipos de enlaces separados por espacios.-->
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">External site</a>
+        <h2>Strong link text</h2>
+        <p><strong>The content inside a link should indicate where the link goes, even out of context</strong></p>
+        <p>Learn more <a href="/products">about our products</a>.</p>
+        <h2>aria-label</h2>
+        <a href="https://github.com" aria-label="Go to GitHub" target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true" width="10" height="10"></svg>
+        </a>
+        <h2>Recommended conventions</h2>
+               <ul>
+            <li>
+                <a href="https://ejemplo.com" target="_blank" rel="noopener">
+                    External site (opens in new tab)
+                </a>
+            </li>
+            <li>
+                <a href="reporte.pdf" download>
+                    Download report (PDF, 2MB)
+                </a>
+            </li>
+            <li>
+                <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a>
+            </li>
+            <li>
+                <a href="tel:+51987654321">+51 987 654 321</a>
+            </li>
+        </ul> 
+    </body>
+</html>
