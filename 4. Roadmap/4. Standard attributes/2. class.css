@@ -1,0 +1,25 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+.box {
+    padding: 10px;
+    background-color: #ffffff;
+    height: 9w0px;
+}
+
+.note {
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.editorial {
+    background: rgb(255 0 0 / 0.25);
+    padding: 10px;
+}
+
+.editorial::before { 
+    content: "Editor: ";
+}
