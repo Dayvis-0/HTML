@@ -1,0 +1,12 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+span.ingredient {
+    color: #ff0000;
+}
