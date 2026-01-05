@@ -42,6 +42,31 @@
             <!--flying car content-->
             </article>
         </main>
+        <h2>Style variants</h2>
+        <!--Imagina que tienes una clase de llamada. Ahora quieres implementar diferentes 
+        variantes, como "nota" y "advertencia". Tradicionalmente, se usan nombres de 
+        clase diferentes.-->
+        <div class="callout callout--note">...</div>
+        <div class="callout callout--warning">...</div>
+        <!--Con atributos de datos, aqui hay una alternativa que puedes considerar-->
+        <div class="callouts">...</div>
+        <div class="callouts" data-variant="note">...</div>
+        <div class="callouts" data-variant="warning">...</div>
+        <p>There are multiple benefits of this:</p>
+        <ul>
+            <li>
+                It elimiminates a lot of invalid states, such as applying callout-note 
+                without also adding callout, or applying multiple variants simultaneously.
+            </li>
+            <li>
+                A separate data-variant attribute allows static analysis for valid values 
+                via linting or type checking  
+            </li>
+            <li>
+                Toggling the variant is more intuitive: you can use div.dataset.variant = "warning";
+                instead of manipulating the classList which requires multiple steps. 
+            </li>
+        </ul>
         <script src="3. Data attributes.js"></script>
     </body>
 </html>

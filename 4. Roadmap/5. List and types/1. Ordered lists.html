@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ordered list - ol</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+            
+            p, li {
+                font: 1rem "Fira Sans", sans-serif;
+            }
+
+            p {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Ordered list</h1>
+        <!-- Las listas ordenadas en HTML se utilizan para mostrar una serie de elementos 
+        en un orden en especifico. Cada elemento de la lista suele estar numerado, lo que 
+        permite a los lectores siguir fácilemente una secuencia o clasificación.-->
+        <h2>ol</h2>
+        <!--El elemento representa una lista ordenada de elementos, normalmente representada
+        como una lista numerada.-->
+        <ol>
+            <li>Mix flour, baking powder, sugar, and salt.</li>
+            <li>In another bowl, mix eggs, milk, and oli.</li>
+            <li>Stir both mixtures together.</li>
+            <li>Fill muffin tray 3/4 full.</li>
+            <li>Bake for 20 minutes.</li>
+        </ol>
+        <h3>Attributes</h3>
+        <h4>reversed</h4>
+        <!--Este atributo booleano especifica que los elementos de la lista están en orden
+        inverso. Se enumerarán de mayor a menor.-->
+        <ol reversed="false">
+            <li>Mix flour, baking powder, sugar, and salt.</li>
+            <li>In another bowl, mix eggs, milk, and oli.</li>
+            <li>Stir both mixtures together.</li>
+        </ol>
+        <h4>start</h4>
+        <!--Un número entero desde el cual comenzar a contar los elementos de la lista.
+        Siempre un número arabico (1,2,3...), incluso cuando el tipo de numeración sea
+        letras o números romanos.-->
+        <ol start="4">
+            <li>Mix flour, baking powder, sugar, and salt.</li>
+            <li>In another bowl, mix eggs, milk, and oli.</li>
+            <li>Stir both mixtures together.</li>
+        </ol>
+        <h4>type</h4>
+        <!--Establece el tipo de numeración:
+        a para letras minúsculas
+        A para letras mayúsculas
+        i para números romanos en minúsculas 
+        I para números romanos en mayúsculas
+        1 para números (predeterminado)-->
+        <ol type="I">
+            <li>Mix flour, baking powder, sugar, and salt.</li>
+            <li>In another bowl, mix eggs, milk, and oli.</li>
+            <li>Stir both mixtures together.</li>
+        </ol>
+        <h3>Examples</h3>
+        <h4>Nesting list</h4>
+        <ol>
+            <li>first item</li>
+            <li>
+                second item
+                <ol>
+                    <li>second item first subitem</li>
+                    <li>second item second subitem</li>
+                    <li>second item third subitem</li>
+                </ol>
+            </li>
+            <li>third item</li>
+        </ol>
+        <h2>li</h2>
+        <!--El elemento HTML <li> se utiliza para representar un elemento en una lista. Debe
+        estar contenido en un elemento padre: una lita ordenada (<ol>), una lista desordenada
+        (<ul>) o un menú (<menu>). En menús y listas desordenadas, los elementos de la lista 
+        suelen mostrarse con un contador ascendente a la izquierda, como un número o una letra. -->
+        <p>Apollo astronauts:</p>
+        <ul>
+            <li>Neil Armstrong</li>
+            <li>Alan Bean</li>
+            <li>Peter Conrad</li>
+            <li>Edgar Mitchell</li>
+            <li>Alan Shepard</li>
+        </ul>
+        <h3>Attributes</h3>
+        <h4>value</h4>
+        <!--Este atributo entero indica el valor ordinal actual del elemento de la lista tal como 
+        lo define el elemento <ol>. el único valor permitido para este atributo es un número, incluso
+        si la lista se muestra con números romanos o letras. Los elementos de lista que siguen a este
+        continúan numerándose a partir del conjunto de valores. Este atributo no tiene significado
+        para listas desordenadas (<ul>) ni para menús (<menu>).-->
+        <ol type="I ">
+            <li>One</li>
+            <li value="4">Four</li>
+            <li>Five</li>
+        </ol>   
+    </body>
+</html>

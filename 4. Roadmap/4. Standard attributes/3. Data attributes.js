@@ -1,10 +1,11 @@
 /*JS acces
-Reading the values of these attributes out in JS is also very simple. You could use 
-getAttribute() with their full HTML name to read them, but the standard defines a simpler
-way: a DOMStringMap you can read out via a dataset propert.
+Leer los valores de estos atributos en JS también es muy sencillo. Puedes usar getAttribute()
+con su nombre HTML completo para leerlos, pero el estándar define una forma más simple: un
+DOMStringMap que puede leer a través de una propiedad del conjunto de datos 
 
-To get data attribute throught the dataset object, get the property by the part of the 
-attribute name after data- (note that dashes are converted to camel case).*/
+Para obtener un atributo de datos a través del conjunto de datos, obtenga la propiedad 
+por la parte del nombre del atributo después de data - (tenga en cuenta que los guiones
+se convierten a camel case)*/
 const article = document.querySelector("#electric-cars");
 // The following would also work
 // const article = document.getElementById("electric-cars");

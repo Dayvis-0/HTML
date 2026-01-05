@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>style</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>style</h1>
+        <!--El atributo global style contiene las declaraciones de estilo CSS que se
+        aplicarán al elemento. Se recomienda definir los estilos en uno o más arhivos
+        separados. Este atributo y el elemento <style> tienen principalmente el propósito
+        de permitir un estilo rápido, por ejemplo, para fines de prueba.-->
+        <div 
+            style="
+                background-color: #ffe7e8;
+                color: #000000; 
+                border: 2px solid #e66456;
+            "    
+            >
+            <p
+                style="
+                    margin: 15px;
+                    line-height: 1.5;
+                    text-align: center;
+                "
+                >
+                Well, I am the slime from your video <br>
+                Oozi'n along on your livi'n room floor.
+            </p>
+        </div>
+        <p>
+            <strong>Note: </strong> This atribute must not be used to convey semantic 
+            information. Even if all stylling is removed, a page should remain 
+            semantically correct. Typically it shouldn't be used to hide irrelevant
+            information; this should be done using the hidden attribute
+        </p>
+    </body>
+</html>
