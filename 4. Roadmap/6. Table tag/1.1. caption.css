@@ -1,0 +1,20 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.box {
+    background-color: #ffffff;
+    padding: 50px;
+}
+
+table {
+    color: #000000;
+    
+}
