@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unordered Lists</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Unordered Lists</h1>
+        <h2>ul</h2>
+        <!--El elemento html <ul> representa una lista desordenada de elementos, normalmente
+        representada como una lista con viñetas-->
+        <ul>
+            <li>Milk</li>
+            <li>
+                Cheese
+                <ul>
+                    <li>Blue cheese</li>
+                    <li>Feta</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Examples</h2>
+        <h3>Nesting a list</h3>
+        <ul>
+            <li>first item</li>
+            <li>
+                second item
+                <!-- Look, the closing </li> tag is not placed here! -->
+                <ul>
+                <li>second item first subitem</li>
+                <li>
+                    second item second subitem
+                    <!-- Same for the second nested unordered list! -->
+                    <ul>
+                    <li>second item second subitem first sub-subitem</li>
+                    <li>second item second subitem second sub-subitem</li>
+                    <li>second item second subitem third sub-subitem</li>
+                    </ul>
+                </li>
+                <!-- Closing </li> tag for the li that
+                            contains the third unordered list -->
+                <li>second item third subitem</li>
+                </ul>
+                <!-- Here is the closing </li> tag -->
+            </li>
+            <li>third item</li>
+        </ul>
+        <h3>Ordered list inside unordered list</h3>
+        <ul>
+            <li>first item</li>
+            <li>
+                second item
+                <!-- Look, the closing </li> tag is not placed here! -->
+                <ol>
+                    <li>second item first subitem</li>
+                    <li>second item second subitem</li>
+                    <li>second item third subitem</li>
+                </ol>
+                <!-- Here is the closing </li> tag -->
+            </li>
+            <li>third item</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Definition Lists</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            p, dt {
+                font-weight: bold;
+            }
+
+            dl, dd {
+                font-size: 0.9rem;
+            }
+
+            dd {
+                font-size: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Definition Lists</h1>
+        <!--El elemento HTML <dl> representa una lista de descripciones. Contiene una lista de 
+        de grupos de términos (especificados mediante el elemento <dt>) y descripciones 
+        (proporcionadas por los elementos <dd>). Los usos comunes de este elemento son implementar
+        un glosario o mostrar metadatos (una lista de pares clave-valor)-->
+        <p>Cryptids of Cornwall:</p>
+        <dl>
+            <dt>Beast of Bodmin</dt>
+                <dd>A large feline inhabiting Bodmin Moor.</dd>
+            <dt>Morgawr</dt>
+                <dd>A sea sepent.</dd>
+            <dt>Owlman</dt>
+                <dd>A giant owl-like creature.</dd>
+        </dl>
+        <h2>Examples</h2>
+        <h3>Single term and description</h3>
+        <dl>
+            <dt>Firefox</dt>
+                <dd>
+                    A free, open source, cross-plataform, graphical web browser developed by the
+                    Mozilla Corporation and hundreds of volunteers.
+                </dd>
+        </dl>
+        <h3>Metadata</h3>
+        <dl>
+            <dt>Name</dt>
+                <dd>Godzilla</dd>
+            <dt>Born</dt>
+                <dd>1952</dd>
+            <dt>Birthplace</dt>
+                <dd>Japan</dd>
+            <dt>Color</dt>
+                <dd>Green</dd>
+        </dl>
+        <h3>Wrapping name-value groups in div elements</h3>
+        <dl>
+            <div>
+                <dt>Name</dt>
+                    <dd>Godzilla</dd>
+            </div>
+            <div>
+                <dt>Born</dt>
+                    <dd>1952</dd>
+            </div>
+            <div>
+                <dt>Birthplace</dt>
+                    <dd>Japan</dd>
+            </div>
+            <div>
+                <dt>Color</dt>
+                    <dd>Green</dd>
+            </div>
+        </dl>
+    </body>
+</html>
