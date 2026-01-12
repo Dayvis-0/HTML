@@ -10,9 +10,11 @@
 }
 
 caption {
-    caption-side: bottom;
+    caption-side: top;
     padding: 10px;
+    padding-bottom: 10px;
     font-weight: bold;
+    text-align: left;   
 }
 
 table {
@@ -47,8 +49,7 @@ tr:nth-child(odd) td {
 }
 
 .heman {
-    font:
-    1.4rem "molot", sans-serif;
+    font: 1.4rem "molot", sans-serif;
     text-shadow:
     1px 1px 1px white,
     2px 2px 1px black;

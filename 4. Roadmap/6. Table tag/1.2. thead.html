@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>thead</title>
+        <link rel="stylesheet" href="1.2. thead.css">
+    </head>
+    <body>
+        <h1>thead</h1>
+        <!--El elemento HTML <thead> encapsula un conjunto de filas de tabla (elementos <tr>),
+        lo que indica que consituyen la cebecera de una tabla con información sobre sus columnas.
+        Esto suele presentare en forma de encabezados de columna (elementos <th>),-->
+        <div class="box">
+            <table>
+                <caption>Council budget (in £) 2018</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Items</th>
+                        <th scope="col">Expenditure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Donuts</th>
+                        <td>3,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Stationery</th>
+                        <td>18,000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <th scope="row">Totals</th>
+                    <td>21,000</td>
+                </tfoot>
+            </table>
+        </div>
+        <h3>Basic head structure</h3>
+        <p>
+            This example demostrates a table divided into a head section with
+            column haeders and a body section with the table's main data.
+        </p>
+        <div class="box">
+            <table>
+                <thead>
+                    <th>Student id</th>
+                    <th>Name</th>
+                    <th>Major</th>
+                    <th>Credits</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3741255</td>
+                        <td>Jones, Martha</td>
+                        <td>Computer science</td>
+                        <td>240</td>
+                    </tr>
+                    <tr>
+                        <td>3971244</td>
+                        <td>Nim, Victor</td>
+                        <td>Russian Literature</td>
+                        <td>220</td>
+                    </tr>
+                    <tr>
+                        <td>410032</td>
+                        <td>Petrov, Alexandra</td>
+                        <td>Astrphysics</td>
+                        <td>260</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Multiple head rows</h3>
+        <p>This example demostrates a table head section with two rows</p>
+        <div class="box">
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Student id</th>
+                        <th colspan="2">Student</th>
+                        <th rowspan="2">Major</th>
+                        <th rowspan="2">Credits</th>
+                    </tr>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3741255</td>
+                        <td>Jones</td>
+                        <td>Martha</td>
+                        <td>Computer science</td>
+                        <td>240</td>
+                    </tr>
+                    <tr>
+                        <td>3971244</td>
+                        <td>Nim</td>
+                        <td>Victor</td>
+                        <td>Russian Literature</td>
+                        <td>220</td>
+                    </tr>
+                    <tr>
+                        <td>410032</td>
+                        <td>Petrov</td>
+                        <td>Alexandra</td>
+                        <td>Astrphysics</td>
+                        <td>260</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
