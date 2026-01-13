@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>colgroup</title>
+        <link rel="stylesheet" href="1.3. colgroup.css">
+    </head>
+    <body>
+        <h1>colgroup</h1>
+        <!--El elemento HTML <colgroup> define un grupo de columnas dentro de una tabla-->
+        <div class="box">
+            <table>
+                <caption>Superheros and sidekicks</caption>
+                <colgroup>
+                    <col>
+                    <col span="2" class="batman">
+                    <col span="2" class="flash">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <th scope="col">Batman</th>
+                        <th scope="col">Robin</th>
+                        <th scope="col">The Flash</th>
+                        <th scope="col">Kid Flash</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <th scope="row">Skill</th>
+                    <td>Smarts, strong</td>
+                    <td>Dex, acrobat</td>
+                    <td>Super speed</td>
+                    <td>Super speed</td>
+                </tbody>
+            </table>
+        </div>
+        <h3>Example</h3>
+        <p>
+            This example demostrates a seven-column table divided into two 
+            &lt;colgroup&gt; elements that span multiple columns.
+        </p>
+        <div class="box">
+            <table>
+                <caption>Personal weekly activities</caption>
+                <colgroup span="5" class="weekdays"></colgroup>
+                <colgroup span="2" class="weekend"></colgroup>
+                <thead>
+                    <tr>
+                        <td>Mon</td>
+                        <td>Tue</td>
+                        <td>Wed</td>
+                        <td>Thu</td>
+                        <td>Fri</td>
+                        <td>Sat</td>
+                        <td>Sun</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Clean room</td>
+                        <td>Football training</td>
+                        <td>Dance Course</td>
+                        <td>Hitory Class</td>
+                        <td>Buy drinks</td>
+                        <td>Study hour</td>
+                        <td>Free time</td>
+                    </tr>
+                    <tr>
+                        <td>Yoga</td>
+                        <td>Chess Club</td>
+                        <td>Meet friends</td>
+                        <td>Gymmastics</td>
+                        <td>Brithday party</td>
+                        <td>Fishing trip</td>
+                        <td>Free time</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
