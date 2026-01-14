@@ -12,5 +12,33 @@
         <!--El elemento HTML <col> define una o más columnas de un grupo de columnas 
         representado por su elemento padre <colgroup>. El elemento <col> solo es válido
         como elemento secundario de un elemento <colgroup> sin atributo span definido.-->
+        <div class="box">
+            <table>
+                <caption>Superheros and sidekicks</caption>
+                <colgroup>
+                    <col>
+                    <col span="2" class="batman">
+                    <col span="2" class="flash">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <th scope="col">Batman</th>
+                        <th scope="col">Robin</th>
+                        <th scope="col">The flash</th>
+                        <th scope="col">Kid flash</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Skill</th>
+                        <td>Smarts, strong</td>
+                        <td>Dex, acrobat</td>
+                        <td>Super speed</td>
+                        <td>Super speed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>
