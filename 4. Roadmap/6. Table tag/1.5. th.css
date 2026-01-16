@@ -1,6 +1,6 @@
 :root {
-  color-scheme: light dark;
-  padding: 100px;
+    color-scheme: light dark;
+    padding: 100px;
 }
 
 .box {
@@ -12,4 +12,36 @@
 
 th, td {
     border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+}
+
+th[scope="col"] {
+    background-color: #505050;
+    color: #ffffff;
+}
+
+th[scope="row"] {
+    background-color: #d6ecd4;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-of-type(even) {
+    background-color: #eeeeee;
+}
+
+table {
+    color: #000000;
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
 }
