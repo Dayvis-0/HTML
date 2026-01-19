@@ -41,5 +41,182 @@
                 </tbody>
             </table>
         </div>
+        <h2>Attributes</h2>
+        <h3>abbr</h3>
+        <!--Una descripción breve y abreviada del contenido de la celda del encabezado
+        proporcionada como una etiqueta alternativa para usar en la celda del encabezado
+        al hacer referencia a la celda en otros contextos.-->
+        <h3>colspan</h3>
+        <!--Un valor entero no negativo que indica cuántas columnas abarca o existe la
+        celda del encabezado.-->
+        <h3>headers</h3>
+        <!--Una lista de cadenas separadas por espacios correspondientes a los atributos id
+        de los elementos <th> que proporcinan los encabezados para esta celda de encabezado.-->
+        <h3>rowspan</h3>
+        <!--Un valor entero no negativo que indica cuántas filas abarca o extiende la celda
+        del encabezado.-->
+        <h3>scope</h3>
+        <!--Define las celdas a las que se refiere el elemto de encabezado (definido en el
+        elemento <th>).Los valores enumerados son: row, col, rowgroup y colgroup.-->
+        <div class="box">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col" abbr="Age">Age</th>
+                        <th scope="col" colspan="2">Contact</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" rowspan="2">Juan</th>
+                        <td headers="Age">25</td>
+                        <td>juan@email.com</td>
+                        <td>999999999</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>juan2@gmail.com</td>
+                        <td>988888888</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Examples</h3>
+        <h4>Basic column and row headers</h4>
+        <p>
+            This example uses <code>&lt;th&gt;</code> elements to introduce column and row
+            headers in a basic table structure.
+        </p>
+        <p>
+            <b>Note: </b> normally, the grouping elements &lt;thead&gt; and &lt;tbody&gt; are
+            used to group rows with headers into the respective table head and body sections. These
+            elements are omited in this example to reduce complexity and enable focusing on the use
+            of header cells.
+        </p>
+        <div class="box">
+            <table>
+                <tr>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Code word</th>
+                    <th scope="col">Pronunciation</th>
+                </tr>
+                <tr>
+                    <th scope="row">A</th>
+                    <td>Alfa</td>
+                    <td>AL fah</td>
+                </tr>
+                <tr>
+                    <th scope="row">B</th>
+                    <td>Bravo</td>
+                    <td>BRAH boh</td>
+                </tr>
+                <tr>
+                    <th scope="row">C</th>
+                    <td>Charlie</td>
+                    <td>CHAR lee</td>
+                </tr>
+                <tr>
+                    <th scope="row">D</th>
+                    <td>Delta</td>
+                    <td>DELL tah</td>
+                </tr>
+            </table>
+        </div>
+        <h3>Column and row spanning</h3>
+        <p>
+            This example extends and enhances the basic table from the previous example by
+            adding a second row for additoinal column headers.
+        </p>
+        <div class="box">
+            <table>
+                <tr>
+                    <th scope="col" rowspan="2">Symbol</th>
+                    <th scope="col" rowspan="2">Code word</th>
+                    <th scope="col" colspan="2">Pronunciation</th>
+                </tr>
+                <tr>
+                    <th scope="col">IPA</th>
+                    <th scope="col">Respelling</th>
+                </tr>
+                <tr>
+                    <th scope="row">A</th>
+                    <td>Alfa</td>
+                    <td>ˈælfa</td>
+                    <td>AL fah</td>
+                </tr>
+                <tr>
+                    <th scope="row">B</th>
+                    <td>Bravo</td>
+                    <td>ˈbraːˈvo</td>
+                    <td>BRAH voh</td>
+                </tr>
+                <tr>
+                    <th scope="row">C</th>
+                    <td>Charlie</td>
+                    <td>ˈtʃɑːli</td>
+                    <td>CHAR lee</td>
+                </tr>
+                <tr>
+                    <th scope="row">D</th>
+                    <td>Delta</td>
+                    <td>ˈdeltɑ</td>
+                    <td>DELL tah</td>
+                </tr>
+            </table>
+        </div>
+        <h3>Associate header cells with other header cells</h3>
+        <p>
+            For more complex relationships between header cells, using <code>th</code> 
+            elements with the scope attribute alone may not be sufficient for assistive
+            technologies, especially screen readers.
+        </p>
+        <p>
+            <b>Note</b>: It's recommended to use more descriptive and useful values for 
+            the id attribute. Each id in a document must be unique to that document. In 
+            this example, the id values are single characters to maintain focus on the 
+            concept of the headers attribute.
+        </p>
+        <div class="box">
+            <table>
+                <tr>
+                    <th scope="col" rowspan="2">Symbol</th>
+                    <th scope="col" rowspan="2">Code word</th>
+                    <th scope="col" colspan="2" id="p" headers="i r">Pronunciation</th>
+                </tr>
+                <tr>
+                    <th scope="col" id="i" headers="p">IPA</th>
+                    <th scope="col" id="r" headers="p">Respelling</th>
+                </tr>
+                <tr>
+                    <th scope="row">A</th>
+                    <td>Alfa</td>
+                    <td>ˈælfa</td>
+                    <td>AL fah</td>
+                </tr>
+                <tr>
+                    <th scope="row">B</th>
+                    <td>Bravo</td>
+                    <td>ˈbraːˈvo</td>
+                    <td>BRAH voh</td>
+                </tr>
+                <tr>
+                    <th scope="row">C</th>
+                    <td>Charlie</td>
+                    <td>ˈtʃɑːli</td>
+                    <td>CHAR lee</td>
+                </tr>
+                <tr>
+                    <th scope="row">D</th>
+                    <td>Delta</td>
+                    <td>ˈdeltɑ</td>
+                    <td>DELL tah</td>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
