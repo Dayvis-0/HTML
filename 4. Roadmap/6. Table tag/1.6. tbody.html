@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tbody</title>
+        <link rel="stylesheet" href="1.6. tbody.css">
+    </head>
+    <body>
+        <h1>tbody</h1>
+        <!--El elemento HMTL <tbody> encapsula un conjunto de filas de tabla (elementos <tr>),
+        lo que indica que comprenden el cuerpo de los datos (principales) de una table.-->
+        <div class="box">
+            <table>
+                <caption>Council budget (in ) 2018</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Items</th>
+                        <th scope="col">Expenditures</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Donuts</th>
+                        <td>3,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Stationery</th>
+                        <td>18,000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row">Totals</th>
+                        <td>21,000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <h2>Examples</h2>
+        <h3>Not specifying a body</h3>
+        <p>
+            This example demostrates that the browser automatically encapsules &lt;tr&gt;
+            elements within a &lt;tbody&gt; element if the row are not nested within a table
+            grouping element (&lt;tbody&gt;, &lt;tfoot&gt;, or &lt;thead&gt;), and are, as in
+            this example, the direct clidren of the &lt;table&gt; element.
+        </p>
+        <div class="box">
+            <table>
+                <tr>
+                    <td>3741255</td>
+                    <td>Jones, Martha</td>
+                    <td>Computer Science</td>
+                    <td>240</td>
+                </tr>
+                <tr>
+                    <td>3971244</td>
+                    <td>Nim, Victor</td>
+                    <td>Russian Literature</td>
+                    <td>220</td>
+                </tr>
+                <tr>
+                    <td>4100332</td>
+                    <td>Petrov, Alexandra</td>
+                    <td>Astrophysics</td>
+                    <td>260</td>
+                </tr>
+            </table>
+        </div>
+        <h3>Basic body structure</h3>
+        <p>This example extends and enhances the basic table from the previous example.</p>
+        <div class="box">
+            <table>
+                <thead>
+                    <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Major</th>
+                    <th>Credits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>3741255</td>
+                    <td>Jones, Martha</td>
+                    <td>Computer Science</td>
+                    <td>240</td>
+                    </tr>
+                    <tr>
+                    <td>3971244</td>
+                    <td>Nim, Victor</td>
+                    <td>Russian Literature</td>
+                    <td>220</td>
+                    </tr>
+                    <tr>
+                    <td>4100332</td>
+                    <td>Petrov, Alexandra</td>
+                    <td>Astrophysics</td>
+                    <td>260</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Multiple bodies</h3>
+        <p>
+            This example extends and enhances the table from the example above even more by
+            introducing multiple body sections.
+        </p>
+        <p>
+            Using multiple &lt;tbody&gt; elements allows creating row groupings within a table. 
+            Each table body can potentially have its own head row or rows; however, there
+            may only be one &lt;thead&gt; element per table! Because of that, &lt;tr&gt; with &lt;th&gt;
+            elements can be used to create headers within each &lt;tbody&gt;.
+        </p>
+        <div class="box">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Student</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Credits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th colspan="3">Computer science</th>
+                    </tr>
+                    <tr>
+                        <td>3741255</td>
+                        <td>Jones, Martha</td>
+                        <td>240</td>
+                    </tr>
+                    <tr>
+                        <td>4077830</td>
+                        <td>Pierce, Benjamin</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>5151701</td>
+                        <td>Kirk, James</td>
+                        <td>230</td>
+                    </tr>
+
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th colspan="3">Russian Literature</th>
+                    </tr>
+                    <tr>
+                        <td>3971244</td>
+                        <td>Nim, Victor</td>
+                        <td>220</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th colspan="3">Astrophysics</th>
+                    </tr>
+                    <tr>
+                        <td>4100332</td>
+                        <td>Petrov, Alexandra</td>
+                        <td>260</td>
+                    </tr>
+                    <tr>
+                        <td>8892377</td>
+                        <td>Toyota, Hiroko</td>
+                        <td>240</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
