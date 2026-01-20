@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tr</title>
+        <link rel="stylesheet" href="1.7. tr.css">
+    </head>
+    <body>
+        <h1>tr</h1>
+        <!--El elemento HTML <tr> define una fila de celdas en una table. Las celdas de la 
+        fila se pueden establecer mediante una combinación de elementos <td> (celda de
+        datos) y <th> (celda de encabezado).-->
+        <div class="box">
+            <table>
+                <caption>Alien football stars</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Player</th>
+                        <th scope="col">Gloobles</th>
+                        <th scope="col">Za'taak</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Player</th>
+                        <td>7</td>
+                        <td>4,569</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Khiresh Odo</th>
+                        <td>7</td>
+                        <td>7,223</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mia Oolong</th>
+                        <td>9</td>
+                        <td>6,219</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2>Examples</h2>
+        <h3>Basic row setup</h3>
+        <p>
+            This example demostrates a table with four rows and three columns, where the 
+            first column contains headers for the row data cells.
+        </p>
+        <div class="box">
+            <table>
+                <tr>
+                    <th scope="row">A</th>
+                    <td>Alfa</td>
+                    <td>AL fah</td>
+                </tr>
+                <tr>
+                    <th scope="row">B</th>
+                    <td>Bravo</td>
+                    <td>BRAH voh</td>
+                </tr>
+                <tr>
+                    <th scope="row">C</th>
+                    <td>Charlie</td>
+                    <td>CHAR lee</td>
+                </tr>
+                <tr>
+                    <th scope="row">D</th>
+                    <td>Delta</td>
+                    <td>DELL tah</td>
+                </tr>
+            </table>
+        </div>
+        <h3>Header row</h3>
+        <p>
+            This example extends the basic table from the previous example by adding a header row
+            as the first row of the table.
+        </p>
+        <div class="box">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Symbol</th>
+                        <th scope="col">Code row</th>
+                        <th scope="col">Pronunciatio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">A</th>
+                        <td>Alfa</td>
+                        <td>AL fah</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">B</th>
+                        <td>Bravo</td>
+                        <td>BRAH voh</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C</th>
+                        <td>Charlie</td>
+                        <td>CHAR lee</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">D</th>
+                        <td>Delta</td>
+                        <td>DELL tah</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Sorting rows</h3>
+        <p>
+            There are no native methods for sorting the rows (&lt;tr&gt; elements) of a &lt;table&gt;. 
+            But using Array.prototype.sort(), Node.removeChild, and Node.appendChild, a 
+            custom sort() function can be implemented in JavaScript to sort an 
+            HTMLCollection of &lt;tr&gt; elements.
+        </p>
+        <div class="box">
+            <table class="order">
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Sorting rows with a click on header cells</h3>
+        <p>
+            This example extends the basic table from the previous example by making the 
+            sorting interactive and independent for multiple columns.
+        </p>
+        <div class="box">
+            <table class="orderInteractive">
+                <thead>
+                    <tr>
+                        <th>Numbers</th>
+                        <th>Letters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>C</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="1.7. tr.js"></script>
+    </body>
+</html>
