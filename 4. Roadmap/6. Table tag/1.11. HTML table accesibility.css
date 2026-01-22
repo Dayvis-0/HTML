@@ -2,3 +2,25 @@
     color-scheme: light dark;
     padding: 100px;
 }
+
+.box {
+    background-color: #ffffff;
+    width: 600px;
+    height: 250px;
+    padding: 30px;
+}
+
+table {
+    color: #000000;
+    border-collapse: collapse;
+    border-spacing: 2px;
+}
+
+thead {
+    border-color: inherit;
+}
+
+td, th {
+    border: 1px solid #51565d;
+    padding: .5rem;
+}

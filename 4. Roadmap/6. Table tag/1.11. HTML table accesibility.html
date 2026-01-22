@@ -11,7 +11,110 @@
         <h1>HTML table accesibility</h1>
         <h2>Recap: Tables for visually impaired users</h2>
         <p>
-            
+
+        </p>
+        <div class="box">
+            <table>
+                <caption>Items Sold August 2016</caption>
+                <thead>
+                    <tr>
+                        <td colspan="2" rowspan="2"></td>
+                        <th colspan="3" scope="colgroup">Clothes</th>
+                        <th colspan="2" scope="colgroup">Accessories</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Trousers</th>
+                        <th scope="col">Skirts</th>
+                        <th scope="col">Dresses</th>
+                        <th scope="col">Bracelets</th>
+                        <th scope="col">Rings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="3" scope="rowgroup">Belgium</th>
+                        <th scope="row">Antwerp</th>
+                        <td>56</td>
+                        <td>22</td>
+                        <td>43</td>
+                        <td>72</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ghent</th>
+                        <td>46</td>
+                        <td>18</td>
+                        <td>50</td>
+                        <td>61</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Brussels</th>
+                        <td>51</td>
+                        <td>27</td>
+                        <td>38</td>
+                        <td>69</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" scope="rowgroup">The Netherlands</th>
+                        <th scope="row">Amsterdam</th>
+                        <td>89</td>
+                        <td>34</td>
+                        <td>69</td>
+                        <td>85</td>
+                        <td>38</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Utrecht</th>
+                        <td>80</td>
+                        <td>12</td>
+                        <td>43</td>
+                        <td>36</td>
+                        <td>19</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Using column and row headers</h3>
+        <p>
+            Screen readers will identify all headers and use them to make programmatic associations
+            between those headers and th cells they relate to. The combination of column and
+            row headers will identify and interpret the data in each cell so that screen reader
+            users can interpret the table similary to how a sighted user does.
+        </p>
+        <h3>Adding a caption to your table with &lt;caption&lt;</h3>
+        <p>
+            You can give your table a caption by putting it inside a &lt;caption&gt; element and
+            nesting that inside the &lt;table&gt; element, You should put it just below the
+            opening &lt;table&gt; tab. 
+        </p>
+        <div class="box">
+            <table>
+                <caption>
+                    Dinosaurs in the Jurassic period
+                </caption>
+                <!-- … -->
+            </table>
+        </div>
+        <p>
+            As you can infer from the brief example above, the caption is meant to contain
+            a description of the table contents. This is useful for all readers wishing to 
+            get a quick of whether the table is useful to them as they scan the page, but 
+            particularly for blind users.
+        </p>
+        <h2>Adding structure with &lt;thead&gt;, &lt;tbody&gt;, and &lt;tfoot&gt;</h2>
+        <p>
+            As your tables get a bit more complex in structure, it is useful to give them more
+            structural definition. One clear way to do this is by using &lt;thead&gt;, 
+            &lt;tbody&gt; and &lt;tfoot&gt;, which allow you to mark up a header, body, and footer section
+            for the table.
+        </p>
+        <p>
+            These elements don't necessarily make the table any more accesible to screen 
+            reader users. The don't result in any visual enhancement on their own, however
+            they are very useful for applying styling and layout enhancements via CSS, which
+            can improve accesibility.
         </p>
     </body>
 </html>
