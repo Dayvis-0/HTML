@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Caption & Summary</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            .box {
+                background-color: #ffffff;
+                width: 350px;
+                height: 500px;
+                padding: 30px;
+            }
+
+            table {
+                color: #000000;
+                border: 1px solid #bccbd3;
+                border-collapse: collapse;
+                border-spacing: 2px;
+            }
+
+            caption {
+                color: #005a6a;
+                font-weight: 700;
+                font-size: 1.125rem;
+                line-height: 1.4;
+                margin-bottom: 8px;
+            }
+
+            tbody {
+                border-color: inherit;
+            }
+
+            td, th {
+                padding: 12px 10px;
+                border: 1px solid #bccbd3;
+            }
+
+            th {
+                background-color: #005a6a;
+                color: #ffffff;
+                font-weight: 700;
+            }
+
+            td {
+                display: table-cell;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Caption & Summary</h1>
+        <p>
+            Captions and summaries provide information that can help users find, navigate,
+            and understand tables.
+        </p>
+        <ul>
+            <li> 
+                <p>
+                    A <strong>caption</strong> functions like a heading for a table. Most
+                    screen readers announce the content of caption.
+                    Capions help users to find a table and understand what it's about and 
+                    decide if they want to read it. If the users uses "Table Mode", captions
+                    are the primary mechanism to identify tables. The caption is provided
+                    by the &lt;caption&gt; element.
+                </p>
+            </li>
+            <li>
+                <p>
+                    A <strong>summary</strong> conveys information about the organization of 
+                    table data in a table and helps users navigate it. For example, if a table
+                    has an unusual structure (as in the examples below), information about what
+                    content can be found in which row or column can be provided to the user. A
+                    summary is usually only needed for complex tables.
+                </p>
+            </li>
+        </ul>
+        <h2>Example 1: Idetifying a table using a caption</h2>
+        <p>
+            The caption should be a short heading for the table content. In this example
+            "Concerts" tells users what information is in the table (as the table could,
+            for example, also contain art exhibition information).
+        </p>
+        <div class="box">
+            <table>
+                <caption>Concerts</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Event</th>
+                        <th scope="col">Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12 Feb</td>
+                        <td>Waltz with Strauss</td>
+                        <td>Main Hall</td>
+                    </tr>
+                    <tr>
+                        <td>24 Mar</td>
+                        <td>The Obelisks</td>
+                        <td>West Wing</td>
+                    </tr>
+                    <tr>
+                        <td>14 Apr</td>
+                        <td>The What</td>
+                        <td>Main Hall</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2>Example 2: Summaries for more complex tables</h2>
+        <h3>Approach 1: Nesting summary insidethe &lt;caption&gt; element</h3>
+        <p>
+            This complex table shows availability of diffent types and sizes of accommodation
+            in two separate locations. The &lt;caption&gt; element acts as a heading of the 
+            table and provides the summary that describes the composition of the table as well.
+        </p>
+        <div class="box">
+            <table>
+                <caption>Availability of holiday accommodation <br>
+                    <span>
+                        Column one has the location and size of accommodation, other columns
+                        show the type and number of properties available.
+                    </span>
+                </caption>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <th scope="col">Studio</th>
+                        <th scope="col">Apt</th>
+                        <th scope="col">Chalet</th>
+                        <th scope="col">Villa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="colgroup" colspan="5">Paris</th>
+                    </tr>
+                    <tr>
+                        <th>1 Bedroom</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>2 Bedroom</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>3 Bedroom</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="colgroup" colspan="5">Rome</th>
+                    </tr>
+                    <tr>
+                        <th>1 Bedroom</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>2 Bedroom</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>3 Bedroom</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
