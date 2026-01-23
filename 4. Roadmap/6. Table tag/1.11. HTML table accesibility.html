@@ -116,5 +116,137 @@
             they are very useful for applying styling and layout enhancements via CSS, which
             can improve accesibility.
         </p>
+        <h3>Adding structure to a spending record table</h3>
+        <div class="box">
+            <h1>My spending record</h1>
+
+            <table>
+                <caption>
+                    How I chose to spend my money
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Purchase</th>
+                        <th>Location</th>
+                        <th>Date</th>
+                        <th>Evaluation</th>
+                        <th>Cost (€)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Haircut</td>
+                        <td>Hairdresser</td>
+                        <td>12/09</td>
+                        <td>Great idea</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Lasagna</td>
+                        <td>Restaurant</td>
+                        <td>12/09</td>
+                        <td>Regrets</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>Shoes</td>
+                        <td>Shoe shop</td>
+                        <td>13/09</td>
+                        <td>Big regrets</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>Toothpaste</td>
+                        <td>Supermarket</td>
+                        <td>13/09</td>
+                        <td>Good</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">SUM</td>
+                        <td>118</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <h2>The <code>scope</code> attribute</h2>
+        <p>
+            The <code>scope</code> attribute can be added to the &lt;th&gt; element to tell 
+            screen readers exactly what cells the header is a header for -- is it a header 
+            for the row it is in, or the column for exaxmple? Looking back to our spending
+            record example from earlier on, you could unmbiguously define the column
+            headers as column headers like this: 
+        </p>
+        <div class="box">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Purchase</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Evaluation</th>
+                        <th scope="col">Cost (€)</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <p>
+            And each row could have a header define like this (if we added row headers as
+            well as column headers).
+        </p>
+        <div class="box">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="row">Haircut</th>
+                        <td>Hairdresser</td>
+                        <td>12/09</td>
+                        <td>Great idea</td>
+                        <td>30</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <p>
+            <code>scope</code> has two more possible values -- <code>colgroup</code> and
+            <code>rowgroup</code>. These are used for headings that sit over the top of 
+            multiple columns of rows.
+        </p>
+        <div class="box">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="3" scope="colgroup">Clothes</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Trousers</th>
+                        <th scope="col">Skirts</th>
+                        <th scope="col">Dresses</th>
+                    </tr>
+                </thead>
+            </table>
+            <br>
+            <table>
+                <tr>
+                    <th rowspan="2" scope="rowgroup">The Netherlands</th>
+                    <th scope="row">Amsterdam</th>
+                    <td>89</td>
+                    <td>34</td>
+                    <td>69</td>
+                </tr>
+                <tr>
+                    <th scope="row">Utrecht</th>
+                    <td>80</td>
+                    <td>12</td>
+                    <td>43</td>
+                </tr>
+            </table>
+        </div>
+        <h2>The <code>id</code> and <code>headers</code> attributes</h2>
+        <p>
+            
+        </p>
     </body>
 </html>
