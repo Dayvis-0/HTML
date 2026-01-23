@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table with two headers</title>
+        <link rel="stylesheet" href="1.12. Table with two headers.css">
+    </head>
+    <body>
+        <h1>Table with two headers</h1>
+        <h2>Example 1: Table with header cells in the top row and first column</h2>
+        <p>
+            The following table of apening times has header information in both the top row
+            and the first column. All header cells are marked up as <code>&lt;th&gt;</code>
+            cells with scope attributes added.
+        </p>
+        <p>
+            In the header row, the <code>col</code> value for <code>scope</code> associates 
+            each header cell with the data cells in the column. In the header column, the row 
+            value associates the individual headers with their rows. Without this information,
+            some users would not easly understand the relationship between header and data 
+            cells. In the example below, the "Open" and "Closed" labels are only useful if 
+            they can be assigned to a particular day and time.
+        </p>
+        <div class="box">
+            <table>
+                <tr>
+                    <td></td>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                </tr>
+                <tr>
+                    <th scope="row">09:00 – 11:00</th>
+                    <td>Closed</td>
+                    <td>Open</td>
+                    <td>Open</td>
+                    <td>Closed</td>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <th scope="row">11:00 – 13:00</th>
+                    <td>Open</td>
+                    <td>Open</td>
+                    <td>Closed</td>
+                    <td>Closed</td>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <th scope="row">13:00 – 15:00</th>
+                    <td>Open</td>
+                    <td>Open</td>
+                    <td>Open</td>
+                    <td>Closed</td>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <th scope="row">15:00 – 17:00</th>
+                    <td>Closed</td>
+                    <td>Closed</td>
+                    <td>Closed</td>
+                    <td>Open</td>
+                    <td>Open</td>
+                </tr>
+            </table>
+        </div>
+        <h2>Example 2: Table with an offset column of header cells</h2>
+        <p>
+            In this table, the row header cells are in the second rather than in the first
+            column. The approach is similar to the examples above: The scope of the header 
+            cells in the top row is set to col. By using the row value for scope assigns the 
+            header cell in the second column to the data cells on the left and the right of
+            the individual header cell. 
+        </p>
+        <div class="box">
+            <table>
+                <caption>
+                    Holidays taken in the last six months
+                </caption >
+                <thead>
+                    <tr>
+                        <th scope="col"><abbr title="Identification Number">ID</abbr></th>
+                        <th scope="col">Name</th>
+                        <th scope="col">July</th>
+                        <th scope="col">August</th>
+                        <th scope="col">September</th>
+                        <th scope="col">October</th>
+                        <th scope="col">November</th>
+                        <th scope="col">December</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>215</td>
+                        <th scope="row">Abel</th>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>231</td>
+                        <th scope="row">Annette </th>
+                        <td>0</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>173</td>
+                        <th scope="row">Bernard</th>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>5</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>141</td>
+                        <th scope="row">Gerald</th>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>99</td>
+                        <th scope="row">Michael</th>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

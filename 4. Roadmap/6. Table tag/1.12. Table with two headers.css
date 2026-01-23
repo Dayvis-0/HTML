@@ -1,0 +1,50 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+.box {
+    background-color: #ffffff;
+    width: 650px;
+    height: 350px;
+    padding: 30px;
+}
+
+table {
+    color: #000000;
+    border: 1px solid #bccbd3;
+    border-collapse: collapse;
+    border-spacing: 2px;
+}
+
+caption {
+    color: #005a6a;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+tbody {
+    border-color: inherit;
+}
+
+td, th {
+    padding: 12px 10px;
+    font-family: Noto Sans,Trebuchet MS,Helvetica Neue,Arial,sans-serif;
+    border: 1px solid #bccbd3;
+}
+
+th {
+    background-color: #005a6a;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+td {
+    display: table-cell;
+}
+
+.text {
+    color: #000000;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table with irregular headers</title>
+        <link rel="stylesheet" href="1.13. Table with irregular headers.css">
+    </head>
+    <body>
+        <h1>Table with irregular headers</h1>
+        <h2>Example 1: Table with two tier headers</h2>
+        <p>
+            In the table below, there are two pairs of column headers. Each pair of column
+            headers, "Produced" and "Sold" is associative with a first-level header that 
+            identifies the pair: "Mars" and "Venus". These first-level headers are made to 
+            span two columns by using the <code>colspan</code> attribute with the value of 2.
+        </p>
+        <p>
+            The column structure needs to be defined at the beginning of the table to associative
+            first-level headers correctly with all cells of both columns. A <code>&lt;col&gt;</code>
+            element identifies each column, beginning on the left. If a header spans two or more 
+            columns, use a <code>&lt;colgroup&gt;</code> element instead of that number of <code>&lt;col&gt;</code>
+            elements, and the number of columns spanned is noted in the span attribute.
+        </p>
+        <p>
+            Also, the value of the <code>scope</code> attribute in the first-level headers is 
+            set to <code>colgroup</code> so that it is associatived with the entire group of 
+            columns. The second-level headers only apply to the corresponding column, so the 
+            <code>scope</code> attribute is set to <code>col</code> as shown in previous examples. 
+        </p>
+        <div class="box">
+            <table>
+                <col>
+                <colgroup span="2"></colgroup>
+                <colgroup span="2"></colgroup>
+                <tr>
+                    <td rowspan="2"></td>
+                    <th colspan="2" scope="colgroup">Mars</th>
+                    <th colspan="2" scope="colgroup">Venus</th>
+                </tr>
+                <tr>
+                    <th scope="col">Produced</th>
+                    <th scope="col">Sold</th>
+                    <th scope="col">Produced</th>
+                    <th scope="col">Sold</th>
+                </tr>
+                <tr>
+                    <th scope="row">Teddy Bears</th>
+                    <td>50,000</td>
+                    <td>30,000</td>
+                    <td>100,000</td>
+                    <td>80,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">Board Games</th>
+                    <td>10,000</td>
+                    <td>5,000</td>
+                    <td>12,000</td>
+                    <td>9,000</td>
+                </tr>
+            </table>
+        </div>
+        <h2>Example: Table with headers spanning multiple rows or columns</h2>
+        <p>
+            In the example below, the table consists of two individual columns and one column
+            group spanning three columns. It has six rows. Two headers that span multiple 
+            rows. To make sure that such header cells that span multiple rows are correctly 
+            associated with all the cells in those rows, the rows must be grouped. To define
+            row groups wrap the corresponding rows in <code>&lt;tbody&gt;</code> elements (table 
+            body). Additionally, the <code>scope</code> attribute of header cells spanning rows
+            has to be set to <code>rowgroup</code>.
+        </p>
+        <div class="box">
+            <table>
+                <caption>
+                    Poster availability
+                </caption>
+                <col>
+                <col>
+                <colgroup span="3"></colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">Poster name</th>
+                        <th scope="col">Color</th>
+                        <th colspan="3" scope="colgroup">Sizes available</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="3" scope="rowgroup">Zodiac</th>
+                        <th scope="row">Full color</th>
+                        <td>A2</td>
+                        <td>A3</td>
+                        <td>A4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Black and white</th>
+                        <td>A1</td>
+                        <td>A2</td>
+                        <td>A3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sepia</th>
+                        <td>A3</td>
+                        <td>A4</td>
+                        <td>A5</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th rowspan="2" scope="rowgroup">Angels</th>
+                        <th scope="row">Black and white</th>
+                        <td>A1</td>
+                        <td>A3</td>
+                        <td>A4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sepia</th>
+                        <td>A2</td>
+                        <td>A3</td>
+                        <td>A5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
