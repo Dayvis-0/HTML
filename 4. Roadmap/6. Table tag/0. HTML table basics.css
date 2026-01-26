@@ -1,0 +1,23 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+.box {
+    background-color: #ffffff;
+    width: 900px;
+    height: 500px;
+    padding: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid black;
+  color: #000000;
+}
+
+th,
+td {
+  padding: 5px;
+  border: 1px solid black;
+}
