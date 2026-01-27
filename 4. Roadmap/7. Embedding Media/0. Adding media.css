@@ -1,0 +1,27 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+.img-dog-supported {
+    display: block;
+    max-width: 100%;
+}
+
+.img-dog-position, .img-dog-inline, .img-dog-block {
+    height: 200px;
+    width: 200px;
+}
+
+.img-dog-block {
+    display: block;
+}
+
+.img-dog-floating {
+    background: #eaeaed;
+    border: 1px solid #9799a7;
+    float: right;
+    margin: 8px 0 0 20px;
+    padding: 4px;
+    width: 200px;
+}
