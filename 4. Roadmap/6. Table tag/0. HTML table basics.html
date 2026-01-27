@@ -599,5 +599,44 @@
                 </tr>
             </table>
         </div>
+        <p>Looking at the <code>&lt;col&gt;</code> elements:</p>
+        <ul>
+            <li>
+                <p>
+                    The first one has <code>span="2"</code> set on it, so it represents the first 
+                    and second columns from the left of the table. We are not targeting these
+                    columns with any styles, but we need to include it so that we can target 
+                    subsequent columns.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The second and fourth ones don't have a <code>span</code> attribute set, so they 
+                    will represent a single column — the third and fifth columns in these cases. 
+                    They have a <code>class</code> of <code>column-background</code> applied.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The third one doesn't have a <code>span</code> attribute set, and has a 
+                    <code>class</code> of <code>column-fixed-width</code> applied. It 
+                    represents the fourth column.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The fifth one doesn't have a <code>span</code> attribute set, and has a 
+                    <code>class</code> of <code>column-background-border</code> applied. It 
+                    represents the sixth column.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The sixth one has <code>span="2"</code> set on it, and has a <code>class</code> 
+                    of <code>column-fixed-width</code>applied. It represents the seventh and 
+                    eighth columns.
+                </p>
+            </li>
+        </ul>
     </body>
 </html>
