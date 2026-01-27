@@ -194,13 +194,410 @@
             <li>
                 <p>
                     <strong>Tables are not automatically responsive:</strong> When you use proper 
-                    layout containers (such as &lt;header&gt;, &lt;section&gt;, &lt;article&gt;, 
-                    or &lt;div&gt;), their width defaults to 100% of their parent element. Tables
-                    on the other hand are sized according to their content by default, so extra 
-                    measures are needed to get table layout styling to effectively work across 
-                    a variety of devices.
+                    layout containers (such as <code>&lt;header&gt;</code>, <code>&lt;section&gt</code>;, 
+                    <code>&lt;article&gt;</code>, or <code>&lt;div&gt;</code>), their width defaults 
+                    to 100% of their parent element. Tables on the other hand are sized according
+                    to their content by default, so extra measures are needed to get table layout
+                    styling to effectively work across a variety of devices.
                 </p>
             </li>
         </ol>
+        <h3>Creating your first table</h3>
+        <ol>
+            <li>
+                <p>
+                    The content of every table is enclosed by these two tags: <code>&lt;table&gt;</code>
+                    <code>&lt;/table&gt;</code>. Add these inside the body of your HTML.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The smallest container inside a table is a table cell, which is created with
+                    a <code>&lt;td&gt;</code> element ("td" stands for "table data"). Add the 
+                    following inside your table tags:
+                </p>
+                <div class="box1">
+                    <table>
+                        <td>Hi, I'im your first cell</td>
+                    </table>
+                </div>
+            </li>
+            <li>
+                <p>
+                    If we want a row of four cells, we need to copy these tags three times. Update
+                    the contents of your table to look like so:
+                </p>
+                <div class="box1">
+                    <table>
+                        <td>Hi, I'm your first cell.</td>
+                        <td>I'm your second cell.</td>
+                        <td>I'm your third cell.</td>
+                        <td>I'm your fourth cell.</td>
+                    </table>
+                </div>
+            </li>
+        </ol>
+        <p>
+            As you will see, the cells are not placed underneath each other, rather they are 
+            automatically aligned with each other on the same row. Each <code>&lt;td&gt;</code> 
+            element creates a single cell and together they make up the first row. Every cell 
+            we add makes the row grow longer.
+        </p>
+        <p>
+            To stop this row from growing and start placing subsequent cells on a second row, 
+            we need to use the <code>&lt;tr&gt;</code> element ('tr' stands for 'table row'). 
+            Let's investigate this now.
+        </p>
+        <ol>
+            <li>
+                <p>
+                    Place the four cells you've already created inside <code>&lt;tr&gt;</code> tags, like so:
+                </p>
+                <div class="box1">
+                    <table>
+                        <tr>
+                            <td>Hi, I'm your first cell.</td>
+                            <td>I'm your second cell.</td>
+                            <td>I'm your third cell.</td>
+                            <td>I'm your fourth cell.</td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+            <li>
+                <p>
+                    Now you've made one row, have a go at making one or two more — each row 
+                    needs to be wrapped in an additional <code>&lt;tr&gt;</code> element, with
+                    each cell contained in a <code>&lt;td&gt;</code>.
+                </p>
+                <div class="box1">
+                    <table>
+                        <table>
+                            <tr>
+                                <td>Hi, I'm your first cell.</td>
+                                <td>I'm your second cell.</td>
+                                <td>I'm your third cell.</td>
+                                <td>I'm your fourth cell.</td>
+                            </tr>
+
+                            <tr>
+                                <td>Second row, first cell.</td>
+                                <td>Cell 2.</td>
+                                <td>Cell 3.</td>
+                                <td>Cell 4.</td>
+                            </tr>
+                        </table>
+                    </table>
+                </div>
+            </li>
+        </ol>
+        <h3>Adding headers with <code>&lt;th&gt;</code> elements</h3>
+        <p>
+            Now let's turn our attention to table headers — special cells that go at the start of
+            a row or column and define the type of data that row or column contains (as an example,
+            see the "Person" and "Age" cells in the first example shown in this article). To 
+            illustrate why they are useful, have a look at the following table example. First 
+            the source code:
+        </p>
+        <div class="box2">
+            <table>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Knocky</td>
+                    <td>Flor</td>
+                    <td>Ella</td>
+                    <td>Juan</td>
+                </tr>
+                <tr>
+                    <td>Breed</td>
+                    <td>Jack Russell</td>
+                    <td>Poodle</td>
+                    <td>Streetdog</td>
+                    <td>Cocker Spaniel</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>16</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Owner</td>
+                    <td>Mother-in-law</td>
+                    <td>Me</td>
+                    <td>Me</td>
+                    <td>Sister-in-law</td>
+                </tr>
+                <tr>
+                    <td>Eating Habits</td>
+                    <td>Eats everyone's leftovers</td>
+                    <td>Nibbles at food</td>
+                    <td>Hearty eater</td>
+                    <td>Will eat till he explodes</td>
+                </tr>
+            </table>
+        </div>
+        <p>
+            The problem here is that, while you can kind of make out what's going on, it is not
+            as easy to cross reference data as it could be. If the column and row headings stood
+            out in some way, it would be much better.
+        </p>
+        <h3>Adding headers to the dogs table</h3>
+        <p>
+            Now we'd like you to have a go at improving the dogs table example by adding some headers.
+        </p>
+        <ol>
+            <li>
+                <p>
+                    To recognize the table headers as headers, both visually and semantically, you
+                    can use the <code>&lt;<strong>th</strong>&gt;</code> element ("th" stands for
+                    "table header"). This works in exactly the same way as a <code>&lt;td&gt;</code>, 
+                    except that it denotes a header, not a normal cell. Go into your HTML, and change 
+                    all the <code>&lt;td&gt;</code> elements surrounding the table headers into 
+                    <code>&lt;th&gt;</code> elements.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Save your HTML and load it in a browser, and you should see that the headers
+                    now look like headers.
+                </p>
+            </li>
+            <div class="box2">
+                <table>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <th>Knocky</th>
+                        <th>Flor</th>
+                        <th>Ella</th>
+                        <th>Juan</th>
+                    </tr>
+                    <tr>
+                        <th>Breed</th>
+                        <td>Jack Russell</td>
+                        <td>Poodle</td>
+                        <td>Streetdog</td>
+                        <td>Cocker Spaniel</td>
+                    </tr>
+                    <tr>
+                        <th>Age</th>
+                        <td>16</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <th>Owner</th>
+                        <td>Mother-in-law</td>
+                        <td>Me</td>
+                        <td>Me</td>
+                        <td>Sister-in-law</td>
+                    </tr>
+                    <tr>
+                        <th>Eating Habits</th>
+                        <td>Eats everyone's leftovers</td>
+                        <td>Nibbles at food</td>
+                        <td>Hearty eater</td>
+                        <td>Will eat till he explodes</td>
+                    </tr>
+                </table>
+            </div>
+        </ol>
+        <h3>Why are headers useful?</h3>
+        <p>
+            We have already partially answered this question — it is easier to find the data you
+            are looking for when the headers clearly stand out, and the design just generally 
+            looks better.
+        </p>
+        <p>
+            <strong>Note:</strong> Table headings come with some default styling — they are bold and 
+            centered even if you don't add your own styling to the table, to help them stand out.
+        </p>
+        <p>
+            Tables headers also have an added benefit — along with the <code>scope</code> attribute (which 
+            we'll learn about in the next article), they allow you to make tables more accessible
+            by associating each header with all the data in the same row or column. Screen readers
+            are then able to read out a whole row or column of data at once, which is pretty useful.
+        </p>
+        <h3>Allowing cells to span multiple rows and columns</h3>
+        <p>
+            Sometimes we want cells to span multiple rows or columns. Take the following simple 
+            example, which shows the names of common animals. In some cases, we want to show the
+            names of the males and females next to the animal name. Sometimes we don't, and in 
+            such cases we just want the animal name to span the whole table.
+        </p>
+        <p>The initial markup looks like this:</p>
+        <div class="box3">
+            <table>
+                <tr>
+                    <th>Animals</th>
+                </tr>
+                <tr>
+                    <th>Hippopotamus</th>
+                </tr>
+                <tr>
+                    <th>Horse</th>
+                    <td>Mare</td>
+                </tr>
+                <tr>
+                    <td>Stallion</td>
+                </tr>
+                <tr>
+                    <th>Crocodile</th>
+                </tr>
+                <tr>
+                    <th>Chicken</th>
+                    <td>Hen</td>
+                </tr>
+                <tr>
+                    <td>Rooster</td>
+                </tr>
+            </table>
+        </div>
+        <h3>Fixing the layout with <code>rowspan</code> and <code>colspan</code></h3>
+        <p>
+            We need a way to get "Animals", "Hippopotamus", and "Crocodile" to span across two 
+            columns, and "Horse" and "Chicken" to span downwards over two rows. Fortunately, 
+            table headers and cells have the <code>colspan</code> and <code>rowspan</code> attributes, 
+            which allow us to do just those things. Both accept a unitless number value, which equals 
+            the number of rows or columns you want spanned. For example, <code>colspan="2"</code> 
+            makes a cell span two columns.
+        </p>
+        <p>
+            Let's use <code>colspan</code> and <code>rowspan</code> to improve this table.
+        </p>
+        <ol>
+            <li>
+                <p>
+                    Use <code>colspan</code> to make "Animals", "Hippopotamus", and "Crocodile" span 
+                    across two columns.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Next, use <code>colspan</code> to make "Animals", "Hippopotamus", and 
+                    "Crocodile" span across two columns.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Finally, use <code>rowspan</code> to make "Horse" and "Chicken" span across two rows.
+                </p>
+            </li>
+        </ol>
+        <div class="box3">
+            <table>
+                <tr>
+                    <th colspan="2">Animals</th>
+                </tr>
+                <tr>
+                    <th colspan="2">Hippopotamus</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Horse</th>
+                    <td>Mare</td>
+                </tr>
+                <tr>
+                    <td>Stallion</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Crocodile</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Chicken</th>
+                    <td>Hen</td>
+                </tr>
+                <tr>
+                    <td>Rooster</td>
+                </tr>
+            </table>
+        </div>  
+        <h3>Grouping columns with <code>&lt;colgroup&gt;</code> and <code>&lt;col&gt;</code></h3>
+        <p>
+            As you get more experience with creating HTML tables, you'll find that applying a background
+            color, for example, to every cell in a single column is harder than you might think. The 
+            <code>&lt;colgroup&gt;</code> and <code>&lt;col&gt;</code> elements provide a solution to this problem.
+        </p>
+        <p>
+            The <code>&lt;colgroup&gt;</code> element should be included as a child of the table, 
+            just after the opening <code>&lt;table&gt;</code><code>&lt;/code&gt;</code> element.
+            Inside the <code>&lt;colgroup&gt;</code><code>&lt;/code&gt;</code> element you can 
+            include one or more <code>&lt;col&gt;</code> elements, which represent groups of 
+            columns. The <code>&lt;col&gt;</code> element can include a span attribute that 
+            indicates the number of columns in that group. It can also include global attributes
+            such as style (if you want to target the group with inline styles) or class (if you
+            want to target that group with CSS or JavaScript using a class name). The
+            <code>&lt;col&gt;</code> elements represent the table columns from the start of the 
+            columns, for example from the left hand side of a table written in a left-to-right 
+            language such as English.
+        </p>
+        <p>
+            Let's have a look at an example to show what we mean. The following table shows a 
+            school timetable:
+        </p>
+        <div class="box2">
+            <h1 style="color: #000000;">School language timetable</h1>
+            <table>
+                <colgroup>
+                    <col span="2" />
+                    <col class="column-background" />
+                    <col class="column-fixed-width" />
+                    <col class="column-background" />
+                    <col class="column-background-border" />
+                    <col span="2" class="column-fixed-width" />
+                </colgroup>
+                <tr>
+                    <td>&nbsp;</td>
+                    <th>Mon</th>
+                    <th>Tues</th>
+                    <th>Wed</th>
+                    <th>Thurs</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+                <tr>
+                    <th>1st period</th>
+                    <td>English</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>German</td>
+                    <td>Dutch</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th>2nd period</th>
+                    <td>English</td>
+                    <td>English</td>
+                    <td>&nbsp;</td>
+                    <td>German</td>
+                    <td>Dutch</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th>3rd period</th>
+                    <td>&nbsp;</td>
+                    <td>German</td>
+                    <td>&nbsp;</td>
+                    <td>German</td>
+                    <td>Dutch</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th>4th period</th>
+                    <td>&nbsp;</td>
+                    <td>English</td>
+                    <td>&nbsp;</td>
+                    <td>English</td>
+                    <td>Dutch</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
