@@ -159,6 +159,70 @@
             controls, including play and pause, seek, and volume controls.
         </p>
         <audio src="jazz.ogg" controls></audio>
+        <p>
+            When present on the <code>&lt;audio&gt;</code> element, the <code>loop</code> Boolean
+            attribute will cause an audio file to repeat continually, from beginning to end.
+        </p>
+        <p>
+            Lastly, the <code>preload</code> attribute for the <code>&lt;audio&gt;</code> element
+            helps identify what, if any, information about the audio file should be loaded before
+            the clip is played. It accepts three values: <code>none</code>, <code>auto</code>, 
+            and <code>metadata</code>.  The <code>none</code> value won’t preload any information
+            about an audio file, while the auto value will preload all information about an audio
+            file. The <code>metadata </code> value sits in between the <code>none</code> and
+            <code>auto</code> values, as it will preload any available metadata information about 
+            an audio file, such as the clip’s length, but not all information.
+        </p>
+        <p>
+            When the <code>preload</code> attribute isn’t present on the <code>&lt;audio&gt;</code> 
+            element, all information about an audio file is loaded, as if the value was set to 
+            <code>auto</code>. For this reason, using the <code>preload</code> attribute with a
+            value of <code>metadata</code> or <code>none</code> is a good idea when an audio file
+            is not essential to a page. It’ll help to conserve bandwidth and allow pages to load faster.
+        </p>
+        <h3>Audio Fallbacks & Multiple Sources</h3>
+        <p>
+            At the moment, different browsers support different audio file formats, the three most
+            popular of which are <code>ogg</code>, <code>mp3</code>, and <code>wav</code>. For the 
+            best browser support we’ll need to use a handful of audio fallbacks, which will be 
+            included inside an <code>&lt;audio&gt;</code> element’s opening and closing tags.
+        </p>
+        <p>
+            To begin, we’ll remove the src attribute from the <code>&lt;audio&gt;</code> element. 
+            Instead, we’ll use the <code>&lt;source&gt;</code> element, with a src attribute, nested
+            inside the <code>&lt;audio&gt;</code> element to define a new source.
+        </p>
+        <p>
+            Using a <code>&lt;source&gt;</code> element and <code>src</code> attribute for each file
+            format, we can list one audio file format after the other. We’ll use the <code>type</code>
+            attribute to quickly help the browser identify which audio types are available. When a 
+            browser recognizes an audio file format it will load that file and ignore all the others.
+        </p>
+        <p>
+            Because it was introduced in HTML5, some browsers may not support the <code>&lt;audio&gt;</code>
+            element. In this case, we can provide a link to download the file after any
+            <code>&lt;source&gt;</code> elements within the <code>&lt;audio&gt;</code> element.
+        </p>
+        <audio controls>
+            <source src="jazz.ogg" type="audio/ogg">
+            <source src="jazz.mp3" type="audio/mpeg">
+            <source src="jazz.wav" type="audio/wav">
+            Please <a href="jazz.mp3" download>download</a> the audio file
+        </audio>
+        <p>
+            To review the previous code, the <code>&lt;audio&gt;</code> element includes the <code>controls</code> 
+            Boolean attribute to ensure the audio player is displayed within browsers that support
+            the element. The <code>&lt;audio&gt;</code> element does not include a <code>src</code>
+            attribute and instead wraps three different <code>&lt;source&gt;</code> elements. Each 
+            <code>&lt;source&gt;</code> element includes a <code>src</code> attribute that 
+            references a different audio file format and a <code>type</code> attribute to identify
+            the format of the audio file. As a last fallback, if a browser doesn’t recognize any of
+             the audio file formats, the anchor link to download the element will be displayed.
+        </p>
+        <h2>Adding Video</h2>
+        <p>
+            
+        </p>
         <p>Extracted from <a href="https://learn.shayhowe.com/html-css/adding-media/#adding-images" target="_blank">Learn shayhowe</a></p>
     </body>
 </html>
