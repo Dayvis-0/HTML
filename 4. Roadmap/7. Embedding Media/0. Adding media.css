@@ -25,3 +25,8 @@
     padding: 4px;
     width: 200px;
 }
+
+video {
+    height: 400px;
+    width: 400px;
+}

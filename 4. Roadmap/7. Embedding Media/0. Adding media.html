@@ -33,7 +33,7 @@
             technologies to help convey the purpose of an image. The <code>alt</code> text will 
             be displayed in place of the image if for some reason the image is not available.
         </p>
-        <img class="img-dog-supported" src="dog.jpg" alt="A black, brown, and white dog wearing a kerchief">
+        <img class="img-dog-supported" src="Images/dog.jpg" alt="A black, brown, and white dog wearing a kerchief">
         <h4>Supported Image Formats</h4>
         <p>
             Images come in a variety of different file formats, and each browser may support (or
@@ -61,7 +61,7 @@
             and <code>height</code> will work also; however, doing so may break the aspect ratio of 
             an image, causing it to appear distorted.
         </p>
-        <img src="dog.jpg" alt="" class="img-dog-position">
+        <img src="Images/dog.jpg" alt="" class="img-dog-position">
         <h3>Positioning Images</h3>
         <p>
             We can use a number of different approaches to position images on a web page. By default
@@ -79,7 +79,7 @@
         </p>
         <p>
             Gastby is a black, brown, and white hound mix puppy who loves howling at fire trucks and
-            collecting belly rubs. <img class="img-dog-inline" src="dog.jpg" alt="A black, brown, and white dog wearing a kerchief">
+            collecting belly rubs. <img class="img-dog-inline" src="Images/dog.jpg" alt="A black, brown, and white dog wearing a kerchief">
             Although he spends most of his time sleeping he is also quick to chase any birds who enter
             his vision.
         </p>
@@ -91,7 +91,7 @@
         </p>
         <p>
             Gastby is a black, brown, and white hound mix puppy who loves howling at fire trucks and
-            collecting belly rubs. <img class="img-dog-block" src="dog.jpg" alt="A black, brown, and white dog wearing a kerchief">
+            collecting belly rubs. <img class="img-dog-block" src="Images/dog.jpg" alt="A black, brown, and white dog wearing a kerchief">
             Although he spends most of his time sleeping he is also quick to chase any birds who enter
             his vision.
         </p>
@@ -104,7 +104,7 @@
             either <code>left</code> or <code>right</code>.
         </p>
         <p>
-            Gatsby is a black, <img class="img-dog-floating" src="dog.jpg" alt="A black, brown, and white dog wearing a kerchief"> 
+            Gatsby is a black, <img class="img-dog-floating" src="Images/dog.jpg" alt="A black, brown, and white dog wearing a kerchief"> 
             brown, and white hound mix puppy who loves howling at fire trucks and collecting belly 
             rubs. Although he spends most of his time sleeping he is also quick to chase any birds 
             who enter his vision.
@@ -132,7 +132,7 @@
             Unlike the <code>&lt;img&gt;</code> element, though, the <code>&lt;audio&gt;</code> element
             requires both opening and closing tags, which we’ll discuss soon.
         </p>
-        <audio src="jazz.ogg"></audio>
+        <audio src="Audios/jazz.ogg"></audio>
         <h3>Audio Attributes</h3>
         <p>
             Several other attributes may accompany the src attribute on the <code>&lt;audio&gt;</code> 
@@ -151,14 +151,15 @@
             element, nothing will appear on the page, but the audio file will automatically play 
             upon loading.
         </p>
-        <audio src="jazz.ogg" autoplay></audio>
+        <!--<audio src="Audios/jazz.ogg" autoplay></audio>-->
+        <audio src="Audios/jazz.ogg"></audio>
         <p>
             To display the <code>&lt;audio&gt;</code> element on a page, the controls Boolean 
             attribute is necessary. When it’s applied to the <code>&lt;audio&gt;</code> element, 
             the <code>controls</code> Boolean attribute will display a browser’s default audio 
             controls, including play and pause, seek, and volume controls.
         </p>
-        <audio src="jazz.ogg" controls></audio>
+        <audio src="Audios/jazz.ogg" controls></audio>
         <p>
             When present on the <code>&lt;audio&gt;</code> element, the <code>loop</code> Boolean
             attribute will cause an audio file to repeat continually, from beginning to end.
@@ -204,10 +205,10 @@
             <code>&lt;source&gt;</code> elements within the <code>&lt;audio&gt;</code> element.
         </p>
         <audio controls>
-            <source src="jazz.ogg" type="audio/ogg">
-            <source src="jazz.mp3" type="audio/mpeg">
-            <source src="jazz.wav" type="audio/wav">
-            Please <a href="jazz.mp3" download>download</a> the audio file
+            <source src="Audios/jazz.ogg" type="audio/ogg">
+            <source src="Audios/jazz.mp3" type="audio/mpeg">
+            <source src="Audios/jazz.wav" type="audio/wav">
+            Please <a href="Audio/jazz.mp3" download>download</a> the audio file
         </audio>
         <p>
             To review the previous code, the <code>&lt;audio&gt;</code> element includes the <code>controls</code> 
@@ -221,8 +222,138 @@
         </p>
         <h2>Adding Video</h2>
         <p>
-            
+            Adding video in HTML5 is very similar to adding audio. We use the <code>&lt;video&gt;</code>
+            element in place of the <code>&lt;audio&gt;</code> element. All of the same attributes (<code>src</code>, 
+            <code>autoplay</code>, <code>controls</code>, <code>loop</code>, and <code>preload</code>) 
+            and fallbacks apply here, too.
         </p>
+        <p>
+            With the <code>&lt;audio&gt;</code> element, if the <code>controls</code> Boolean 
+            attribute isn’t specified the audio clip isn’t displayed. With videos, if the 
+            <code>controls</code> Boolean attribute is not specified the video will display. 
+            However, it is fairly difficult to view unless the <code>autoplay</code> Boolean attribute is 
+            also applied. In general, the best practice here is to include the <code>controls</code> 
+            Boolean attribute unless there is a good reason not to allow users to start, stop, or 
+            replay the video.
+        </p>
+        <video src="Videos/pokemon.ogv" controls></video>
+        <h3>Poster Attribute</h3>
+        <p>
+            One additional attribute available for the <code>&lt;video&gt;</code> element is the 
+            poster attribute. The poster attribute allows us to specify an image, in the form of 
+            a URL, to be shown before a video is played.
+        </p>
+        <video src="Videos/pokemon.ogv" controls poster="Images/pokemon.jpg"></video>
+        <h3>Video Fallbacks</h3>
+        <p>
+            As with the <code>&lt;audio&gt;</code> element, video fallbacks are also necessary. 
+            The same markup format, with multiple <code>&lt;source&gt;</code> elements for each
+            file type and a plain text fallback, also applies within the 
+            <code>&lt;video&gt;</code> element.
+        </p>
+        <video controls>
+            <source src="Videos/pokemon.ogv" type="video/ogv">
+            <source src="Videos/pokemon.mp4" type="video/mp4">
+            Please <a href="Video/pokemon.mp4" download>download</a> the video.
+        </video>
+        <h2>Adding Inline Frames</h2>
+        <p>
+            Another way to add content to a page is to embed another HTML page within the current
+            page. This is done using an inline frame, or <code>&lt;iframe&gt;</code> element. The
+            <code>&lt;iframe&gt;</code> element accepts the URL of another HTML page within the 
+            <code>src</code> attribute value; this causes the content from the embedded HTML page 
+            to be displayed on the current page. The value of the <code>src</code> attribute may 
+            be a URL relative to the page the <code>&lt;iframe&gt;</code> element appears on or 
+            an absolute URL for an entirely external page.
+        </p>
+        <iframe src="https://www.google.com/maps/embed"></iframe>
+        <p>
+            The <code>&lt;iframe&gt;</code> element has a few default styles, including an inset
+            <code>border</code> and a <code>width</code> and <code>height</code>. These styles 
+            can be adjusted using the <code>frameborder</code>, <code>width</code>, and <code>height</code>
+            HTML attributes or by using the <code>border</code>, <code>width</code>, and 
+            <code>height</code> CSS properties.
+        </p>
+        <p>
+            Pages referenced within the <code>src</code> attribute of an <code>&lt;iframe&gt;</code> 
+            element play by their own rules, as they do not inherit any styles or behaviors from 
+            the page they are referenced on. Any styles applied to a page that includes an 
+            <code>&lt;iframe&gt;</code> element will not be inherited by the page referenced 
+            within the <code>&lt;iframe&gt;</code> element. Additionally, links within the page 
+            referenced within the <code>&lt;iframe&gt;</code> element will open inside that frame, 
+            leaving the page that contains the <code>&lt;iframe&gt;</code> element unchanged.
+        </p>
+        <h2>Semantically Identifying Figures & Captions</h2>
+        <p>
+            With HTML5 also came the introduction of the <code>&lt;figure&gt;</code> and 
+            <code>&lt;figcaption&gt;</code> elements. These elements were created to semantically
+            mark up self-contained content or media, commonly with a caption. Before HTML5 this 
+            was frequently done using an ordered list. While an ordered list worked, the markup 
+            was not semantically correct.
+        </p>
+        <h3>Figure</h3>
+        <p>
+            The <code>&lt;figure&gt;</code> block-level element is used to identify and wrap 
+            self-contained content, often in the form of media. It may surround images, audio 
+            clips, videos, blocks of code, diagrams, illustrations, or other self-contained 
+            media. More than one item of self-contained content, such as multiple images or 
+            videos, may be contained within the <code>&lt;figure&gt;</code> element at a 
+            time. If the <code>&lt;figure&gt;</code> element is moved from the main portion 
+            of a page to another location (for example, the bottom of the page), it should 
+            not disrupt the content or legibility of the page.
+        </p>
+        <figure>
+            <img class="img-dog-supported" src="Images/dog.jpg" alt="A black, brown, and white dog wearing a kerchief">
+        </figure>
+        <h3>Figure caption</h3>
+        <p>
+            To add a caption or legend to the <code>&lt;figure&gt;</code> element, the 
+            <code>&lt;figcaption&gt;</code> element is used. The <code>&lt;figcaption&gt;</code> 
+            may appear at the top of, bottom of, or anywhere within the <code>&lt;figure&gt;</code> 
+            element; however, it may only appear once. When it’s used, the <code>&lt;figcaption&gt;</code> 
+            element will serve as the caption for all content within the <code>&lt;figure&gt;</code> 
+            element.
+        </p>
+        <p>
+            Additionally, the <code>&lt;figcaption&gt;</code> element may replace an 
+            <code>&lt;img&gt;</code> element’s alt attribute if the content of the 
+            <code>&lt;figcaption&gt;</code> element provides a useful description of the visual 
+            content of the image.
+        </p>
+        <figure>
+            <img src="Images/dog.jpg">
+            <figcaption>A beautiful black, brown, and white hound dog wearing kerchief.</figcaption>
+        </figure>
+        <p>
+            Not all forms of media need to be included within a <code>&lt;figure&gt;</code> element
+            or include a <code>&lt;figcaption&gt;</code> element; only those that are self-contained 
+            and belong together as a group.
+        </p>
+        <h2>Summary</h2>
+        <p>
+            Alongside text, media is one of the largest parts of the web. Use of images, audio, 
+            and video has only grown over recent years, and it isn’t likely to slow down. Now we
+            know how to incorporate these forms of media into our designs and how we can use 
+            them to enrich the content on our websites.
+        </p>
+        <p>Within this lesson we covered the following:</p>
+        <ul>
+            <li>
+                <p>The best ways to add images, audio clips, videos, and inline frames to a page</p>
+            </li>
+            <li>
+                <p>Different ways to position images in different situations</p>
+            </li>
+            <li>
+                <p>How to provide audio and video fallbacks for older browsers</p>
+            </li>
+            <li>
+                <p>Common attributes available to audio clips and videos</p>
+            </li>
+            <li>
+                <p>The semantic way to mark up self-contained content, including media</p>
+            </li>
+        </ul>
         <p>Extracted from <a href="https://learn.shayhowe.com/html-css/adding-media/#adding-images" target="_blank">Learn shayhowe</a></p>
     </body>
 </html>
