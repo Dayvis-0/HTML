@@ -1,157 +1,157 @@
 <!doctype html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>td</title>
-    <link rel="stylesheet" href="1.8. td.css" />
-  </head>
-  <body>
-    <h1>td</h1>
-    <!--El elemento HTML <td> define una celda de una tabla que contiene datos y puede
-        usarse como elemento secundario del elemento <tr>.-->
-    <div class="box">
-      <table>
-        <caption>
-          Alien football stars
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Player</th>
-            <th scope="col">Gloobles</th>
-            <th scope="col">Za'taak</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">TR-7</th>
-            <td>7</td>
-            <td>4,56</td>
-          </tr>
-          <tr>
-            <th scope="row">Khiresh Odo</th>
-            <td>7</td>
-            <td>7,223</td>
-          </tr>
-          <tr>
-            <th scope="row">Mia Oolong</th>
-            <td>9</td>
-            <td>6,219</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <h2>Examples</h2>
-    <p>
-      This example uses &lt;td&gt; elements along with other table-related
-      elements to introduce a basic table with data about the phonetic alphabet.
-    </p>
-    <p>
-      Note: Normally, a table head group with column headers would be
-      implemented to make it easier to understand the information in the
-      columns. The &lt;thead&gt; and &lt;tbody&gt; elements would be used to
-      group such rows of headers and data into the respective table head and
-      body sections. This is not implemented in this example to focus on the
-      data cells and reduce the complexity of this example.
-    </p>
-    <div class="box">
-      <table>
-        <tr>
-          <th scope="row">A</th>
-          <td>Alfa</td>
-          <td>AL fah</td>
-        </tr>
-        <tr>
-          <th scope="row">B</th>
-          <td>Bravo</td>
-          <td>BRAH voh</td>
-        </tr>
-        <tr>
-          <th scope="row">C</th>
-          <td>Charlie</td>
-          <td>CHAR lee</td>
-        </tr>
-        <tr>
-          <th scope="row">D</th>
-          <td>Delta</td>
-          <td>DELL tah</td>
-        </tr>
-      </table>
-    </div>
-    <h3>Column and row spanning</h3>
-    <p>
-      This example extends and enhances the basic table from the previous
-      example by adding an additional "ABC" cell.
-    </p>
-    <div class="box">
-      <table>
-        <tr>
-          <th scope="row">A</th>
-          <td>Alfa</td>
-          <td>AL fah</td>
-          <td rowspan="3">ABC</td>
-        </tr>
-        <tr>
-          <th scope="row">B</th>
-          <td>Bravo</td>
-          <td>BRAH voh</td>
-        </tr>
-        <tr>
-          <th scope="row">C</th>
-          <td>Chrliet</td>
-          <td>CHAR lee</td>
-        </tr>
-        <tr>
-          <th scope="row">D</th>
-          <td>Delta</td>
-          <td colspan="2">DELL tah</td>
-        </tr>
-        <tr>
-          <th scope="row">E</th>
-          <td>Echo</td>
-          <td colspan="2">ECK oh</td>
-        </tr>
-      </table>
-    </div>
-    <h3>Associate data cells with header cells</h3>
-    <p>
-      For more complex relationships between data cells (&lt;td&gt; elements)
-      and header cells (&lt;th&gt; elements), using &lt;th&gt; elements with the
-      scope attribute alone may not be sufficient for assistive technologies,
-      especially screen readers.
-    </p>
-    <div class="box">
-      <table>
-        <tr>
-          <th id="a" scope="row">A</th>
-          <td>Alfa</td>
-          <td>AL fah</td>
-          <td headers="a b c" rowspan="3">ABC</td>
-        </tr>
-        <tr>
-          <th id="b" scope="row">B</th>
-          <td>Bravo</td>
-          <td>BRAH voh</td>
-        </tr>
-        <tr>
-          <th id="c" scope="row">C</th>
-          <td>Charlie</td>
-          <td>CHAR lee</td>
-        </tr>
-        <tr>
-          <th scope="row">D</th>
-          <td>Delta</td>
-          <td colspan="2">DELL tah</td>
-        </tr>
-        <tr>
-          <th scope="row">E</th>
-          <td>Echo</td>
-          <td colspan="2">ECK oh</td>
-        </tr>
-      </table>
-    </div>
-  <p>Extracted from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/td" target="_blank">MDN td</a></p>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>td</title>
+        <link rel="stylesheet" href="1.8. td.css" />
+    </head>
+    <body>
+        <h1>td</h1>
+        <!--El elemento HTML <td> define una celda de una tabla que contiene datos y puede
+            usarse como elemento secundario del elemento <tr>.-->
+        <div class="box">
+            <table>
+                <caption>
+                    Alien football stars
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Player</th>
+                        <th scope="col">Gloobles</th>
+                        <th scope="col">Za'taak</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">TR-7</th>
+                        <td>7</td>
+                        <td>4,56</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Khiresh Odo</th>
+                        <td>7</td>
+                        <td>7,223</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mia Oolong</th>
+                        <td>9</td>
+                        <td>6,219</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2>Examples</h2>
+        <p>
+            This example uses &lt;td&gt; elements along with other table-related
+            elements to introduce a basic table with data about the phonetic alphabet.
+        </p>
+        <p>
+            Note: Normally, a table head group with column headers would be
+            implemented to make it easier to understand the information in the
+            columns. The &lt;thead&gt; and &lt;tbody&gt; elements would be used to
+            group such rows of headers and data into the respective table head and
+            body sections. This is not implemented in this example to focus on the
+            data cells and reduce the complexity of this example.
+        </p>
+        <div class="box">
+            <table>
+                <tr>
+                    <th scope="row">A</th>
+                    <td>Alfa</td>
+                    <td>AL fah</td>
+                </tr>
+                <tr>
+                    <th scope="row">B</th>
+                    <td>Bravo</td>
+                    <td>BRAH voh</td>
+                </tr>
+                <tr>
+                    <th scope="row">C</th>
+                    <td>Charlie</td>
+                    <td>CHAR lee</td>
+                </tr>
+                <tr>
+                    <th scope="row">D</th>
+                    <td>Delta</td>
+                    <td>DELL tah</td>
+                </tr>
+            </table>
+        </div>
+        <h3>Column and row spanning</h3>
+        <p>
+            This example extends and enhances the basic table from the previous
+            example by adding an additional "ABC" cell.
+        </p>
+        <div class="box">
+            <table>
+                <tr>
+                    <th scope="row">A</th>
+                    <td>Alfa</td>
+                    <td>AL fah</td>
+                    <td rowspan="3">ABC</td>
+                </tr>
+                <tr>
+                    <th scope="row">B</th>
+                    <td>Bravo</td>
+                    <td>BRAH voh</td>
+                </tr>
+                <tr>
+                    <th scope="row">C</th>
+                    <td>Chrliet</td>
+                    <td>CHAR lee</td>
+                </tr>
+                <tr>
+                    <th scope="row">D</th>
+                    <td>Delta</td>
+                    <td colspan="2">DELL tah</td>
+                </tr>
+                <tr>
+                    <th scope="row">E</th>
+                    <td>Echo</td>
+                    <td colspan="2">ECK oh</td>
+                </tr>
+            </table>
+        </div>
+        <h3>Associate data cells with header cells</h3>
+        <p>
+            For more complex relationships between data cells (&lt;td&gt; elements)
+            and header cells (&lt;th&gt; elements), using &lt;th&gt; elements with the
+            scope attribute alone may not be sufficient for assistive technologies,
+            especially screen readers.
+        </p>
+        <div class="box">
+            <table>
+                <tr>
+                    <th id="a" scope="row">A</th>
+                    <td>Alfa</td>
+                    <td>AL fah</td>
+                    <td headers="a b c" rowspan="3">ABC</td>
+                </tr>
+                <tr>
+                    <th id="b" scope="row">B</th>
+                    <td>Bravo</td>
+                    <td>BRAH voh</td>
+                </tr>
+                <tr>
+                    <th id="c" scope="row">C</th>
+                    <td>Charlie</td>
+                    <td>CHAR lee</td>
+                </tr>
+                <tr>
+                    <th scope="row">D</th>
+                    <td>Delta</td>
+                    <td colspan="2">DELL tah</td>
+                </tr>
+                <tr>
+                    <th scope="row">E</th>
+                    <td>Echo</td>
+                    <td colspan="2">ECK oh</td>
+                </tr>
+            </table>
+        </div>
+        <p>Extracted from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/td" target="_blank">MDN td</a></p>
+    </body>
 </html>
 
