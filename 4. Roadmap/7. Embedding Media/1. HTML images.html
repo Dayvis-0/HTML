@@ -50,6 +50,113 @@
             leaves you with no control over the image being removed or replaced with something 
             embarrassing.
         </p>
+        <h3>Alternative text</h3>
+        <p>
+            The next attribute we'll look at is <code>alt</code>. Its value is supposed to be a 
+            textual description of the image, for use in situations where the image cannot be 
+            seen/displayed or takes a long time to render because of a slow internet connection. 
+            For example, our above code could be modified like so:
+        </p>
+        <img 
+            src="Images/dinosaur.jpg" 
+            alt="The head and torso of a dinosaur skeleton; it has a large heade with long sharp teeth">
+        <h3>Width and height</h3>
+        <p>
+            You can use the width and height attributes to specify the width and height of your 
+            image. They are given as integers without a unit, and represent the image's width and 
+            height in pixels.
+        </p>
+        <img 
+            src="Images/dinosaur.jpg" 
+            alt="The head and torso of a dinosaur skeleton; it has a large heade with long sharp teeth"
+            width="400"
+            height="341">
+        <p>
+            There's a very good reason to do this. The HTML for your page and the image are separate 
+            resources, fetched by the browser as separate HTTP(S) requests. As soon as the browser 
+            has received the HTML, it will start to display it to the user. If the images haven't 
+            yet been received (and this will often be the case, as image file sizes are often much 
+            larger than HTML files), then the browser will render only the HTML, and will update 
+            the page with the image as soon as it is received.
+        </p>
+        <p>For example, suppose we have some text after the image:</p>
+        <h1>Images in HTML</h1>
+        <img
+            src="Images/dinosaur.jpg"
+            alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
+            title="A T-Rex on display in the Manchester University Museum" />
+        <blockquote>
+        <p>
+            But down there it would be dark now, and not the lovely lighted aquarium she
+            imagined it to be during the daylight hours, eddying with schools of tiny,
+            delicate animals floating and dancing slowly to their own serene currents
+            and creating the look of a living painting. That was wrong, in any case. The
+            ocean was different from an aquarium, which was an artificial environment.
+            The ocean was a world. And a world is not art. Dorothy thought about the
+            living things that moved in that world: large, ruthless and hungry. Like us
+            up here.
+        </p>
+        <footer>- Rachel Ingalls, <cite>Mrs. Caliban</cite></footer>
+        </blockquote>
+        <p>
+            As soon as the browser downloads the HTML, the browser will start to display the page.
+        </p>
+        <p>
+            Once the image is loaded, the browser adds the image to the page. Because the image 
+            takes up space, the browser has to move the text down the page, to fit the image 
+            above it:
+        </p>
+        <img src="Images/no-size.png" width="400">
+        <p>
+            Moving the text like this is extremely distracting to users, especially if they have 
+            already started to read it, and it also causes the browser to re-render the page, which
+            is bad for performance.
+        </p>
+        <p>
+            If you specify the actual size of the image in your HTML using the width and height 
+            attributes, then the browser knows how much space to allow for the image, before it 
+            has downloaded.
+        </p>
+        <p>
+            This means that when the image has been downloaded, the browser doesn't have to 
+            move the surrounding content.
+        </p>
+        <img src="Images/size.png" width="400">
+        <h4>Resizing images</h4>
+        <p>
+            Although, as we have said, it is good practice to specify the actual size of your
+            images using HTML attributes, you should not use them to resize images.
+        </p>
+        <p>
+            If you set the image size too big, you'll end up with images that look grainy, fuzzy, 
+            or too small, and wasting bandwidth downloading an image that is not fitting the 
+            user's needs. The image may also end up looking distorted, if you don't maintain 
+            the correct aspect ratio. You should use an image editor to put your image at the 
+            correct size before putting it on your webpage.
+        </p>
+        <p>If you do need to alter an image's size, you should use CSS instead.</p>
+        <h3>Image titles</h3>
+        <p>
+            As with links, you can also add <code>title</code> attributes to images, to provide 
+            further supporting information if needed. In our example, we could do this:
+        </p>
+        <img
+            src="Images/dinosaur.jpg"
+            alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
+            width="400"
+            height="341"
+            title="A T-Rex on display in the Manchester University Museum" />
+        <p>
+            However, this is not recommended — <code>title</code> has a number of accessibility 
+            problems, mainly based around the fact that screen reader support is very unpredictable
+            and most browsers won't show it unless you are hovering with a mouse (so e.g., no 
+            access to keyboard users)
+        </p>
+        <p>
+            It is better to include such supporting information in the main article text, rather 
+            than attached to the image.
+        </p>
+        
         <p>Extracted from <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images">MDN HTML images</a></p>
     </body>
 </html>
