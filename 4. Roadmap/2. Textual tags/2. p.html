@@ -11,26 +11,97 @@
                 padding: 100px;
             }
 
-            p {
+            .p {
                 margin: 10px 0;
                 margin-bottom: 2em;
                 padding: 5px;
                 border: 1px solid #999;
             }
+            
+            .p-style {
+                margin: 0;
+                text-indent: 3ch;
+            }
+
+            .p-style.pilcrow {
+                text-indent: 0;
+                display: inline;
+            }
+
+            .p-style.pilcrow + .p-style.pilcrow::before {
+                content: " ¶ ";
+            }
         </style>
     </head>
     <body>
         <h1>p</h1>
-        <!--La etiqueta en HTML define un párrafo. Los navegadores agregan automáticamente una única linea en 
-        blanco antes y después de cada párrafo, creando una separación clara entre bloques de texto. Es un elemento
-        a nivel de bloque, lo que significa que ocupa todo el ancho disponible y comienza en una nueva linea-->
-        <p>
+        <!--La etiqueta <p> en HTML define un párrafo. Los navegadores agregan automáticamente una única 
+        linea en blanco antes y después de cada párrafo, creando una separación clara entre bloques 
+        de texto. Es un elemento a nivel de bloque, lo que significa que ocupa todo el ancho disponible
+        y comienza en una nueva linea.-->
+        <p class="p">
+            The <code>&lt;p&gt;</code> HTML element represents a paragraph. Paragraphs are usually 
+            represented in visual media as blocks of text separated from adjacent blocks by blank 
+            lines and/or first-line indentation, but HTML paragraphs can be any structural grouping 
+            of related content, such as images or form fields.
+        </p>        
+        <p class="p">
             Geckos are a group of usually small, usually nocturnal lizards. They are found on every 
             continent except Antarctica
         </p>
         <p>
             Some species live in houses where they hunt insects attrected by artificial light
         </p>
+        <h2>Examples</h2>
+        <p>
+            This is the first paragraph of text. This is the first paragraph of text. This
+            is the first paragraph of text. This is the first paragraph of text.
+        </p>
+        <p>
+            This is the second paragraph. This is the second paragraph. This is the second
+            paragraph. This is the second paragraph.
+        </p>
+
+        <h2>Styling paragraphs</h2>
+        <p class="p-style">
+            By default, browsers separate paragraphs with a single blank line. Alternate separation 
+            methods, such as first-line indentation, can be achieved with CSS:
+        </p>
+        <p class="p-style">
+            Separating paragraphs with blank lines is easiest for readers to scan, but
+            they can also be separated by indenting their first lines. This is often used
+            to take up less space, such as to save paper in print.
+        </p>
+
+        <p class="p-style">
+            Writing that is intended to be edited, such as school papers and rough drafts,
+            uses both blank lines and indentation for separation. In finished works,
+            combining both is considered redundant and amateurish.
+        </p>
+
+        <p class="p-style">
+            In very old writing, paragraphs were separated with a special character: ¶,
+            the <i>pilcrow</i>. Nowadays, this is considered claustrophobic and hard to
+            read.
+        </p>
+        <p class="p-style">
+            How hard to read? See for yourself:
+            <button data-toggle-text="Oh no! Switch back!">
+                Use pilcrow for paragraphs
+            </button>
+        </p>
+        <script>
+            document.querySelector("button").addEventListener("click", (event) => {
+                document.querySelectorAll("p").forEach((paragraph) => {
+                    paragraph.classList.toggle("pilcrow");
+                })
+
+                [event.target.innerText, event.target.dataset.toggleText] = [
+                    event.target.dataset.toggleText, 
+                    event.target.innerText
+                ];
+            });
+        </script>
         <p>Extracted from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/p">MDN p</a></p>
     </body>
 </html>

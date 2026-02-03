@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Headings WAI</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Headings</h1>
+        <h2>Overview</h2>
+        <p>
+            Headings communicate the organization of the content on the page. Web browsers, plug-ins, 
+            and assistive technologies can use them to provide in-page navigation.
+        </p>
+        <h2>Heading ranks</h2>
+        <p>
+            Nest headings by their rank (or level). The most important heading has the rank 1 
+            (<code>&lt;h1&gt;</code>), the least important heading rank 6 (<code>&lt;h6&gt;</code>). 
+            Headings with an equal or higher rank start a new section, headings with a lower rank 
+            start new subsections that are part of the higher ranked section.
+        </p>
+        <p>
+            Skipping heading ranks can be confusing and should be avoided where possible: Make sure 
+            that a <code>&lt;h2&gt;</code> is not followed directly by an <code>&lt;h4&gt;</code>
+        </p>
+        <h2>Headings that reflect the page organization</h2>
+        <h3>Example 1: Main heading before navigation</h3>
+        <img src="ExampleOne.png" width="300">
+        <h3>Example 2: Main heading after navigation</h3>
+        <img src="ExampleTwo.png" width="300">
+        <p>
+            Extracted from: 
+            <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/">W3 headings</a>
+        </p>
+    </body>
+</html>
