@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic tags</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            pre {
+                background: #eeeef0;
+                color: #000000;
+                padding: 10px;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Basic Tags</h1>
+        <h2>!DOCTYPE</h2>
+        <!--La declaración <!DOCTYPE> es una instrucción para el navegador web sobre la versión
+        HTML utilizada para escribir la página.-->
+        <p>
+            The `<code>&lt;!DOCTYPE&gt;</code>` declaration is an instruction to the web browser about the 
+            HTML version used to write the page. It's placed at the very top of an HTML document, 
+            before the <code>&lt;html&gt;</code> tag, and ensures that the browser renders the page 
+            in "standards code," following the correct specifications for that HTML version. 
+            Technically, It is not an HTML tag itself.
+        </p>
+        <p>
+            The HTML document type declaration, also known as <code>DOCTYPE</code>, is the first line 
+            of code required in every HTML or XHTML document. The <code>DOCTYPE</code> declaration is an 
+            instruction to the web browser about what version of HTML the page is written in. This 
+            ensures that the web page is parsed the same way by different web browsers.
+        </p>
+        <p>
+            In HTML 4.01, the <code>DOCTYPE</code> declaration refers to a document type definition 
+            (DTD). A DTD defines the structure and the legal elements of an XML document. Because 
+            HTML 4.01 was based on the Standard Generalised Markup Language (SGML), referring to a 
+            DTD in the <code>DOCTYPE</code> declaration was necessary.
+        </p>
+        <p>
+            In contrast, the declaration of HTML5 <code>DOCTYPE</code> is much simpler: it no longer 
+            requires a reference to DTDs as it is no longer based on SGML. See the examples below for 
+            a comparison between HTML 4.01 and HTML5 <code>DOCTYPE</code>s.
+        </p>
+        <h3>Examples:</h3>
+        <p>Doctype syntax for HTML5 and beyond</p>
+        <p>Extracted from:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+        <p>Doctype syntax for strict HTML 4.01:</p>
+        <pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</code></pre>
+        <p>Doctype syntax for transitional HTML 4.01:</p>
+        <pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</code></pre>
+        <p>Doctype syntax for frameset HTML 4.01:</p>
+        <pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;</code></pre>
+        <h2><code>&lt;html&gt;</code></h2>
+        <!--El elemento HTML <html> representa la raiz (elemento de un nivel superior) de un documento
+        HTML, por lo que también se le conoce como elemento raíz.-->
+        <p>
+            The <code>&lt;html&gt;</code> HTML element represents the root (top-level element) of an HTML
+            document, so it is also referred to as the root element. All other elements must be descendants
+            of this element. There can be only one <code>&lt;html&gt;</code> element in a document.
+        </p>
+        <p>
+            While HTML does not require authors to specify <code>&lt;html&gt;</code> element start and
+            ending tags, it is important for authors to do so as it will allow them to specify the 
+            lang for the webpage. Providing a lang attribute with a valid BCP 47 language tag on the 
+            <code>&lt;html&gt;</code> element will help screen reading technology determine the proper
+            language to announce. The identifying language tag should describe the language used by 
+            the majority of the content of the page.
+        </p>
+        <h2><code>&lt;head&gt;</code></h2>
+        <!--El elemento HMTL <head> contiene información legible por máquina (metadatos) sobre el documento
+        como su título, scripts y hojas de estilo. Solo puede haber un documento heade en un documento HTML.-->
+        <p>
+            The <code>&lt;head&gt;</code> HTML element contains machine-readable information (metadata) 
+            about the document, like its title, scripts, and style sheets. There can be only one 
+            <code>&lt;head&gt;</code> element in an HTML document.
+        </p>
+        <h2><code>&lt;body&gt;</code></h2>
+        <!--El elemento HTML <body> representa el contenido de un documento HTML. Solo puede haber un 
+        elemento <body> en un documento HTML.-->
+        <p>
+            The <code>&lt;body&gt;</code> HTML element represents the content of an HTML document. 
+            There can be only one <code>&lt;body&gt;</code> element in a document.
+        </p>
+        <h2><code>&lt;meta&gt;</code></h2>
+        <!--El elemento HTML <meta> representa metadatos que no pueden representarse mediante otros
+        elementos relacionados con metadatos, como <base>, <link>, <script>, <style>, or <title>.-->
+        <p>
+            The <code>&lt;meta&gt;</code> HTML element represents metadata that cannot be represented 
+            by other meta-related elements, such as <code>&lt;base&gt;</code>, <code>&lt;link&gt;</code>, 
+            <code>&lt;script&gt;</code>, <code>&lt;style&gt;</code>, or <code>&lt;title&gt;</code>.
+        </p>
+        <p>
+            The type of metadata provided by the <code>&lt;meta&gt;</code> element can be one of
+            the following:
+        </p>
+        <ul>
+            <li>
+                <p>
+                    If the <code>name</code> attribute is set, the <code>&lt;meta&gt;</code> element 
+                    provides document-level metadata that applies to the whole page.
+                </p>
+            </li>
+            <li>
+                <p>
+                    If the <code>http-equiv</code> attribute is set, the <code>&lt;meta&gt;</code> 
+                    element acts as a pragma directive to simulate directives that could otherwise 
+                    be given by an HTTP header.
+                </p>
+            </li>
+            <li>
+                <p>
+                    If the <code>charset</code> attribute is set, the <code>&lt;meta&gt;</code> 
+                    element is a charset declaration, giving the character encoding in which the 
+                    document is encoded.
+                </p>
+            </li>
+            <li>
+                <p>
+                    If the <code>itemprop</code> attribute is set, the <code>meta</code> element 
+                    provides user-defined metadata.
+                </p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Glossary/Doctype">MDN Doctype</a> and
+                <a href="https://www.freecodecamp.org/news/what-is-the-doctype-declaration-in-html/">Free code camp Doctype</a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/html">MDN html</a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/body">MDN body</a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta">MDN meta</a>
+            </li>
+        </ul>
+    </body>
+</html>
