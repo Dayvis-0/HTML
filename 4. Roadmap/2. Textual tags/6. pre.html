@@ -17,9 +17,19 @@
         </style>
     </head>
     <body>
-        <!--El elemento representa texto preformateado que debe presentarse exactamente como 
-        esta escrito en el archivo HTML-->
         <h1>pre</h1>
+        <!--El elemento HTML <pre> representa texto preformateado que debe presentarse exactamente 
+        como esta escrito en el archivo HTML.-->
+        <p>
+            The <code>&lt;pre&gt;</code> HTML element represents preformatted text which is to be 
+            presented exactly as written in the HTML file. The text is typically rendered using a 
+            non-proportional, or monospaced font.
+        </p>
+        <p>
+            Whitespace inside this element is displayed as written, with one exception. If one or 
+            more leading newline characters are included immediately following the opening 
+            <code>&lt;pre&gt;</code> tag, the first newline character is stripped.
+        </p>
         <pre>
                         S
                         A
@@ -40,6 +50,13 @@
             AUX                  A  L
             LEM                      ANDS   - Apollinaire
         </pre>
+        <h2>Accessibility</h2>
+        <p>
+            It is important to provide an alternate description for any images or diagrams created 
+            using preformatted text. The alternate description should clearly and concisely describe 
+            the image or diagram's content.
+        </p>
+        <h3>Example</h3>
         <figure>
             <pre role="img" aria-label="ASCII COW">
                 ___________________________
@@ -56,12 +73,13 @@
                 preformatted text characters.
             </figcaption>
         </figure>
-        <pre><code>
-        let i = 5;
-
-        if (i &lt; 10 &amp;&amp; i &gt; 0)
-        return &quot;Single Digit Number&quot;
-        </code></pre>
+        <h2>Example</h2>
+        <p>Using CSS to change the font color is easy.</p>
+<pre><code>
+body {
+color: red;
+}
+</code></pre>
     <p>Extracted from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/pre" target="_blank">MDN pre</a></p>
 </body>
 </html>
