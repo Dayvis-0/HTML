@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background: #fff0f0; 
+        }
+        a { 
+            display: block; 
+            margin: 10px 0; 
+            padding: 10px; 
+            background: white; 
+            border: 1px solid #ccc; 
+            text-decoration: none; 
+        }
+        a:hover { background: #f5f5f5; }
+    </style>
+</head>
+<body>
+    <h4>Estás en el iframe rosado (nivel 2)</h4>
+    <p><strong>Hacé click en estos enlaces:</strong></p>
+    
+    <a href="https://www.google.com" target="_blank">🔵 _blank - Nueva pestaña</a>
+    
+    <a href="https://www.wikipedia.org" target="_self">🔴 _self - Se queda aquí (rosado)</a>
+    
+    <a href="https://www.wikipedia.org" target="_parent">🔵 _parent - Va al iframe azul</a>
+    
+    <a href="https://www.stackoverflow.com" target="_top">🟢 _top - Rompe todo, va a página principal</a>
+    
+    <a href="https://developer.mozilla.org" target="_unfencedTop">🟣 _unfencedTop - Similar a _top</a>
+    
+    <p><em>Notá la diferencia entre _self (rosado), _parent (azul) y _top (página completa)</em></p>
+</body>
+</html>

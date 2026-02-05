@@ -26,7 +26,7 @@
         <h3>href</h3>
         <!--La URL a la que apunta el hipervinculo. Los enlaces no se limitan a URL basadas en 
         HTTP; pueden usar cualquier esquema URL compatible con los navegadorres.-->
-        <p>You can reach Michel at:</p>
+        <p>You can reach Dayvis at:</p>
         <ul>
             <li><a href="https://github.com">Web site</a></li>
             <li><a href="mailto:m.amdeyvis@gmail.com">Email</a></li>
@@ -36,8 +36,42 @@
         <h3>target</h3>
         <!--Donde mostrar la URL enlazada, com nombre de un contexto de navegación (una pestaña,
         ventana o <iframe>).-->
-        <a href="https://github.com" target="_blank">Open in new tab</a>
-        <a href="6.pdf" target="_blank">Show PDF</a>
+        <p>
+           Where to display the linked URL, as the name for a browsing context (a tab, window, or 
+           <code>&lt;iframe&gt;</code> ). The following keywords have special meanings for where to load the URL: 
+        </p>
+        <ul>
+            <li>
+                <p><code>_self</code>: The current browsing context.(Default)</p>
+            </li>
+            <li>
+                <p>
+                    <code>_blank</code>: Usually a new tab, but users can configure browsers to open
+                    a new window instead.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <code>_parent</code>: The parent browsing context of the current one. If no parent,
+                    behaves as <code>_self</code>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <code>_top</code>: The topmost browsing context.To be specific, this means the 
+                    "highest" context that's an ancestor of the current one. If no ancestors, behaves 
+                    as <code>_self</code>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <code>_unfencedTop</code>: Allows embedded fenced frames to navigate the top-level 
+                    frame (i.e., traversing beyond the root of the fenced frame, unlike other reserved 
+                    destinations). 
+                </p>
+            </li>
+        </ul>
+        <p>Example: <a href="target_simple.html" target="_blank">target values</a></p>
         <h3>download</h3>
         <!--Hace que el navegador considere la URL enlazada como una descarga. Puede usarse con 
         o sin un valor de nombre del archivo-->
@@ -47,6 +81,35 @@
         <h3>rel</h3>
         <!--La relación de la URL vinculada como tipos de enlaces separados por espacios.-->
         <a href="https://github.com" target="_blank" rel="noopener noreferrer">External site</a>
+        
+        <h2>Most used attributes</h2>
+        <h3>hreflang</h3>
+        <!--Idioma del destino del enlace-->
+        <a href="https://ejemplo.com" hreflang="es">Sitio en español</a>
+        <a href="https://example.com" hreflang="en">English site</a>
+        
+        <h3>type</h3>
+        <!--Tipo MIME del destino-->
+        <a href="6.pdf" type="application/pdf">PDF document</a>
+        <a href="1.jpeg" type="image/jpeg">JPEG image</a>
+        
+        <h3>media</h3>
+        <!--Medios de destino-->
+        <a href="print.html" media="print">Versión para imprimir</a>
+        <a href="mobile.html" media="handheld">Versión móvil</a>
+        
+        <h3>referrerpolicy</h3>
+        <!--Qué información de referer enviar-->
+        <a href="https://example.com" referrerpolicy="no-referrer">No enviar referer</a>
+        <a href="https://example.com" referrerpolicy="same-origin">Solo mismo dominio</a>
+        
+        <h3>ping</h3>
+        <!--URLs a notificar cuando se hace clic-->
+        <a href="https://example.com" ping="/analytics/click?url=https://example.com">Enlace con analytics</a>
+        
+        <h3>title</h3>
+        <!--Tooltip descriptivo-->
+        <a href="https://example.com" title="Visita nuestro sitio principal">Sitio principal</a>
         <h2>Strong link text</h2>
         <p><strong>The content inside a link should indicate where the link goes, even out of context</strong></p>
         <p>Learn more <a href="/products">about our products</a>.</p>
@@ -70,7 +133,7 @@
                 <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a>
             </li>
             <li>
-                <a href="tel:+51987654321">+51 987 654 321</a>
+                <a href="tel:+51123456789">+51 123 456 789</a>
             </li>
         </ul> 
         <p>Extracted from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a" target="_blank">MDN a</a></p>

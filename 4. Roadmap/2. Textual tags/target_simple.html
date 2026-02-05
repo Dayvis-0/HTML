@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Iframes Simple</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { border: 3px solid #333; margin: 20px 0; padding: 20px; background: #f0f0f0; }
+        iframe { 
+            width: 100%; 
+            height: 300px; 
+            border: 2px solid #666; 
+            background: white; 
+        }
+        iframe.nested {
+            border: 2px solid #ff0000;
+            background: #fff0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo Target con Iframes</h1>
+    
+    <div class="container">
+        <h3>IFrame Nivel 1 (Padre)</h3>
+        <iframe src="iframe_nivel1.html"></iframe>
+    </div>
+    
+    <h2>Resumen:</h2>
+    <ul>
+        <li><strong>_self</strong>: Se queda en el iframe rosado</li>
+        <li><strong>_parent</strong>: Navega en el iframe azul</li>
+        <li><strong>_top</strong>: Rompe todo y navega en esta página</li>
+        <li><strong>_blank</strong>: Nueva pestaña</li>
+        <li><strong>_unfencedTop</strong>: Rompe fenced frames (áreas aisladas de seguridad)</li>
+    </ul>
+</body>
+</html>

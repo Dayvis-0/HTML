@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background: #e6f3ff; 
+        }
+        .nested-container {
+            border: 2px solid #0066cc;
+            margin: 20px 0;
+            padding: 15px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <h3>IFrame Nivel 1 (Azul)</h3>
+    <p>Este es el iframe padre.</p>
+    
+    <div class="nested-container">
+        <h4>IFrame Nivel 2 (con enlaces)</h4>
+        <iframe src="iframe_nivel2.html" class="nested" height="250"></iframe>
+    </div>
+</body>
+</html>

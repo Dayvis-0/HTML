@@ -1,6 +1,6 @@
 # Textual Tags in HTML
 
-Textual tags in HTML are used to structure and format text content on a webpage. They define how text should appear, whether it's a paragraph, heading, emphasized word, or a quoted section. These tags provide semantic meaning to the text, helping browsers and search engines understand the content's organization and purpose.
+Textual tags in HTML are used to structure and format text content on a webpage. They define how text should appear, whether it's a paragraph, heading, emphasized word, or a referenced section. These tags provide semantic meaning to the text, helping browsers and search engines understand the content's organization and purpose.
 
 ## 📋 Core Textual Tags
 
@@ -9,12 +9,14 @@ Textual tags in HTML are used to structure and format text content on a webpage.
 - **Purpose**: Structure content with importance levels
 - **Usage**: `<h1>` for main title, `<h2>`-`<h6>` for subheadings
 - **Best Practice**: Use hierarchically, don't skip levels
+- **Files**: `1. headings.html`, `1.1. Headings WAI.html`, `1.2. title.html`
 
 ### Paragraphs
 - **`<p>`** - Paragraph container
 - **Purpose**: Group related sentences
 - **Features**: Automatic margins, block-level element
 - **Usage**: Standard text content blocks
+- **File**: `2. p.html`
 
 ### Text Formatting
 - **`<strong>`** - Important text (semantic bold)
@@ -22,27 +24,22 @@ Textual tags in HTML are used to structure and format text content on a webpage.
 - **`<em>`** - Emphasized text (semantic italic)
 - **`<i>`** - Italic text (visual only)
 - **`<mark>`** - Highlighted/marked text
-- **`<small>`** - Smaller text (comments, fine print)
+- **Files**: `5. b and strong.html`, `7. i and em.html`, `8. mark.html`
 
 ### Structural Text
 - **`<br>`** - Line break (self-closing)
 - **`<hr>`** - Horizontal rule/thematic break
 - **`<pre>`** - Preformatted text (preserves whitespace)
-- **`<blockquote>`** - Quoted text from another source
+- **Files**: `3. hr.html`, `4. br.html`, `6. pre.html`
 
 ### Special Text
 - **`<sub>`** - Subscript text (below baseline)
 - **`<sup>`** - Superscript text (above baseline)
-- **`<code>`** - Code snippets
-- **`<kbd>`** - Keyboard input
-- **`<samp>`** - Sample output
-- **`<var>`** - Variables
+- **Files**: `9. sub.html`, `10. sup.html`
 
 ### Links and References
 - **`<a>`** - Anchor/hyperlink
-- **`<cite>`** - Citation/title of creative work
-- **`<abbr>`** - Abbreviation with expansion
-- **`<dfn>`** - Definition term
+- **File**: `11. Links.html`
 
 ## 🎯 Semantic vs Presentational
 
@@ -50,14 +47,12 @@ Textual tags in HTML are used to structure and format text content on a webpage.
 - **`<strong>`** - Indicates importance
 - **`<em>`** - Indicates emphasis
 - **`<mark>`** - Highlights relevant content
-- **`<cite>`** - References creative works
-- **`<blockquote>`** - Quotes external sources
+- **`<h1>` to `<h6>`** - Heading hierarchy
+- **`<p>`** - Paragraph structure
 
 ### Presentational Tags (Use Sparingly)
 - **`<b>`** - Bold without semantic meaning
 - **`<i>`** - Italic without semantic meaning
-- **`<small>`** - Smaller text size
-- **`<u>`** - Underlined text
 
 ## 📊 Text Tag Categories
 
@@ -65,7 +60,6 @@ Textual tags in HTML are used to structure and format text content on a webpage.
 Create new lines and take full width:
 - `<h1>` to `<h6>`
 - `<p>`
-- `<blockquote>`
 - `<pre>`
 - `<hr>`
 
@@ -75,11 +69,11 @@ Flow within text without breaking:
 - `<em>`, `<i>`
 - `<mark>`
 - `<sub>`, `<sup>`
-- `<code>`, `<kbd>`, `<samp>`, `<var>`
-- `<a>`, `<abbr>`, `<cite>`
+- `<a>`
 
-### Inline-Block Elements
+### Self-Closing Elements
 - `<br>` (line break)
+- `<hr>` (horizontal rule)
 
 ## 🔧 Common Attributes
 
@@ -95,90 +89,76 @@ Flow within text without breaking:
 - **`rel`** - Relationship type
 - **`download`** - Download trigger
 
-### Text-Specific Attributes
-- **`abbr`** - Expansion text (for `<abbr>`)
-- **`cite`** - Source URL (for `<blockquote>`)
-- **`datetime`** - Machine-readable date (for `<time>`)
+### Link-Specific Attributes
+- **`href`** - URL destination
+- **`target`** - Browser context (`_blank`, `_self`, `_parent`, `_top`, `_unfencedTop`)
+- **`rel`** - Relationship type (`noopener`, `noreferrer`, `nofollow`)
+- **`download`** - Download trigger
+- **`hreflang`** - Language of destination
+- **`type`** - MIME type of destination
+- **`media`** - Target media
+- **`referrerpolicy`** - Referrer policy
+- **`ping`** - URLs to notify on click
+- **`title`** - Tooltip text
 
-## 🎨 Styling Considerations
+## 🚀 Target Attribute Values
 
-### Default Browser Styles
-- **Headings**: Decreasing font sizes, bold weights
-- **Paragraphs**: Default margins, line height
-- **Links**: Blue color, underline
-- **Emphasis**: Italic or bold rendering
+### Navigation Contexts
+- **`_self`** - Same window/frame
+- **`_blank`** - New tab/window
+- **`_parent`** - Parent frame
+- **`_top`** - Top window (breaks all frames)
+- **`_unfencedTop`** - Breaks fenced frames (security isolation)
 
-### Custom Styling Tips
-- Use CSS for consistent typography
-- Maintain readable line heights (1.4-1.6)
-- Ensure sufficient color contrast
-- Consider responsive font sizes
-
-## 📱 Accessibility Best Practices
-
-### Screen Reader Support
-- Use semantic tags for meaning
-- Provide link text that makes sense out of context
-- Use proper heading hierarchy
-- Include alt text for images within text
-
-### Visual Accessibility
-- Ensure high contrast ratios
-- Don't rely solely on color for meaning
-- Use appropriate font sizes
-- Maintain sufficient spacing
-
-## 🔍 SEO Considerations
-
-### Heading Structure
-- Use one `<h1>` per page
-- Maintain logical heading hierarchy
-- Include keywords in headings
-- Keep headings descriptive and concise
-
-### Text Content
-- Use semantic tags for content meaning
-- Structure text with proper paragraphs
-- Include relevant keywords naturally
-- Use descriptive link text
-
-## 🚀 Modern HTML5 Features
-
-### New Semantic Text Tags
-- **`<time>`** - Date/time information
-- **`<wbr>`** - Word break opportunity
-- **`<bdi>`** - Bi-directional isolation
-- **`<rp>`, `<rt>`, `<ruby>`** - Ruby annotations
-
-### Enhanced Features
-- Better semantic meaning
-- Improved accessibility
-- Enhanced SEO capabilities
-- Mobile-optimized rendering
+### Target Usage
+- `_self`: Default behavior
+- `_blank`: Best for external links (use with `noopener noreferrer`)
+- `_parent`/`_top`: Frame navigation contexts
+- `_unfencedTop`: Modern security contexts
 
 ## 💡 Pro Tips
 
 1. **Choose semantic over presentational** - Use `<strong>` instead of `<b>` when text is important
 2. **Maintain heading hierarchy** - Don't skip heading levels for SEO
 3. **Use appropriate line breaks** - `<br>` for addresses, not for spacing
-4. **Quote properly** - Use `<blockquote>` for long quotes, `<q>` for inline quotes
+4. **Preformat when needed** - Use `<pre>` for code, ASCII art, or text that needs exact spacing
 5. **Highlight meaningfully** - Use `<mark>` for search results or key terms
+6. **Link securely** - Use `target="_blank"` with `rel="noopener noreferrer"` for external links
 
 ## 📚 Quick Reference
 
-| Tag | Purpose | Type | Semantic? |
-|-----|---------|------|-----------|
-| `<h1>-<h6>` | Headings | Block | ✅ |
-| `<p>` | Paragraph | Block | ✅ |
-| `<strong>` | Important | Inline | ✅ |
-| `<em>` | Emphasis | Inline | ✅ |
-| `<mark>` | Highlight | Inline | ✅ |
-| `<a>` | Hyperlink | Inline | ✅ |
-| `<br>` | Line break | Inline | ❌ |
-| `<hr>` | Thematic break | Block | ✅ |
-| `<pre>` | Preformatted | Block | ✅ |
-| `<sub>` | Subscript | Inline | ✅ |
-| `<sup>` | Superscript | Inline | ✅ |
+| Tag | Purpose | Type | Semantic? | File |
+|-----|---------|------|-----------|------|
+| `<h1>-<h6>` | Headings | Block | ✅ | `1. headings.html` |
+| `<p>` | Paragraph | Block | ✅ | `2. p.html` |
+| `<strong>` | Important | Inline | ✅ | `5. b and strong.html` |
+| `<b>` | Bold | Inline | ❌ | `5. b and strong.html` |
+| `<em>` | Emphasis | Inline | ✅ | `7. i and em.html` |
+| `<i>` | Italic | Inline | ❌ | `7. i and em.html` |
+| `<mark>` | Highlight | Inline | ✅ | `8. mark.html` |
+| `<a>` | Hyperlink | Inline | ✅ | `11. Links.html` |
+| `<br>` | Line break | Self-closing | ❌ | `4. br.html` |
+| `<hr>` | Thematic break | Self-closing | ✅ | `3. hr.html` |
+| `<pre>` | Preformatted | Block | ✅ | `6. pre.html` |
+| `<sub>` | Subscript | Inline | ✅ | `9. sub.html` |
+| `<sup>` | Superscript | Inline | ✅ | `10. sup.html` |
+
+## 📁 File Organization
+
+This documentation covers the following HTML files:
+- `1. headings.html` - Heading hierarchy and usage
+- `1.1. Headings WAI.html` - Accessibility guidelines for headings
+- `1.2. title.html` - Document title tag
+- `2. p.html` - Paragraph elements with pilcrow example
+- `3. hr.html` - Horizontal rules
+- `4. br.html` - Line breaks
+- `5. b and strong.html` - Bold text (semantic vs presentational)
+- `6. pre.html` - Preformatted text examples
+- `7. i and em.html` - Italic text (semantic vs presentational)
+- `8. mark.html` - Highlighted text
+- `9. sub.html` - Subscript text
+- `10. sup.html` - Superscript text
+- `11. Links.html` - Anchor tags and attributes
 
 ---
 
