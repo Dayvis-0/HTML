@@ -14,8 +14,12 @@
     </head>
     <body>
         <h1>mark</h1>
-        <!--El elemento representa texto que ésta marcado o resaltado para fines de referencia
-        o notación debido a la relevancia del pasaje marcado en el contexto circundante.-->
+        <!--El elemento HTML <mark> representa texto que ésta marcado o resaltado para fines de 
+        referencia o notación debido a la relevancia del pasaje marcado en el contexto circundante.-->
+        <p>
+            The <code>&lt;mark&gt;</code> HTML element represents text which is marked or highlighted 
+            for reference or notation purposes due to the marked passage's relevance in the enclosing context.
+        </p>
         <p>
             search results of "salamander"
         </p>
@@ -28,8 +32,31 @@
             Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and 
             other small creatures.
         </p>
-        <hr>
-        <h2>Marking text of interest</h2>
+        <h2>Usage notes</h2>
+        <p>Thipical use cases for <code>&lt;mark&gt;</code> include:</p>
+        <ul>
+            <li>
+                <p>
+                    Think of this like using a highlighter pen in a book to mark passages that you 
+                    find of interest.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Otherwise, <code>&lt;mark&gt;</code> indicates a portion of the document's content 
+                    which is likely to be relevant to the user's current activity. This might be used, 
+                    for example, to indicate the words that matched a search operation.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Don't use <code>&lt;mark&gt;</code> for syntax highlighting purposes; instead, 
+                    use the <code>&lt;span&gt;</code> element with appropriate CSS applied to it.
+                </p>
+            </li>
+        </ul>
+        <h2>Examples</h2>
+        <h3>Marking text of interest</h3>
         <p>
             In this first example, a &lt;mark&gt; element is used to mark some text within a quote which is of particular interest to the user
         </p>
@@ -40,8 +67,10 @@
             weapon, the DEATH STAR, an armored space station with enough power to destroy 
             an entire planet.
         </blockquote>
+        <h3>Identifying context-sensitive passages</h3>
         <p>
-            This example demostrates using &lt;mark&gt; to mark search results within a passage.
+            This example demostrates using <code>&lt;mark&gt;</code> to mark search results within 
+            a passage.
         </p>
         <p>
             It is a dark time for the Rebellion. Alltough the Death Star has been destroyed,
@@ -52,6 +81,6 @@
             Evading the dreaded <mark class="match">Imperial</mark> Starfleet, a group of freedom fighters led by Luke Skywalker has established a new secret base on the 
             remote ice world of Hoth.
         </p>
-    <p>Extracted from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/mark" target="_blank">MDN mark</a></p>
-</body>
+        <p>Extracted from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/mark" target="_blank">MDN mark</a></p>
+    </body>
 </html>

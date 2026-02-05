@@ -14,13 +14,45 @@
     </head>
     <body>
         <h1>sub</h1>
-        <!--El elemento especifica texto en linea que debe mostrarse como subindice por razones
-        exclusivamente tipografícas, Los subindices suelen mostrarse con una linea de base más 
-        baja y texto más pequeño.-->
+        <!--El elemento HTML <sub> especifica texto en linea que debe mostrarse como subindice por 
+        razones exclusivamente tipografícas.-->
+        <p>
+            The <code>&lt;sub&gt;</code> HTML element specifies inline text which should be displayed 
+            as subscript for solely typographical reasons. Subscripts are typically rendered with a 
+            lowered baseline using smaller text.
+        </p>
         <p>
             Almost every developer's favorite molecule is 
             C <sub>8</sub> H <sub>10</sub> N <sub>4</sub> O <sub>2</sub>, also known as "caffeine"
         </p>
+        <h2>Usage notes</h2>
+        <p>
+            The <code>&lt;sub&gt;</code> element should be used only for typographical reasons—that 
+            is, to change the position of the text to comply with typographical conventions or 
+            standards, rather than solely for presentation or appearance purposes
+        </p>
+        <p>
+            Appropriate use cases for <code>&lt;sub&gt;</code> include (but aren't necessarily 
+            limited to):
+        </p>
+        <ul>
+            <li>
+                <p>Marking up footnote numbers.</p>
+            </li>
+            <li>
+                <p>
+                    Marking up the subscript in mathematical variable numbers (although you may also 
+                    consider using a MathML formula for this)
+                </p>
+            </li>
+            <li>
+                <p>
+                    Denoting the number of atoms of a given element within a chemical formula (such 
+                    as every developer's best friend, C <sub>8</sub> H <sub>10</sub> N <sub>4</sub>
+                    O<sub>2</sub>, otherwise known as "caffeine").
+                </p>
+            </li>
+        </ul>
         <h2>Footnote numbers</h2>
         <p>
             Traditional footnotes are denoted using numbers which are rendered in subscript. This
@@ -51,6 +83,6 @@
             C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, which is commonly known
             as "caffeine."
         </p>
-    <p>Extracted from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/sub" target="_blank">MDN sub</a></p>
-</body>
+        <p>Extracted from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/sub" target="_blank">MDN sub</a></p>
+    </body>
 </html>

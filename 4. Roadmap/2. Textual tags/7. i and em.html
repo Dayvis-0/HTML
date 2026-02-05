@@ -15,8 +15,14 @@
     <body>
         <h1>i and em</h1>
         <h2>i</h2>
-        <!--El elemento representa un rango de texto que se encarga de separa del contexto normal
+        <!--El elemento HTML <i> representa un rango de texto que se encarga de separar del texto normal
         por algún motivo, como texto idiomático, términos técnicos, designaciones taxonómicas, entre otros.-->
+        <p>
+            The <code>&lt;b&gt;</code> HTML element represents a range of text that is set off from 
+            the normal text for some reason, such as idiomatic text, technical terms, taxonomical 
+            designations, among others. 
+        </p>
+        <h3>Try it</h3>
         <p>
             I looked at it and thought <i>This can't be real!</i>
         </p>
@@ -28,28 +34,103 @@
             The term <i>bandwidth</i> describes the measure of how much informatoin can pass
             through a data connection in a given amount of time.
         </p>
+        <h3>Usage notes</h3>
+        <ul>
+            <li>
+                <p>
+                    Use the <code>&lt;i&gt;</code> element for text that is set off from the normal 
+                    prose for readability reasons. This would be a range of text with different semantic 
+                    meaning than the surrounding text. Among the use cases for the <code>&lt;i&gt;</code> 
+                    element are spans of text representing a different quality or mode of text, such as:
+                </p>
+                <ul>
+                    <li>
+                        <p>Alternative voice or mood</p>
+                    </li>
+                    <li>
+                        <p>Taxonomic designations (such as the genus and species "<em>Homo sapiens</em>")</p>
+                    </li>
+                    <li>
+                        <p>
+                            Idiomatic terms from another language (such as "<em>et cetera</em>"); these 
+                            should include the <code>lang</code> attribute to indetify the language
+                        </p>
+                    </li>
+                    <li>
+                        <p>Tecnical terms</p>
+                    </li>
+                    <li>
+                        <p>Transliterations</p>
+                    </li>
+                    <li>
+                        <p>
+                            Thoughts (such as "She wondered,<em>What is this writer talking about, anyway?</em> ")
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Ship or vessel names in Western writing systems (such as "They searched 
+                            the docks for the <em>Empress of the Galaxy</em>, the ship to which they
+                            were assigned.")
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>
+                    Be sure the text in question is not actually more appropriately marked up with
+                    another element.
+                </p>
+                <ul>
+                    <li>
+                        <p>Use <code>&lt;em&gt;</code> to indicate stress emphasis.</p>
+                    </li>
+                    <li>
+                        <p>Use <code>&lt;strong&gt;</code> to indicate importance, seriousness, or urgency.</p>
+                    </li>
+                    <li>
+                        <p>Use <code>&lt;mark&gt;</code> to indicate revelance.</p>
+                    </li>
+                    <li>
+                        <p>
+                            Use <code>&lt;cite&gt;</code> to mark up the name of a work, such as a 
+                            book, play, or song.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Use <code>&lt;dfn&gt;</code> to mark up the defining instance of a term.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Example</h3>
         <p>
             The latin phrase <i lang="la">Veni, vidi, vici</i> is often mentioned in music,
             art and literature 
         </p>
         <h2>em</h2>
-        <!--El elemento marca el texto con énfasis. Este elemento se puede anidar, y cada  nivel 
-        de anidación indica un mayor grado de énfasis-->
+        <!--El elemento HTML <em> marca el texto con énfasis. Este elemento se puede anidar, y cada 
+        nivel de anidación indica un mayor grado de énfasis-->
         <p>
-            Get out of bed <em>now</em>!
+            The <em> HTML element marks text that has stress emphasis. The <code>&lt;em&gt;</code> 
+            element can be nested, with each level of nesting indicating a greater degree of emphasis.
         </p>
+        <h3>Usage notes</h3>
         <p>
-            We <em>bad</em> to do something about it.
+            The <code>&lt;em&gt;</code> element is for words that have a stressed emphasis compared 
+            to surrounding text, which is often limited to a word or words of a sentence and affects 
+            the meaning of the sentence itself.
         </p>
+        <h3>Examples</h3>
+        <p>Get out of bed <em>now</em>!</p>
+        <p>We <em>bad</em> to do something about it.</p>
+        <p>This is <em>not</em> a drill!</p>
+        <p>Just <em>do</em> it already!</p>
+        <p>We <em>had</em> to do something about it</p>
         <p>
-            This is <em>not</em> a drill!
+            Extracted from: 
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/i" target="_blank">MDN i</a> and
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/em" target="_blank">MDN em</a>
         </p>
-        <p>
-            Just <em>do</em> it already!
-        </p>
-        <p>
-            We <em>had</em> to do something about it
-        </p>
-    <p>Extracted from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/i" target="_blank">MDN i</a></p>
-</body>
+    </body>
 </html>
