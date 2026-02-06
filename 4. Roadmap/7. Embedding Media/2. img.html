@@ -104,15 +104,56 @@
         </p>
         <dl>
             <dt><code>anonymus</code></dt>
+            <img src="Images/size.png" crossorigin="anonymous" alt="Image without credentials" height="200">
             <dt><code>use-credentials</code></dt>
+            <img src="Images/grapefruit-slice.jpg" crossorigin="use-credentials" alt="Image with credentials" height="200">
         </dl>
         <code>decoding</code>
         <p>
-            This attribute provides a hint to the browser as to whether it should perform image 
-            decoding along with rendering the other DOM content in a single presentation step that 
-            looks more "correct" (sync), or render and present the other DOM content first and then 
-            decode the image and present it later (async).
+            This attribute provides a hint to the browser as to whether it should perform image decoding
+            along with rendering the other DOM content in a single presentation step that looks more 
+            "correct" (<code>sync</code>), or render and present the other DOM content first and then 
+            decode the image and present it later (<code>async</code>).
         </p>
+        <p>Allowed values:</p>
+        <dl>
+            <dt><code>sync</code></dt>
+            <img src="Images/dog.jpg" alt="Asinbchronous decoding dog" width="200" decoding="async">
+            <dt><code>async</code></dt>
+            <img src="Images/pokemon.jpg" alt="Pokemon synchronous decoding" width="200" decoding="sync">
+            <dt><code>auto</code></dt>
+            <img src="Images/dinosaur.jpg" alt="Dinosaur automatic decoding" width="200" decoding="auto">
+        </dl>
+        <code>height and width</code>
+        <p>The intrinsic height of the image, in pixels. Must be an integer without a unit.</p>
+        <p>The intrinsic width of the image in pixels. Must be an integer without a unit.</p>
+        <img src="Images/size.png" alt="Example with dimensions" width="300" height="200">
+        <code>loading</code>
+        <p>Indicates how the browser should load the image:</p>
+        <dl>
+            <dt><code>eager</code></dt>
+            <img src="Images/grapefruit-slice.jpg" loading="eager" height="200">
+            <dt><code>lazy</code></dt>
+            <img src="Images/dinosaur.jpg" loading="laz" height="200">
+        </dl>
+        <code>ismap</code>
+        <p>
+            This Boolean attribute indicates that the image is part of a server-side map. If so, the 
+            coordinates where the user clicked on the image are sent to the server.
+        </p>
+        <img src="Images/no-size.png" alt="Image with map" ismap height="200">
+        <code>srcset</code>
+        <p>
+            One or more strings separated by commas, indicating possible image sources for the 
+            user agent to use.
+        </p>
+        <img src="Images/no-size.png" 
+            srcset="Images/no-size.png 300w, Images/size.png 600w, Images/dinosaur.jpg 1200w" 
+            sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 1200px"
+            alt="">
+        <code>usemap</code>
+        <p>The partial URL (starting with #) of an image map associated with the element.</p>
+        <img src="Images/dog.jpg" alt="Imagens with map" usemap="#mip mapa" height="200">
         <p>
             Extracted from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#attributes">MDN img</a>
         </p>
