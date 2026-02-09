@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="2. img.css">
     </head>
     <body>
-        <h1>img</h1>
+        <h1><code>&lt;img&gt;</code></h1>
         <!--El elemento HTML <img> incrusta una imagen en el documento-->
         <p>The <code>&lt;img&gt;</code> HTML element embeds an image into the document.</p>
         <img 
@@ -154,6 +154,25 @@
         <code>usemap</code>
         <p>The partial URL (starting with #) of an image map associated with the element.</p>
         <img src="Images/dog.jpg" alt="Imagens with map" usemap="#mip mapa" height="200">
+        <h2>Accessibility</h2>
+        <h3>Authoring meaningful alternate descriptions</h3>
+        <p>
+            An <code>alt</code> attribute's value should provide a clear and concise text replacement 
+            for the image's content. It should not describe the presence of the image itself or the 
+            file name of the image. 
+        </p>
+        <h3>Identify SVG as a image</h3>
+        <p>
+            Due to a VoiceOver bug, VoiceOver does not correctly announce SVG images as images. Include 
+            <code>role="img"</code> to all <code>&lt;img&gt;</code> elements with SVG source files to
+            ensure assistive technologies correctly announce the SVG as image content.
+        </p>
+        <h3>The title attribute</h3>
+        <p>
+            The <code>title</code> attribute is not an acceptable substitute for the <code>alt</code> 
+            attribute. Additionally, avoid duplicating the <code>alt</code> attribute's value in a 
+            <code>title</code> attribute declared on the same image.
+        </p>
         <p>
             Extracted from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#attributes">MDN img</a>
         </p>
