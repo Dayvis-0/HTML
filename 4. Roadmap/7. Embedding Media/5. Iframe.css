@@ -1,0 +1,9 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+dl {
+    padding-left: 1rem;
+    border-left: 1px solid #bbbbbb;  
+}

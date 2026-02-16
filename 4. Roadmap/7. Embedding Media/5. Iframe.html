@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>iframe</title>
+        <link rel="stylesheet" href="5. Iframe.css">
+    </head>
+    <body>
+        <h1>Iframe</h1>
+        <!--El elemnto HTML <iframe> representa un contexto de navegación anidado, que incorpora 
+        otra página HTML a la actual.-->
+        </p>
+        <iframe 
+            id="inlineFrameExample"
+            title="Inline Frame Example"
+            width="300"
+            height="200"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+        </iframe>
+        <p>
+            <strong>Warning</strong>: Because each browsing context is a complete document environment, 
+            every <code>&lt;iframe&gt;</code> in a page requires increased memory and other computing 
+            resources. While theoretically you can use as many <code>&lt;iframe&gt;</code> s as you 
+            like, check for performance problems.
+        </p>
+        <h2>Attributes</h2>
+        <code>allow</code>
+        <p>
+            Specifies a Permissions Policy for the <code>&lt;iframe&gt;</code>. The policy defines what 
+            features are available to the <code>&lt;iframe&gt;</code> (for example, access to the 
+            microphone, camera, battery, web-share, etc.) based on the origin of the request.
+        </p>
+        <code>allowfullscreen</code>
+        <p>
+            Set to true if the <code>&lt;iframe&gt;</code> can activate fullscreen mode by calling the 
+            requestFullscreen() method.
+        </p>
+        <code>hight</code>
+        <p>The height of the frame in CSS pixels. Default is 150.</p>
+        <code>loading</code>
+        <p>Indicates when the browser should load the iframe:</p>
+        <dl>
+            <dt><code>eager</code></dt>
+            <dd>Load the iframe immediately on page load (this is the default value).</dd>
+
+            <dt>lazy</dt>
+            <dd>
+                Defer loading of the iframe until it reaches a calculated distance from the visual 
+                viewport, as defined by the browse.
+            </dd>
+            <iframe 
+                id="inlineFrameExample"
+                title="Inline Frame Example"
+                width="300"
+                height="200"
+                loading="lazy"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+            </iframe>
+        </dl>
+        <code>name</code>
+        <p>A targetable name for the embedded browsing context.</p>
+    </body>
+</html>
