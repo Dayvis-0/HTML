@@ -61,7 +61,7 @@
         </dl>
         <code>name</code>
         <p>A targetable name for the embedded browsing context.</p>
-        <code>refrrerpolicy</code>
+        <code>referrerpolicy</code>
         <p>Indicates which referrer to send when fetching the frame's resource:</p>
         <dl>
             <dt>no-referrer</dt>
@@ -73,6 +73,37 @@
             <dt>strict-origin-when-cross-origin</dt>
             <dt>unsafe-url</dt>
         </dl>
+        <code>sandbox</code>
+        <p>
+            Controls the restrictions applied to the content embedded in the <code>&lt;iframe&gt;</code>. 
+            The value of the attribute can either be empty to apply all restrictions, or space-separated 
+            tokens to lift particular restrictions:
+        </p>
+        <dl>
+            <dt>allow-downloads</dt>
+            <dt>allow-forms</dt>
+            <dt>allow-modals</dt>
+            <dt>allow-orientation-lock</dt>
+            <dt>allow-pointer-lock</dt>
+            <dt>allow-popups</dt>
+            <dt>allow-popups-to-escape-sandbox</dt>
+            <dt>allow-presentation</dt>
+            <dt>allow-same-origin</dt>
+            <dt>allow-scripts</dt>
+            <dt>allow-top-navigation</dt>
+            <dt>allow-top-navigation-by-user-activation</dt>
+            <dt>allow-top-navigation-to-custom-protocols</dt>
+        </dl>
+        <code>src</code>
+        <p>
+            The URL of the page to embed. Use a value of <code>about:blank</code> to embed an empty page 
+            that conforms to the same-origin policy. 
+        </p>
+        <code>srcdoc</code>
+        <p>Inline HTML to embed, overriding the <code>src</code> attribute.</p>
+        <code>width</code>
+        <p>The width of the frame in CSS pixels. Default is <code>300</code>.</p>
+        <h2>Examples</h2>
         <p>
             Extracted from:
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe">MDN iframe</a>
