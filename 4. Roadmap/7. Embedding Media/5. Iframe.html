@@ -5,7 +5,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>iframe</title>
-        <link rel="stylesheet" href="5. Iframe.css">
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+            
+            dl {
+                padding-left: 1rem;
+                border-left: 1px solid #bbbbbb;  
+            }
+        </style>
     </head>
     <body>
         <h1>Iframe</h1>
@@ -103,7 +113,49 @@
         <p>Inline HTML to embed, overriding the <code>src</code> attribute.</p>
         <code>width</code>
         <p>The width of the frame in CSS pixels. Default is <code>300</code>.</p>
+        <h2>Accessibility</h2>
+        <p>
+            People navigating with assistive technology such as a screen reader can use the title attribute 
+            on an <code>&lt;iframe&gt;</code> to label its content. The title's value should concisely 
+            describe the embedded content:
+        </p>
+        <iframe
+            title="Wikipedia page for Avocados"
+            src="https://en.wikipedia.org/wiki/Avocado"
+            height="400"
+            width="400">
+        </iframe>
         <h2>Examples</h2>
+        <h3>A basic <code>&lt;iframe&gt;</code></h3>
+        <iframe 
+            src="https://example.org" 
+            title="iframe Example 1"
+            width="400"
+            height="300">
+        </iframe>
+        <h3>Embedding source code in an <code>&lt;iframe&gt;</code></h3>
+        <article>
+            <footer>Nine minutes ago, <i>jc</i> wrote:</footer>
+            <iframe 
+                sandbox
+                srcdoc="<p>There are two ways to use the <code>iframe</code> element:</p>
+                <ol>
+                    <li>
+                        <a href=&quot;about:srcdoc#embed_another&quot;>To embed content from another page</a>
+                    </li>
+                    <li>
+                        <a href=&quot;about:srcdoc#embed_user&quot;>To embed user-generated content</a>
+                    </li>
+                </ol
+                <h2 id=&quot;embed_another&quot;>Embedding content from another page</h2>
+                <p>Use the <code>src</code> attribute to specify the URL of the page to embed:</p>
+                <pre><code>&amp;lt;iframe src=&quot;https://example.org&quot;&amp;gt;&amp;lt;/iframe&amp;gt;</code></pre>
+                <h2 id=&quot;embed_user&quot;>Embedding user-generated content</h2>
+                <p>Use the <code>srcdoc</code> attribute to specify the content to embed. This post is already an example!</p>"
+                width="500"
+                height="250">
+            </iframe>
+        </article>
         <p>
             Extracted from:
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe">MDN iframe</a>
