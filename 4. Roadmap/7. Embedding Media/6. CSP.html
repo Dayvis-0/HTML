@@ -125,6 +125,55 @@
         </ul>
         <h3>Fetch directives</h3>
         <p>
+            Fetch directives are used to specify a particular category of resource that a document is 
+            allowed to load — such as JavaScript, CSS stylesheets, images, fonts, and so on.
+        </p>
+        <p>There are different fetch directives for different types of resource. For example:</p>
+        <ul>
+            <li>
+                <p><code>script-src</code> sets allowed sources for JavaScript.</p>
+            </li>
+            <li>
+                <p><code>style-src</code> sets allowed sources for CSS stylesheets.</p>
+            </li>
+            <li>
+                <p><code>img-src</code> sets allowed sources for images.</p>
+            </li>
+        </ul>
+        <p>
+            One special fetch directive is default-src, which sets a fallback policy for all resources 
+            whose directives are not explicitly listed.
+        </p>
+        <p>For example, the CSP below sets two fetch directives:</p>
+        <img src="Images/csp_source_expressions.png" alt="CSP diagram showing source expressions" width="600" height="300">
+        <p>The effect of this is that:</p>
+        <ul>
+            <li>images must be either same-origin with the document, or loaded from <code>example.com</code></li>
+            <li>all other resources must be same-origin with the document.</li>
+        </ul>
+        <h3>Blocking resources</h3>
+        <p>
+            To block a resource type entirely, use the 'none' keyword. For example, the following directive 
+            blocks all <code>&lt;object&gt;</code> and <code>&lt;embed&gt;</code> resources:
+        </p>
+        <code>Content-Security-Policy: object-src 'none'</code>
+        <p>
+            Note that 'none' cannot be combined with any other method in a particular directive: in practice, 
+            if any other source expressions are given alongside 'none', then they are ignored.
+        </p>
+        <h3>Nonces</h3>
+        <p>
+            A nonce is the recommended approach for restricting the loading of <code>&lt;script&gt;</code> 
+            and <code>&lt;style&gt;</code> resources.
+        </p>
+        <p>
+            With a nonce, the server generates a random value for every HTTP response, and includes it 
+            in a script-src and/or a style-src directive:
+        </p>
+        <code><pre>Content-Security-Policy:
+  script-src 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'</pre></code>
+        <h3>Hashes</h3>
+        <p>
             Extracted from;
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP">MDN CSP</a>
         </p>
