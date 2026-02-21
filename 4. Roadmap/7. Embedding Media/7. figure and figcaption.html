@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>figure and figcaption</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>figure and figcaption</h1>
+        <h2>figure</h2>
+        <!--El elemento HTML <figure> representa contenido independiente, posiblemente con un título
+        opcional, que se especifica mediante el elemento <figcaption>.-->
+        <p>
+            The <strong><code>&lt;figure&gt;</code></strong> HTML element represents self-contained content, potentially 
+            with an optional caption, which is specified using the <code>&lt;figcaption&gt;</code> element. 
+            The figure, its caption, and its contents are referenced as a single unit.
+        </p>
+        <figure>
+            <img 
+                src="Images/elephant.png" 
+                alt="Elephant at sunset"
+                height="200">
+                <figcaption>An elephant at sunset</figcaption>
+        </figure>
+        <h3>Examples</h3>
+        <h4>Images</h4>
+        <!-- Just an image -->
+        <figure>
+            <img src="Images/favicon-192x192.png" alt="The beautiful MDN logo." />
+        </figure>
+        <!-- Image with a caption -->
+        <figure>
+            <img src="Images/favicon-192x192.png" alt="The beautiful MDN logo." />
+            <figcaption>MDN Logo</figcaption>
+        </figure>
+        <h4>Code snippets</h4>
+        <figure>
+    <figcaption>Get browser details using <code>navigator</code>.</figcaption>
+<pre>
+function NavigatorExample() {
+  let txt = `Browser CodeName: ${navigator.appCodeName};\n`;
+  txt += `Browser Name: ${navigator.appName};\n`;
+  txt += `Browser Version: ${navigator.appVersion};\n`;
+  txt += `Cookies Enabled: ${navigator.cookieEnabled};\n`;
+  txt += `Platform: ${navigator.platform};\n`;
+  txt += `User-agent header: ${navigator.userAgent};`;
+  console.log("NavigatorExample", txt);
+}
+</pre>
+        </figure>
+        <h4>Quotations</h4>
+        <figure>
+            <figcaption><b>Edsger Dijkstra:</b></figcaption>
+            <blockquote>
+                If debugging is the process of removing software bugs, then programming must
+                be the process of putting them in.
+            </blockquote>
+        </figure>
+        <h4>Poems</h4>
+        <figure>
+            <p>
+                Bid me discourse, I will enchant thine ear,<br />
+                Or like a fairy trip upon the green,<br />
+                Or, like a nymph, with long dishevelled hair,<br />
+                Dance on the sands, and yet no footing seen:<br />
+                Love is a spirit all compact of fire,<br />
+                Not gross to sink, but light, and will aspire.<br />
+            </p>
+            <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
+        </figure>
+        <hr>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figure">MDN figure</a>
+        </p>
+        <h2>figcaption</h2>
+        <!--El elemento HTML <figcaption> representa un título o leyenda que describe el resto del contenido
+        de su elemento padre <figure> proporcionándole a <figure> un nombre accesible.-->
+        <p>
+            The <strong><code>&lt;figcaption&gt;</code></strong> HTML element represents a caption or 
+            legend describing the rest of the contents of its parent <code>&lt;figure&gt;</code> 
+            element, providing the <figure> an accessible name.
+        </p>
+        <figure>
+            <img 
+                src="Images/elephant.png" 
+                alt="Elephant at sunset"
+                height="200">
+                <figcaption>An elephant at sunset</figcaption>
+        </figure>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figcaption">MDN figure</a>
+        </p>
+    </body>
+</html>
