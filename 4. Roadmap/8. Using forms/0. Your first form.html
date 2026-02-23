@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your first form</title>
+        <link rel="stylesheet" href="0. Your first form.css">
+    </head>
+    <body>
+        <h1>Your first form</h1>
+        <h2>What are web forms?</h2>
+        <p>
+            Forms allow users to enter data, which is generally sent to a web server for processing and 
+            storage or used on the client-side to immediately update the interface in some way.
+        </p>
+        <h2>Designing your form</h2>
+        <p>
+            Designing a quick mockup will help you to define the right set of data you want to ask your 
+            user to enter. From a user experience (UX) point of view, it's important to remember that 
+            the bigger your form, the more you risk frustrating people and losing users. Keep it simple
+            and stay focused: ask only for the data you absolutely need.
+        </p>
+        <p>Let's make a rough sketch.</p>
+        <img src="Images/form-sketch-low.png" alt="The form to build, roughly sketch">
+        <p>
+            Our form will contain three text fields and one button. We are asking the user for their 
+            name, their email and the message they want to send. Hitting the button will send their 
+            data to a web server.
+        </p>
+        <h2>Implementing our form HTML</h2>
+        <p>
+            Ok, let's have a go at creating the HTML for our form. We will use the following HTML 
+            elements: <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, 
+            <code>&lt;textarea&gt;</code>, and <code>&lt;button&gt;</code>.
+        </p>
+        <h3>The <code>&lt;form&gt;</code> element</h3>
+        <p>All forms start with a <code>&lt;form&gt;</code> element, like this:</p>
+        <code>&lt;form action="/my-handling-form-page" method="post"&gt;...&lt;/form&gt;</code>
+        <p>
+            This element formally defines a form. It's a container element like a <code>&lt;section&gt;</code> 
+            or <code>&lt;footer&gt;</code> element, but specifically for containing forms; it also supports 
+            some specific attributes to configure the way the form behaves.  All of its attributes are 
+            optional, but it's standard practice to always set at least the <code>action</code> and 
+            <code>method</code> attributes:
+        </p> 
+        <ul>
+            <li>
+                The <code>action</code> attribute defines the location (URL) where the form's collected 
+                data should be sent when it is submitted.
+            </li>
+            <li>
+                The <code>method</code> attribute defines which HTTP method to send the data with (usually
+                 <code>get</code> or <code>post</code>).
+            </li>
+        </ul>
+        <h3>The <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, and <code>&lt;textarea&gt;</code> elements</h3>
+        <p>
+            Our contact form is not complex: the data entry portion contains three text fields, each with a 
+            corresponding <code>&lt;label&gt;</code>:
+        </p>
+        <ul>
+            <li>The input field for the name is a single-line text field.</li>
+            <li>The input field for the email is an input of type email: a single-line text field that accepts only email addresses.</li>
+            <li>The input field for the message is a<code>&lt;textarea&gt;</code>; a multiline text field.</li>
+        </ul>
+        <h3>The <code>&lt;button&gt;</code> element</h3>
+        <p>
+            The markup for our form is almost complete; we just need to add a button to allow the user to 
+            send, or "submit", their data once they have filled out the form. This is done by using the 
+            <code>&lt;/button&gt;</code> element; add the following just above the closing 
+            <code>&lt;/form&gt;</code> tag.
+        </p>
+        <p>
+            The <code>&lt;button&gt;</code> element also accepts a type attribute — this accepts one of 
+            three values: submit, reset, or button.
+        </p>
+        <ul>
+            <li>
+                A click on a <code>submit</code> button (the default value) sends the form's data to the web 
+                page defined by the <code>action</code> attribute of the <code>&lt;form&gt;</code> element.
+            </li>
+            <li>
+                A click on a <code>reset</code> button resets all the form widgets to their default value 
+                immediately. 
+            </li>
+            <li>
+                A click on a <code>button</code> button does <em>nothing</em>! That sounds silly, but it's 
+                amazingly useful for building custom buttons — you can define their chosen functionality 
+                with JavaScript.
+            </li>
+        </ul>
+        <h2>Contact</h2>
+        <form action="/my-handling-form-page" method="post" id="contact-form">
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="user_email">
+            </p>
+            <p>
+                <label for="Message">Message</label>
+                <textarea name="user_message" id="msg"></textarea>
+            </p>
+            <p class="button">
+                <button type="submit">Send your message</button>
+            </p>
+        </form>
+        <h2>Sending form data to your web server</h2>
+        <p>
+            On the server side, the script at the URL <code>/my-handling-form-page</code> will receive the 
+            data as a list of 3 key/value items contained in the HTTP request. The way this script will 
+            handle that data is up to you. Each server-side language (PHP, Python, Ruby, Java, C#, etc.) 
+            has its own mechanism of handling form data.
+        </p>
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+
+                console.log('Datos enviados;', data);
+
+                localStorage.setItem('formData', JSON.stringify(data));
+
+                alert('Mensaje enviado!\n\nRevisá la consola (F12) para ver los datos.');
+            })
+        </script>
+        <p>
+            Extractef from;
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form">MDN Your first form</a>
+        </p>
+    </body>
+</html>

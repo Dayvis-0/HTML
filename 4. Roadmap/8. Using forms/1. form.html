@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>form</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            form.form-example {
+                display: table;
+            }
+
+            div.form-example {
+                display: table-row;
+            }
+
+            label, input {
+                display: table-cell;
+                margin-bottom: 10px;
+            }
+
+            label {
+                padding-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>form</h1>
+        <!--El elemento HTML <form> representa una sección de documento que contiene controles 
+        interactivos para enviar información.-->
+        <p>
+            The <strong><code>&lt;form&gt;</code></strong> HTML element represents a document section 
+            containing interactive controls for submitting information.
+        </p>
+        <form action="" method="get" class="form-example">
+            <div class="form-example">
+                <label for="name">Enter your name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-example">
+                <label for="email">Enter your email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-example">
+                <input type="submit" value="Suscribe!">
+            </div>
+        </form>
+        <h2>Attributes</h2>
+        <dl>
+            <dt><code>accept-charset</code></dt>
+            <dd>
+                <p>
+                    The character encoding accepted by the server. The specification allows a single 
+                    case-insensitive value of "UTF-8", reflecting the ubiquity of this encoding.
+                </p>
+            </dd>
+            <dt><code>autocapitalize</code></dt>
+            <dd>
+                <p>
+                    Controls whether inputted text is automatically capitalized and, if so, in what manner. 
+                </p>
+            </dd>
+            <dt><code></code></dt>
+            <dd>
+                <p></p>
+            </dd>
+            <dt><code></code></dt>
+            <dd>
+                <p></p>
+            </dd>
+        </dl>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form">MDN form</a>
+        </p>
+    </body>
+</html>
