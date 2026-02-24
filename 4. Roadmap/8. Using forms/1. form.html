@@ -65,15 +65,150 @@
                     Controls whether inputted text is automatically capitalized and, if so, in what manner. 
                 </p>
             </dd>
-            <dt><code></code></dt>
+            <dt><code>autocomplete</code></dt>
             <dd>
-                <p></p>
+                <p>
+                    Indicates whether input elements can by default have their values automatically 
+                    completed by the browser. Possible values:
+                </p>
+                <ul>
+                    <li>
+                        <p><code>off</code>: The browser may not automatically complete entries</p>
+                    </li>
+                    <li>
+                        <p><code>on</code>: The browser may automatically complete entries.</p>
+                    </li>
+                </ul>
             </dd>
-            <dt><code></code></dt>
+            <dt><code>name</code></dt>
             <dd>
-                <p></p>
+                <p>The name of the form.</p>
+            </dd>
+            <dt><code>rel</code></dt>
+            <dd>
+                <p>Controls the annotations and what kinds of links the form creates.</p>
             </dd>
         </dl>
+        <h3>Attributes for form submission</h3>
+        <p>The following attributes control behavior during form submission.</p>
+        <dl>
+            <dt><code>action</code></dt>
+            <dd>
+                <p>
+                    The URL that processes the form submission. This attribute is ignored when 
+                    <code>method="dialog"</code> is set.
+                </p>
+            </dd>
+            <dt><code>enctype</code></dt>
+            <dd>
+                <p>
+                    If the value of the method attribute is post, enctype is the MIME type of the form 
+                    submission. Possible values:
+                </p>
+                <ul>
+                    <li>
+                        <p><code>application/x-www-form-urlencoded</code>: The default value.</p>
+                    </li>
+                    <li>
+                        <p>
+                            <code>multipart/form-data</code>: Use this if the form contains <code>&lt;input&gt;</code> 
+                            elements with <code>type=file</code>.
+                        </p>
+                    </li>
+                    <li>
+                        <p><code>text//plain</code>: Useful for debugging purposes.</p>
+                    </li>
+                </ul>
+            </dd>
+            <dt><code>method</code></dt>
+            <dd>
+                <p>The HTTP method to submit the form with. The only allowed methods/values are (case insensitive):</p>
+                <ul>
+                    <li>
+                        <p><code>post</code>: The <code>POST</code> method; form data sent as the request body.</p>
+                    </li>
+                    <li>
+                        <p>
+                            <code>get</code> (default): The <code>GET</code>; form data appended to the 
+                            <code>action</code> URL with a <code>?</code> separator. Use this method when 
+                            the form has no side effects.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <code>dialog</code>: When the form is inside a <code>&lt;dialog&gt;</code>, 
+                            closes the dialog and causes a <code>submit</code> event to be fired on 
+                            submission, without submitting data or clearing the form. 
+                        </p>
+                    </li>
+                </ul>
+            </dd>
+            <dt><code>novalidate</code></dt>
+            <dd>
+                <p>This Boolean attribute indicates that the form shouldn't be validated when submitted.</p>
+            </dd>
+            <dt><code>target</code></dt>
+            <dd>
+                <p>
+                    Indicates where to display the response after submitting the form. The following 
+                    keywords have special meanings:
+                </p>
+                <ul>
+                    <li>
+                        <p><code>_self</code>(default): Load into the same browsing context as the current one.</p>
+                    </li>
+                    <li>
+                        <p><code>_blank</code>: Load into a new unnamed browsing context.</p>
+                    </li>
+                    <li>
+                        <p>
+                            <code>_parent</code>: Load into the parent browsing context of the current 
+                            one. If no parent, behaves the same as _self.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <code>_top</code>: Load into the top-level browsing context (i.e., the 
+                            browsing context that is an ancestor of the current one and has no parent). 
+                            If no parent, behaves the same as _self.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <code>_unfencedTop</code>: Load the response from a form inside an embedded 
+                            fenced frame into the top-level frame (i.e., traversing beyond the root of 
+                            the fenced frame, unlike other reserved destinations). Only available inside
+                            fenced frames.
+                        </p>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <h2>Example</h2>
+        <!-- Form which will send a GET request to the current URL -->
+        <form method="get">
+            <label>
+                Name:
+                <input name="submitted-name" autocomplete="name">
+            </label>
+            <button>Save</button>
+        </form>
+        <!-- Form which will send a POST request to the current URL -->
+        <form method="post">
+            <label>
+                Name:
+                <input name="submitted-name" autocomplete="name">
+            </label>
+            <button>Save</button>
+        </form>
+        <!-- Form with fieldset, legend, and label -->
+        <form method="post">
+            <fieldset>
+                <legend>Do you agree to the terms?</legend>
+                <label><input type="radio" name="radio" value="yes">Yes</label>
+                <label><input type="radio" name="radio" value="no">No</label>
+            </fieldset>
+        </form>
         <p>
             Extracted from;
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form">MDN form</a>
