@@ -10,9 +10,89 @@
                 color-scheme: light dark;
                 padding: 100px;
             }
+
+            .preference {
+                display: flex;
+                justify-content: space-between;
+                width: 60%;
+                margin: 0.5rem  ;
+            }
         </style>
     </head>
     <body>
         <h1>label</h1>
+        <!--El elemento HTML <label> representa un título para un elemento en una interfaz de usuario.-->
+        <p>
+            The <strong><code>&lt;label&gt;</code></strong> HTML element represents a caption for an 
+            item in a user interface.
+        </p>
+        <div class="preference">
+            <label for="cheese"> I like cheese</label>
+            <input type="checkbox" name="cheese" id="cheese">
+        </div>
+        <div class="preference">
+            <label for="peas"> I like peas</label>
+            <input type="checkbox" name="peas" id="peas">
+        </div>
+        <h2>Attributes</h2>
+        <dl>
+            <dt><code>for</code></dt>
+            <dd>
+                <p>
+                    The value is the <code>id</code> of the labelable form control in the same document, 
+                    associating the <code>&lt;label&gt;</code> with that form control.
+                </p>
+            </dd>
+        </dl>
+        <h2>Usage notes</h2>
+        <h3>Associating a label with a form control</h3>
+        <p>
+            The first element in the document with an <code>id</code> attribute matching the value of the 
+            <code>for</code> attribute is the labeled control for this <code>label</code> element — if 
+            the element with that <code>id</code> is actually a labelable element. 
+        </p>
+        <p>
+            Associating a <code>&lt;label&gt;</code> with a form control, such as <code>&lt;input&gt;</code>
+            or <code>&lt;textarea&gt;</code> offers some major advantages:
+        </p>
+        <ul>
+            <li>
+                <p>
+                    The label text is not only visually associated with its corresponding text input; it
+                    is programmatically associated with it too
+                </p>
+            </li>
+            <li>
+                <p>
+                    When a user clicks or touches/taps a label, the browser passes the focus to its 
+                    associated input (the resulting event is also raised for the input).
+                </p>
+            </li>
+        </ul>
+        <p>
+            There are two ways to associate a <code>&lt;label&gt;</code> with a form control, commonly
+            referred to as explicit and implicit association.
+        </p>
+        <p>
+            To explicitly associate a <code>&lt;label&gt;</code> element with an <code>&lt;input&gt;</code> 
+            element, you first need to add the id attribute to the <code>&lt;input&gt;</code> element.
+            Next, you add the for attribute to the <code>&lt;label&gt;</code> element, where the value 
+            of for is the same as the id in the <code>&lt;input&gt;</code> element.
+        </p>
+        <label for="peas">I like peas.</label>
+        <input type="checkbox" name="peas" id="peas">
+        <p>
+            Alternatively, you can nest the <code>&lt;input&gt;</code> directly inside the <code>&lt;label&gt;</code>, 
+            in which case the <code>for</code> and <code>id</code> attributes are not needed because 
+            the association is implicit:
+        </p>
+        <label>
+            I like peas.
+            <input type="checkbox" name="peas" />
+        </label>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label">MDN label</a>
+        </p>
     </body>
 </html>
