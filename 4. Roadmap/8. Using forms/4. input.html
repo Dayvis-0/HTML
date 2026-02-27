@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>input</title>
+        <link rel="stylesheet" href="4. input.css">
+    </head>
+    <body>
+        <h1><code>&lt;input&gt;</code></h1>
+        <!--El elemento HTML <input> se utiliza para crear controles interactivos para formularios basados
+        en web con el fin de aceptar datos del usuario.-->
+        <p>
+            The <strong><code>&lt;input&gt;</code></strong> HTML element is used to create interactive 
+            controls for web-based forms in order to accept data from the user; a wide variety of types 
+            of input data and control widgets are available, depending on the device and user agent. 
+            The <code>&lt;input&gt;</code> element is one of the most powerful and complex in all of HTML 
+            due to the sheer number of combinations of input types and attributes.
+        </p>
+        <label for="name">Name (4 to 8 characters):</label>
+        <input 
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="4"
+            maxlength="8"
+            size="10"
+            >
+        <h2><code>&lt;input&gt;</code> types</h2>
+        <p>The available types are as follows:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Basic example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>button</td>
+                    <td>
+                        <p>
+                            A push button with no default behavior displaying the value of the value 
+                            attribute, empty by default.
+                        </p>
+                    </td>
+                    <td><input type="button" value="Button"></td>
+                </tr>
+                <tr>
+                    <td>checkbox</td>
+                    <td>
+                        <p>A check box allowing single values to be selected/deselected.</p>
+                    </td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>color</td>
+                    <td>
+                        <p>
+                            A control for specifying a color; opening a color picker when active in 
+                            supporting browsers.
+                        </p>
+                    </td>
+                    <td><input type="color"></td>
+                </tr>
+                <tr>
+                    <td>date</td>
+                    <td>
+                        <p>A control for entering a date (year, month, and day, with no time). </p>
+                    </td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>datetime-local</td>
+                    <td>
+                        <p>A control for entering a date and time, with no time zone.</p>
+                    </td>
+                    <td><input type="datetime-local"></td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td>
+                        <p>
+                            A field for editing an email address. Looks like a <code>text</code> input, but 
+                            has validation parameters and relevant keyboard in supporting browsers and 
+                            devices with dynamic keyboards.
+                        </p>
+                    </td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <td>file</td>
+                    <td>
+                        <p>
+                            A control that lets the user select a file. Use the <code>accept</code> attribute 
+                            to define the types of files that the control can select.
+                        </p>
+                    </td>
+                    <td><input type="file" accept="image/*"></td>
+                </tr>
+                <tr>
+                    <td>hidden</td>
+                    <td>
+                        <p>A control that is not displayed but whose value is submitted to the server.</p>
+                    </td>
+                    <td><input type="hidden"></td>
+                </tr>
+                <tr>
+                    <td>image</td>
+                    <td>
+                        <p>
+                            A graphical <code>submit</code> button. Displays an image defined by the 
+                            <code>src</code> attribute. The <code>alt</code> attribute displays if the 
+                            image <code>src</code> is missing.
+                        </p>
+                    </td>
+                    <td><input type="image" src="Images/pokemon.jpg" alt="Pokemon" height="50px"></td>
+                </tr>
+                <tr>
+                    <td>month</td>
+                    <td>
+                        <p>A control for entering a month and year, with no time zone.</p>
+                    </td>
+                    <td><input type="month"></td>
+                </tr>
+                <tr>
+                    <td>number</td>
+                    <td>
+                        <p>A control for entering a number. Displays a spinner and adds default validation. </p>
+                    </td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td>
+                        <p>
+                            A single-line text field whose value is obscured. Will alert user if site is 
+                            not secure.
+                        </p>
+                    </td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td>radio</td>
+                    <td>
+                        <p>
+                            A radio button, allowing a single value to be selected out of multiple choices 
+                            with the same <code>name</code> value.
+                        </p>
+                    </td>
+                    <td><input type="radio"></td>
+                </tr>
+                <tr>
+                    <td>range</td>
+                    <td>
+                        <p>
+                            A control for entering a number whose exact value is not important. Displays as 
+                            a range widget defaulting to the middle value. Used in conjunction <code>min</code> 
+                            and <code>max</code> to define the range of acceptable values.
+                        </p>
+                    </td>
+                    <td><input type="range" min="10" step="10" max="100"></td>
+                </tr>
+                <tr>
+                    <td>reset</td>
+                    <td>
+                        <p>A button that resets the contents of the form to default values. Not recommended.</p>
+                    </td>
+                    <td><input type="reset" value="Restore"></td>
+                </tr>
+                <tr>
+                    <td>search</td>
+                    <td>
+                        <p>
+                            A single-line text field for entering search strings. Line-breaks are 
+                            automatically removed from the input value.
+                        </p>
+                    </td>
+                    <td><input type="search"></td>
+                </tr>
+                <tr>
+                    <td>submit</td>
+                    <td>
+                        <p>	A button that submits the form.</p>
+                    </td>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+                <tr>
+                    <td>tel</td>
+                    <td>
+                        <p>A control for entering a telephone number.</p>
+                    </td>
+                    <td><input type="tel"></td>
+                </tr>
+                <tr>
+                    <td>text</td>
+                    <td>
+                        <p>
+                            The default value. A single-line text field. Line-breaks are automatically 
+                            removed from the input value.
+                        </p>
+                    </td>
+                    <td><input type="text" value="Hello"></td>
+                </tr>
+                <tr>
+                    <td>time</td>
+                    <td>
+                        <p>A control for entering a time value with no time zone.</p>
+                    </td>
+                    <td><input type="time"></td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>
+                        <p>
+                            A field for entering a URL. Looks like a text input, but has validation parameters 
+                            and relevant keyboard in supporting browsers and devices with dynamic keyboards.
+                        </p>
+                    </td>
+                    <td><input type="url"></td>
+                </tr>
+                <tr>
+                    <td>week</td>
+                    <td>
+                        <p>
+                            A control for entering a date consisting of a week-year number and a week 
+                            number with no time zone.
+                        </p>
+                    </td>
+                    <td><input type="week"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Extraced from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input">MDN input</a>
+        </p>
+    </body>
+</html>

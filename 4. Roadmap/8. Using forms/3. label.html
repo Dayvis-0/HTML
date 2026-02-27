@@ -90,6 +90,73 @@
             I like peas.
             <input type="checkbox" name="peas" />
         </label>
+        <p>These two methods are equivalent, but there are a few considerations:</p>
+        <ul>
+            <li>
+                <p>
+                    While common browser and screen reader combinations support implicit association, not 
+                    all assistive technologies do.
+                </p>
+            </li>
+            <li>
+                <p>Depending on your design, the type of association may impact stylability.</p>
+            </li>
+            <li>
+                <p>
+                    Explicit association requires the form control to have an id, which must be unique in 
+                    the whole document. 
+                </p>
+            </li>
+        </ul>
+        <p>
+            Generally, we recommend using explicit association with the for attribute, to ensure 
+            compatibility with external tools and assistive technologies.
+        </p>
+        <p>
+            The form control that a label is labeling is called the labeled control of the label element. 
+            Multiple labels can be associated with the same form control:
+        </p>
+        <label for="username">Enter your username:</label>
+        <input id="username" name="username" type="text" />
+        <label for="username">Forgot your username?</label>
+        <p>
+            Elements that can be associated with a <code>&lt;label&gt;</code> element include 
+            <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code> (except for type="hidden"), 
+            <code>&lt;meter&gt;</code>, <code>&lt;output&gt;</code>, <code>&lt;progress&gt;</code>, 
+            <code>&lt;select&gt;</code> and <code>&lt;textarea&gt;</code>.
+        </p>
+        <h2>Accessibility</h2>
+        <h3>Interactive content</h3>
+        <p><strong>Don't do this:</strong></p>
+        <label for="tac">
+            <input id="tac" type="checkbox" name="terms-and-conditions" />
+            I agree to the <a href="#">Terms and Conditions</a>
+        </label>
+        <p><strong>Prefer this:</strong></p>
+        <p>
+            <a href="#">Read our Terms and Conditions</a>
+        </p>
+        <label for="tac">
+            <input id="tac" type="checkbox" name="terms-and-conditions" />
+            I agree to the Terms and Conditions
+        </label>
+        <h3>Headings</h3>
+        <p><strong>Don't do this:</strong></p>
+        <label for="your-name">
+            <h3>Your name</h3>
+            <input id="your-name" name="your-name" type="text" />
+        </label>
+        <p><strong>Prefer this:</strong></p>
+        <label class="large-label" for="your-name">
+            Your name
+            <input id="your-name" name="your-name" type="text" />
+        </label>
+        <h2>Examples</h2>
+        <h3>Defining an implicit label</h3>
+        <label>Click me <input type="text"></label>
+        <h3>Defining an explicit label with the "for" attribute</h3>
+        <label for="username">Click me to focus on the input field.</label>
+        <input type="text" id="username">
         <p>
             Extracted from;
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label">MDN label</a>
