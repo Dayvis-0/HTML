@@ -234,6 +234,207 @@
                 </tr>
             </tbody>
         </table>
+        <h2>Attributes</h2>
+        <p>
+            Attributes for the <code>&lt;input&gt;</code> element include the global HTML attributes and 
+            additionally:
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Type(s)</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>accept</code></td>
+                    <td><code>file</code></td>
+                    <td><p>Hint for expected file type in file upload controls</p></td>
+                </tr>
+                <tr>
+                    <td><code>alpha1</code></td>
+                    <td><code>color</code></td>
+                    <td><p>Opacity of the color</p></td>
+                </tr>
+                <tr>
+                    <td><code>alt</code></td>
+                    <td><code>image</code></td>
+                    <td><p>alt attribute for the image type. Required for accessibility</p></td>
+                </tr>
+                <tr>
+                    <td><code>autocapitalize</code></td>
+                    <td><p>all except <code>url</code>, <code>email</code>, and<code>password</code></p></td>
+                    <td><p>Controls automatic capitalization in inputted text.</p></td>
+                </tr>
+                <tr>
+                    <td><code>autocomplete</code></td>
+                    <td><p>all except <code>checkbox</code>, <code>radio</code> and buttons</p></td>
+                    <td><p>Hint for form autofill feature</p></td>
+                </tr>
+                <tr>
+                    <td><code>capture</code></td>
+                    <td><code>file</code></td>
+                    <td><p>Media capture input method in file upload controls</p></td>
+                </tr>
+                <tr>
+                    <td><code>checked</code></td>
+                    <td><code>checkbox</code> y <code>radio</code></td>
+                    <td><p>Wheter the command or controls is checked</p></td>
+                </tr>
+                <tr>
+                    <td><code>colorspace</code></td>
+                    <td><code>color</code></td>
+                    <td>The color space that should be used for selecting the color value</td>
+                </tr>
+                <tr>
+                    <td><code>dirname</code></td>
+                    <td><code>hidden</code>, <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code></td>
+                    <td>Name of form field to use for sending the element's directionality in form submission</td>
+                </tr>
+                <tr>
+                    <td><code>disabled</code></td>
+                    <td>all</td>
+                    <td>Whether the form control is disabled</td>
+                </tr>
+                <tr>
+                    <td><code>form</code></td>
+                    <td>all</td>
+                    <td>Associates the control with a form element</td>
+                </tr>
+                <tr>
+                    <td><code>formaction</code></td>
+                    <td><code>image</code>, <code>submit</code></td>
+                    <td>URL to use for form submission</td>
+                </tr>
+                <tr>
+                    <td><code>formenctype</code></td>
+                    <td><code>image</code>, <code>submit</code></td>
+                    <td>Form data set encoding type to use for form submission</td>
+                </tr>
+                <tr>
+                    <td><code>formmethod</code></td>
+                    <td><code>image</code>, <code>submit</code></td>
+                    <td>HTTP method to use for form submission</td>
+                </tr>
+                <tr>
+                    <td><code>formnovalidate</code></td>
+                    <td><code>image</code>, <code>submit</code></td>
+                    <td>Bypass form control validation for form submission</td>
+                </tr>
+                <tr>
+                    <td><code>formtarget</code></td>
+                    <td><code>image</code>, <code>submit</code></td>
+                    <td>Browsing context for form submission</td>
+                </tr>
+                <tr>
+                    <td><code>height</code></td>
+                    <td><code>image</code></td>
+                    <td>Same as height attribute for <code>&lt;img&gt;</code>; vertical dimension</td>
+                </tr>
+                <tr>
+                    <td><code>list</code></td>
+                    <td>all except <code>hidden</code>, <code>password</code>, <code>checkbox</code>, <code>radio</code>, and buttons</td>
+                    <td>Value of the id attribute of the <code>&lt;datalist&gt;</code> of autocomplete options</td>
+                </tr>
+                <tr>
+                    <td><code>max</code></td>
+                    <td><code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>range</code></td>
+                    <td>Maximum value</td>
+                </tr>
+                <tr>
+                    <td><code>maxlength</code></td>
+                    <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code></td>
+                    <td>Maximum length (number of characters) of <code>value</code></td>
+                </tr>
+                <tr>
+                    <td><code>min</code></td>
+                    <td><code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>range</code></td>
+                    <td>Minimum value</td>
+                </tr>
+                <tr>
+                    <td><code>minlength</code></td>
+                    <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code></td>
+                    <td>Minimum length (number of characters) of <code>value</code></td>
+                </tr>
+                <tr>
+                    <td><code>multiple</code></td>
+                    <td><code>email</code>, <code>file</code></td>
+                    <td>Boolean. Whether to allow multiple values</td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>all</td>
+                    <td>Name of the form control. Submitted with the form as part of a name/value pair</td>
+                </tr>
+                <tr>
+                    <td><code>pattern</code></td>
+                    <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code></td>
+                    <td>Pattern the <code>value</code> must match to be valid</td>
+                </tr>
+                <tr>
+                    <td><code>placeholder</code></td>
+                    <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code>, <code>number</code></td>
+                    <td>Text that appears in the form control when it has no value set</td>
+                </tr>
+                <tr>
+                    <td><code>popovertarget</code></td>
+                    <td><code>button</code></td>
+                    <td>Designates an <code>&lt;input type="button"&gt;</code> as a control for a popover element</td>
+                </tr>
+                <tr>
+                    <td><code>popovertargetaction</code></td>
+                    <td><code>button</code></td>
+                    <td>Specifies the action that a popover control should perform</td>
+                </tr>
+                <tr>
+                    <td><code>readonly</code></td>
+                    <td>all except <code>hidden</code>, <code>range</code>, <code>color</code>, <code>checkbox</code>, <code>radio</code>, and buttons</td>
+                    <td>Boolean. The value is not editable</td>
+                </tr>
+                <tr>
+                    <td><code>required</code></td>
+                    <td>all except <code>hidden</code>, <code>range</code>, <code>color</code>, and buttons</td>
+                    <td>Boolean. A value is required or must be checked for the form to be submittable</td>
+                </tr>
+                <tr>
+                    <td><code>size</code></td>
+                    <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code></td>
+                    <td>Size of the control</td>
+                </tr>
+                <tr>
+                    <td><code>src</code></td>
+                    <td><code>image</code></td>
+                    <td>Same as <code>src</code> attribute for <code>&lt;img&gt;</code>; address of image resource</td>
+                </tr>
+                <tr>
+                    <td><code>step</code></td>
+                    <td><code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>range</code></td>
+                    <td>Incremental values that are valid</td>
+                </tr>
+                <tr>
+                    <td><code>switch</code></td>
+                    <td><code>checkbox</code></td>
+                    <td>Whether the checkbox input should be rendered as a switch</td>
+                </tr>
+                <tr>
+                    <td><code>type</code></td>
+                    <td>all</td>
+                    <td>Type of form control</td>
+                </tr>
+                <tr>
+                    <td><code>value</code></td>
+                    <td>all except <code>image</code></td>
+                    <td>The value of the control. When specified in the HTML, corresponds to the initial value</td>
+                </tr>
+                <tr>
+                    <td><code>width</code></td>
+                    <td><code>image</code></td>
+                    <td>Same as <code>width</code> attribute for<code>&lt;img&gt;</code></td>
+                </tr>
+            </tbody>
+        </table>
         <p>
             Extraced from;
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input">MDN input</a>
