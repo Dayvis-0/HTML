@@ -245,6 +245,7 @@
                     <th>Attribute</th>
                     <th>Type(s)</th>
                     <th>Description</th>
+                    <th>Example</th>
                 </tr>
             </thead>
             <tbody>
@@ -252,192 +253,489 @@
                     <td><code>accept</code></td>
                     <td><code>file</code></td>
                     <td><p>Hint for expected file type in file upload controls</p></td>
+                    <td><code>&lt;input type="file" accept=".pdf"&gt;</code><br><br><input type="file" accept=".pdf" style="font-size:12px;"></td>
                 </tr>
                 <tr>
                     <td><code>alpha1</code></td>
                     <td><code>color</code></td>
                     <td><p>Opacity of the color</p></td>
+                    <td><code>&lt;input type="color" alpha1&gt;</code><br><br><input type="color" style="width:60px;height:30px;"></td>
                 </tr>
                 <tr>
                     <td><code>alt</code></td>
                     <td><code>image</code></td>
                     <td><p>alt attribute for the image type. Required for accessibility</p></td>
+                    <td><code>&lt;input type="image" src="..." alt="Submit"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>autocapitalize</code></td>
                     <td><p>all except <code>url</code>, <code>email</code>, and<code>password</code></p></td>
                     <td><p>Controls automatic capitalization in inputted text.</p></td>
+                    <td><code>&lt;input autocapitalize="words"&gt;</code><br><br><input autocapitalize="words" placeholder="capitalize each word"></td>
                 </tr>
                 <tr>
                     <td><code>autocomplete</code></td>
                     <td><p>all except <code>checkbox</code>, <code>radio</code> and buttons</p></td>
                     <td><p>Hint for form autofill feature</p></td>
+                    <td><code>&lt;input autocomplete="name"&gt;</code><br><br><input autocomplete="name" placeholder="autocomplete"></td>
                 </tr>
                 <tr>
                     <td><code>capture</code></td>
                     <td><code>file</code></td>
                     <td><p>Media capture input method in file upload controls</p></td>
+                    <td><code>&lt;input type="file" capture="user"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>checked</code></td>
                     <td><code>checkbox</code> y <code>radio</code></td>
                     <td><p>Wheter the command or controls is checked</p></td>
+                    <td><code>&lt;input type="checkbox" checked&gt;</code><br><br><input type="checkbox" checked></td>
                 </tr>
                 <tr>
                     <td><code>colorspace</code></td>
                     <td><code>color</code></td>
                     <td>The color space that should be used for selecting the color value</td>
+                    <td><code>&lt;input type="color" colorspace="srgb"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>dirname</code></td>
                     <td><code>hidden</code>, <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code></td>
                     <td>Name of form field to use for sending the element's directionality in form submission</td>
+                    <td><code>&lt;input dirname="name.dir"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>disabled</code></td>
                     <td>all</td>
                     <td>Whether the form control is disabled</td>
+                    <td><code>&lt;input disabled&gt;</code><br><br><input disabled placeholder="disabled"></td>
                 </tr>
                 <tr>
                     <td><code>form</code></td>
                     <td>all</td>
                     <td>Associates the control with a form element</td>
+                    <td><code>&lt;input form="myForm"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>formaction</code></td>
                     <td><code>image</code>, <code>submit</code></td>
                     <td>URL to use for form submission</td>
+                    <td><code>&lt;input type="submit" formaction="/submit"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>formenctype</code></td>
                     <td><code>image</code>, <code>submit</code></td>
                     <td>Form data set encoding type to use for form submission</td>
+                    <td><code>&lt;input type="submit" formenctype="multipart/form-data"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>formmethod</code></td>
                     <td><code>image</code>, <code>submit</code></td>
                     <td>HTTP method to use for form submission</td>
+                    <td><code>&lt;input type="submit" formmethod="POST"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>formnovalidate</code></td>
                     <td><code>image</code>, <code>submit</code></td>
                     <td>Bypass form control validation for form submission</td>
+                    <td><code>&lt;input type="submit" formnovalidate&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>formtarget</code></td>
                     <td><code>image</code>, <code>submit</code></td>
                     <td>Browsing context for form submission</td>
+                    <td><code>&lt;input type="submit" formtarget="_blank"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>height</code></td>
                     <td><code>image</code></td>
                     <td>Same as height attribute for <code>&lt;img&gt;</code>; vertical dimension</td>
+                    <td><code>&lt;input type="image" height="50"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>list</code></td>
                     <td>all except <code>hidden</code>, <code>password</code>, <code>checkbox</code>, <code>radio</code>, and buttons</td>
                     <td>Value of the id attribute of the <code>&lt;datalist&gt;</code> of autocomplete options</td>
+                    <td><code>&lt;input list="browsers"&gt;</code><br><br><input list="browsers" placeholder="try typing..."><datalist id="browsers"><option value="Chrome"></option><option value="Firefox"></option></datalist></td>
                 </tr>
                 <tr>
                     <td><code>max</code></td>
                     <td><code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>range</code></td>
                     <td>Maximum value</td>
+                    <td><code>&lt;input type="number" max="100"&gt;</code><br><br><input type="number" max="100" placeholder="max 100"></td>
                 </tr>
                 <tr>
                     <td><code>maxlength</code></td>
                     <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code></td>
                     <td>Maximum length (number of characters) of <code>value</code></td>
+                    <td><code>&lt;input maxlength="10"&gt;</code><br><br><input maxlength="10" placeholder="max 10 chars"></td>
                 </tr>
                 <tr>
                     <td><code>min</code></td>
                     <td><code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>range</code></td>
                     <td>Minimum value</td>
+                    <td><code>&lt;input type="number" min="0"&gt;</code><br><br><input type="number" min="0" placeholder="min 0"></td>
                 </tr>
                 <tr>
                     <td><code>minlength</code></td>
                     <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code></td>
                     <td>Minimum length (number of characters) of <code>value</code></td>
+                    <td><code>&lt;input minlength="3"&gt;</code><br><br><input minlength="3" placeholder="min 3 chars"></td>
                 </tr>
                 <tr>
                     <td><code>multiple</code></td>
                     <td><code>email</code>, <code>file</code></td>
                     <td>Boolean. Whether to allow multiple values</td>
+                    <td><code>&lt;input type="file" multiple&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>name</code></td>
                     <td>all</td>
                     <td>Name of the form control. Submitted with the form as part of a name/value pair</td>
+                    <td><code>&lt;input name="username"&gt;</code><br><br><input name="username" placeholder="name=value pair"></td>
                 </tr>
                 <tr>
                     <td><code>pattern</code></td>
                     <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code></td>
                     <td>Pattern the <code>value</code> must match to be valid</td>
+                    <td><code>&lt;input pattern="[0-9]{3}"&gt;</code><br><br><input pattern="[0-9]{3}" placeholder="3 digits"></td>
                 </tr>
                 <tr>
                     <td><code>placeholder</code></td>
                     <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code>, <code>number</code></td>
                     <td>Text that appears in the form control when it has no value set</td>
+                    <td><code>&lt;input placeholder="Enter name"&gt;</code><br><br><input placeholder="Enter name"></td>
                 </tr>
                 <tr>
                     <td><code>popovertarget</code></td>
                     <td><code>button</code></td>
                     <td>Designates an <code>&lt;input type="button"&gt;</code> as a control for a popover element</td>
+                    <td><code>&lt;input type="button" popovertarget="myPopover"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>popovertargetaction</code></td>
                     <td><code>button</code></td>
                     <td>Specifies the action that a popover control should perform</td>
+                    <td><code>&lt;input type="button" popovertargetaction="toggle"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>readonly</code></td>
                     <td>all except <code>hidden</code>, <code>range</code>, <code>color</code>, <code>checkbox</code>, <code>radio</code>, and buttons</td>
                     <td>Boolean. The value is not editable</td>
+                    <td><code>&lt;input value="Locked" readonly&gt;</code><br><br><input value="Locked" readonly></td>
                 </tr>
                 <tr>
                     <td><code>required</code></td>
                     <td>all except <code>hidden</code>, <code>range</code>, <code>color</code>, and buttons</td>
                     <td>Boolean. A value is required or must be checked for the form to be submittable</td>
+                    <td><code>&lt;input required&gt;</code><br><br><input required placeholder="required field"></td>
                 </tr>
                 <tr>
                     <td><code>size</code></td>
                     <td><code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code></td>
                     <td>Size of the control</td>
+                    <td><code>&lt;input size="30"&gt;</code><br><br><input size="30" placeholder="size=30"></td>
                 </tr>
                 <tr>
                     <td><code>src</code></td>
                     <td><code>image</code></td>
                     <td>Same as <code>src</code> attribute for <code>&lt;img&gt;</code>; address of image resource</td>
+                    <td><code>&lt;input type="image" src="btn.png"&gt;</code></td>
                 </tr>
                 <tr>
                     <td><code>step</code></td>
                     <td><code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>range</code></td>
                     <td>Incremental values that are valid</td>
+                    <td><code>&lt;input type="number" step="0.01"&gt;</code><br><br><input type="number" step="0.01" placeholder="step 0.01"></td>
                 </tr>
                 <tr>
                     <td><code>switch</code></td>
                     <td><code>checkbox</code></td>
                     <td>Whether the checkbox input should be rendered as a switch</td>
+                    <td><code>&lt;input type="checkbox" switch&gt;</code><br><br><input type="checkbox" switch></td>
                 </tr>
                 <tr>
                     <td><code>type</code></td>
                     <td>all</td>
                     <td>Type of form control</td>
+                    <td><code>&lt;input type="email"&gt;</code><br><br><input type="email" placeholder="email type"></td>
                 </tr>
                 <tr>
                     <td><code>value</code></td>
                     <td>all except <code>image</code></td>
                     <td>The value of the control. When specified in the HTML, corresponds to the initial value</td>
+                    <td><code>&lt;input value="Hello"&gt;</code><br><br><input value="Hello"></td>
                 </tr>
                 <tr>
                     <td><code>width</code></td>
                     <td><code>image</code></td>
                     <td>Same as <code>width</code> attribute for<code>&lt;img&gt;</code></td>
+                    <td><code>&lt;input type="image" width="100"&gt;</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Most Used Attributes</h2>
+        <p>These are the attributes you'll see in 90% of production applications:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Attribute</th>
+                    <th scope="col">Why</th>
+                    <th scope="col">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Essential for backend. Identifies each field when form is submitted. Without it, nothing gets sent to the server.</td>
+                    <td><code>&lt;input name="email"&gt;</code><br><br><input name="email" placeholder="see? no label shown"></td>
+                </tr>
+                <tr>
+                    <td><code>type</code></td>
+                    <td>Defines input behavior. Changing this alone gives you validation, specialized keyboards on mobile, and better UX.</td>
+                    <td><code>&lt;input type="email"&gt;</code><br><br><input type="email" placeholder="try typing text"></td>
+                </tr>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Links input to its <code>&lt;label&gt;</code> (via </code> attribute). Critical for accessibility and<code>for CSS/JS targeting.</td>
+                    <td><code>&lt;input id="username"&gt;</code><br><code>&lt;label for="username"&gt;</code><br><br><label for="username-example">Username: </label><input id="username-example"></td>
+                </tr>
+                <tr>
+                    <td><code>required</code></td>
+                    <td>Built-in validation. Prevents form submission if empty. No JS needed. Shows browser-native error message.</td>
+                    <td><code>&lt;input required&gt;</code><br><br><input required placeholder="try submitting empty"></td>
+                </tr>
+                <tr>
+                    <td><code>placeholder</code></td>
+                    <td>UX hint showing expected format or example. Don't use it as a replacement for labels!</td>
+                    <td><code>&lt;input placeholder="e.g. john@email.com"&gt;</code><br><br><input placeholder="e.g. john@email.com"></td>
+                </tr>
+                <tr>
+                    <td><code>autocomplete</code></td>
+                    <td>Tells browser what data to autofill (name, credit card, address). HUGE for user experience. Required for WCAG compliance.</td>
+                    <td><code>&lt;input autocomplete="email"&gt;</code><br><br><input autocomplete="email" placeholder="autocomplete=on"><br><code>&lt;input autocomplete="tel"&gt;</code><br><br><input autocomplete="tel" placeholder="autocomplete=on"></td>
+                </tr>
+                <tr>
+                    <td><code>value</code></td>
+                    <td>Sets initial value or gets current value in JS. For checkboxes/radios, defines which value gets submitted.</td>
+                    <td><code>&lt;input value="USD"&gt;</code><br><br><input value="USD"><br><br><code>&lt;input type="checkbox" value="newsletter" checked&gt;</code><br><br><input type="checkbox" value="newsletter" checked> Subscribe</td>
+                </tr>
+                <tr>
+                    <td><code>disabled</code></td>
+                    <td>Disables input (won't be submitted, not focusable, visually dimmed). Used for conditional UI (loading states, permissions).</td>
+                    <td><code>&lt;input disabled&gt;</code><br><br><input disabled placeholder="can't click me"></td>
+                </tr>
+                <tr>
+                    <td><code>minlength</code> / <code>maxlength</code></td>
+                    <td>Validation limits. Browser blocks typing beyond maxlength, shows error below minlength on submit.</td>
+                    <td><code>&lt;input minlength="4" maxlength="8"&gt;</code><br><br><input minlength="4" maxlength="8" placeholder="4-8 chars only"></td>
+                </tr>
+                <tr>
+                    <td><code>pattern</code></td>
+                    <td>Custom regex validation. Use when you need specific format (phone, ID, promo code). Falls back to custom error message.</td>
+                    <td><code>&lt;input pattern="[A-Z]{3}[0-9]{4}"&gt;</code><br><br><input pattern="[A-Z]{3}[0-9]{4}" placeholder="ABC1234"></td>
+                </tr>
+                <tr>
+                    <td><code>readonly</code></td>
+                    <td>Makes field non-editable but still submittable. Unlike disabled, users can still select/copy the value.</td>
+                    <td><code>&lt;input value="2024-01-01" readonly&gt;</code><br><br><input value="2024-01-01" readonly></td>
+                </tr>
+                <tr>
+                    <td><code>checked</code></td>
+                    <td>Pre-selects checkbox or radio button. Only useful for <code>type="checkbox"</code> or <code>type="radio"</code>.</td>
+                    <td><code>&lt;input type="checkbox" checked&gt;</code><br><br><input type="checkbox" checked> Checked<br><br><input type="checkbox"> Unchecked</td>
+                </tr>
+                <tr>
+                    <td><code>for</code> (label)</td>
+                    <td>Accessibility - clicking label focuses input. Also links input to label for screen readers.</td>
+                    <td><code>&lt;label for="email"&gt;Email&lt;/label&gt;</code><br><br><label for="email-visual">Email: </label><input id="email-visual"></td>
+                </tr>
+                <tr>
+                    <td><code>class</code></td>
+                    <td>CSS targeting. Most inputs need styling (width, border, padding). Very common in real projects.</td>
+                    <td><code>&lt;input class="form-input error"&gt;</code><br><br><input class="" style="border: 2px solid #e74c3c; border-radius: 4px; padding: 8px;" placeholder="styled with CSS"></td>
+                </tr>
+                <tr>
+                    <td><code>form</code></td>
+                    <td>Associates input with form outside its parent. Useful when input is outside <code>&lt;form&gt;</code> but should submit with it.</td>
+                    <td><code>&lt;form id="checkout"&gt;...&lt;/form&gt;</code><br><code>&lt;input form="checkout"&gt;</code><br><br><form id="checkout-form-2" style="display:inline;"></form><input form="checkout-form-2" placeholder="linked to form">
+                </tr>
+            </tbody>
+        </table>
+        <h2>CSS</h2>
+        <h3>UI pseudo-classes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pseudo-class</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>enable</code></td>
+                    <td>
+                        <p>
+                            Any currently enabled element that can be activated (selected, clicked on, typed 
+                            into, etc.) or accept focus and also has a disabled state, in which it can't 
+                            be activated or accept focus.
+                        </p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>disabled</code></td>
+                    <td>
+                        <p>
+                            Any currently disabled element that has an enabled state, meaning it otherwise 
+                            could be activated (selected, clicked on, typed into, etc.) or accept focus 
+                            were it not disabled.
+                        </p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>:read-only</code></td>
+                    <td><p>Element not editable by the user</p></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>read-write</code></td>
+                    <td><p>Element that is editable by the user.</p></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>:placeholder-shown</code></td>
+                    <td>
+                        <p>
+                            Element that is currently displaying <code>placeholder</code> text, including 
+                            <code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code> elements with 
+                            the <code>placeholder</code> attribute present that has, as yet, no value.
+                        </p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>:default</code></td>
+                    <td>
+                        <p>
+                            Form elements that are the default in a group of related elements. Matches 
+                            checkbox and radio input types that were checked on page load or render.
+                        </p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>:checked</code></td>
+                    <td>
+                        <p>
+                            Matches <code>checkbox</code> and radio input types that are currently checked 
+                            (and the<code>&lt;option&gt;</code> in a <code>&lt;select&gt;</code> that 
+                            is currently selected).
+                        </p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>:indeterminate</code></td>
+                    <td>
+                        <p>
+                            checkbox elements whose indeterminate property is set to true by JavaScript, 
+                            radio elements, when all radio buttons with the same name value in the form 
+                            are unchecked, and <code>&lt;progress&gt;</code> elements in an indeterminate 
+                            state
+                        </p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>:valid</code></td>
+                    <td>
+                        <p>
+                            Form controls that can have constraint validation applied and are currently valid.
+                        </p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>:invalid</code></td>
+                    <td>
+                        <p>
+                            Form controls that have constraint validation applied and are currently not valid.
+                        </p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>:in-range</code></td>
+                    <td>
+                        <p>
+                            
+                        </p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code></code></td>
+                    <td>
+                        <p></p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code></code></td>
+                    <td>
+                        <p></p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code></code></td>
+                    <td>
+                        <p></p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code></code></td>
+                    <td>
+                        <p></p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code></code></td>
+                    <td>
+                        <p></p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code></code></td>
+                    <td>
+                        <p></p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code></code></td>
+                    <td>
+                        <p></p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code></code></td>
+                    <td>
+                        <p></p>
+                    </td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
         <p>
-            Extraced from;
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input">MDN input</a>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input" target="_blank">MDN input</a>
         </p>
     </body>
 </html>
