@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>input type file</title>
+        <link rel="stylesheet" href="5. input type file.css">
+    </head>
+    <body>
+        <h1>input type file</h1>
+        <!--Los elementos <input> con type="file" permiten al usuario elegir uno o más archivos del 
+        almacenamieento de su dispositivo.-->
+        <p>
+            <code>&lt;input&gt;</code> elements with type="file" let the user choose one or more files from 
+            their device storage. Once chosen, the files can be uploaded to a server using form submission, 
+            or manipulated using JavaScript code and the File API.
+        </p>
+        <label for="avatar">Choose a profile picture:</label>
+        <input type="file" id="avatar" name="avatar" accept="image/png,image/jpeg">
+        <h2>Additional attributes</h2>
+        <h3>accept</h3>
+        <p>
+            The accept attribute value is a string that defines the file types the file input should accept. 
+            This string is a comma-separated list of unique file type specifiers. 
+        </p>
+        <input 
+            type="file"
+            id="docpicker"
+            accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+        <h3>capture</h3>
+        <p>
+            The capture attribute value is a string that specifies which camera to use for capture of image 
+            or video data, if the accept attribute indicates that the input should be of one of those types.
+        </p>
+        <p>
+            A value of user indicates that the user-facing camera and/or microphone should be used. A value 
+            of environment specifies that the outward-facing camera and/or microphone should be used. 
+        </p>
+        <input 
+            type="file" 
+            id="camera"
+            capture="user">
+        <h3>multiple</h3>
+        <p>
+            When the multiple Boolean attribute is specified, the file input allows the user to select 
+            more than one file.
+        </p>
+        <h2>Unique file type specifiers</h2>
+        <p>
+            A unique file type specifier is a string that describes a type of file that may be selected by 
+            the user in an <code>&lt;input&gt;</code> element of type file. Each unique file type specifier 
+            may take one of the following forms:
+        </p>
+        <ul>
+            <li>
+                A valid case-insensitive filename extension, starting with a period (".") character. For 
+                example: <code>.jpg</code>, <code>.pdf</code>, or <code>.doc</code>.
+            </li>
+            <li>A valid MIME type string, with no extensions.</li>
+            <li>The string <code>audio/*</code> meaning "any audio file".</li>
+            <li>The string <code>video/*</code> meaning "any video file".</li>
+            <li>The string <code>image/*</code> meaning "any image file".</li>
+        </ul>
+        <p>
+            The accept attribute takes a string containing one or more of these unique file type 
+            specifiers as its value, separated by commas.
+        </p>
+        <input type="file" accept="image/*,.pdf" />
+        <h2>Using file inputs</h2>
+        <h3>A basic example</h3>
+        <form method="post" enctype="multipart/form-data">
+            <div>
+                <label for="file">Choose file to upload</label>
+                <input type="file" name="file" id="file" multiple>
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+        <h3>Limiting accepted file types</h3>
+        <p>
+            Acceptable file types can be specified with the accept attribute, which takes a comma-separated 
+            list of allowed file extensions or MIME types. Some examples:
+        </p>
+        <ul>
+            <li><code>accept="image/png"</code> or <code>accept=".png"</code> — Accepts PNG files.</li>
+            <li>
+                <code>accept="image/png, image/jpeg"</code> or <code>accept=".png, .jpg, .jpeg"</code> — 
+                Accept PNG or JPEG files.
+            </li>
+            <li>
+                <code>accept="image/*"</code> — Accept any file with an <code>image/*</code> MIME type. 
+                (Many mobile devices also let the user take a picture with the camera when this is used.)
+            </li>
+            <li>
+                <code>accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"</code> 
+                — accept anything that smells like an MS Word document.
+            </li>
+        </ul>
+        <form method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="profile_pic">Choose file to upload</label>
+                    <input
+                        type="file"
+                        id="profile_pic"
+                        name="profile_pic"
+                        accept=".jpg, .jpeg, .png" />
+                </div>
+                <div>
+                    <button>Submit</button>
+                </div>
+        </form>
+        <h2>Examples</h2>
+        <form method="post" enctype="multipart/form-data">
+            <div>
+                <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
+                <input 
+                    type="text"
+                    id="image_uploads"
+                    name="image_uploads"
+                    accept=".jpg, jpeg, .png"
+                    multiple>
+            </div>
+            <div class="preview">
+                <p>No files currently selected for upload</p>
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file">MDN input</a>
+        </p>
+        <script>
+            const input = document.querySelector("input");
+            const preview = document.querySelector(".preview");
+
+            input.style.opacity = 0;
+            input.addEventListener("change", updateImageDisplay);
+            function updateImageDisplay() {
+                while (preview.firstChild) {
+                    preview.removeChild(preview.firstChild);
+                }
+
+                const curFiles = input.files;
+                if (curFiles.length === 0) {
+                    const para = document.createElement("p");
+                    para.textContent = "No files currently selected for upload";
+                    preview.appendChild(para);
+                } else {
+                    const list = document.createElement("ol");
+                    preview.appendChild(list);
+
+                    for (const file of curFiles) {
+                    const listItem = document.createElement("li");
+                    const para = document.createElement("p");
+                    if (validFileType(file)) {
+                        para.textContent = `File name ${file.name}, file size ${returnFileSize(
+                        file.size,
+                        )}.`;
+                        const image = document.createElement("img");
+                        image.src = URL.createObjectURL(file);
+                        image.alt = image.title = file.name;
+
+                        listItem.appendChild(image);
+                        listItem.appendChild(para);
+                    } else {
+                        para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
+                        listItem.appendChild(para);
+                    }
+
+                    list.appendChild(listItem);
+                    }
+                }
+            }
+            // https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types
+            const fileTypes = [
+            "image/apng",
+            "image/bmp",
+            "image/gif",
+            "image/jpeg",
+            "image/pjpeg",
+            "image/png",
+            "image/svg+xml",
+            "image/tiff",
+            "image/webp",
+            "image/x-icon",
+            ];
+
+            function validFileType(file) {
+            return fileTypes.includes(file.type);
+            }
+            function returnFileSize(number) {
+            if (number < 1e3) {
+                return `${number} bytes`;
+            } else if (number >= 1e3 && number < 1e6) {
+                return `${(number / 1e3).toFixed(1)} KB`;
+            }
+            return `${(number / 1e6).toFixed(1)} MB`;
+            }
+            const button = document.querySelector("form button");
+            button.addEventListener("click", (e) => {
+                e.preventDefault();
+                const para = document.createElement("p");
+                para.append("Image uploaded!");
+                preview.replaceChildren(para);
+            });
+
+        </script>
+    </body>
+</html>
