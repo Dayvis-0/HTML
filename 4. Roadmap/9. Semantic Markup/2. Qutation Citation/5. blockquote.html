@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>&lt;blockquote&gt;</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            div:has(>blockquote) {
+                background-color: #ededed;
+                margin: 10px auto;
+                padding: 15px;
+                border-radius: 5px;
+                color: #000000;
+            }
+
+            blockquote p::before {
+                content: "\201C";
+            }
+
+            blockquote p::after {
+                content: "\201D";
+            }
+
+            blockquote + p {
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>&lt;blockquote&gt;</h1>
+        <!--El elemento HTML <blockquote> indica que el texto incluido es una cita extendida o representa 
+        una sección de texto que se cita de otra fuente-->
+        <p>
+            The <strong><code>&lt;blockquote&gt;</code></strong> HTML element indicates that the enclosed 
+            text is an extended quotation. Usually, this is rendered visually by indentation. A URL for the 
+            source of the quotation may be given using the cite attribute, while a text representation of 
+            the source can be given using the <code>&lt;cite&gt;</code> element.
+        </p>
+        <div>
+            <blockquote cite="https://www.huxley.net/bnw/four.html">
+                <p>
+                Words can be like X-rays, if you use them properly—they'll go through
+                anything. You read and you're pierced.
+                </p>
+            </blockquote>
+            <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+        </div>
+        <h2>Examples</h2>
+        <blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149">
+            <p>
+                Avian carriers can provide high delay, low throughput, and low altitude service. The connection 
+                topology is limited to a single point-to-point path for each carrier, used with standard 
+                carriers, but many carriers can be used without significant interference with each other, 
+                outside early spring. This is because of the 3D ether space available to the carriers, in 
+                contrast to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision avoidance 
+                system, which increases availability.
+            </p>
+        </blockquote>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote">MDN blockquote</a>
+        </p>
+    </body>
+</html>

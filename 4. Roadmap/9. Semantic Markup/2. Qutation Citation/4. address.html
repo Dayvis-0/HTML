@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>&lt;address&gt;</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            a[href^="mailto"]::before {
+                content: "📧 ";
+            }
+            a[href^="tel"]::before {
+              content: "📞 ";
+            }
+        </style>
+    </head>
+    <body>
+        <h1>&lt;address&gt;</h1>
+        <!--El elemento HTML <address> indica que el HTML incluido proporciona información de contacto de 
+        de una o varias personas, o de una organización.-->
+        <p>
+            The <strong><code>&lt;address&gt;</code></strong> HTML element indicates that the enclosed HTML 
+            provides contact information for a person or people, or for an organization.
+        </p>
+        <p>Contact the author of this page:</p>
+        <address>
+            <a href="mailto:jim@example.com">jim@example.com</a><br />
+            <a href="tel:+14155550132">+1 (415) 555‑0132</a>
+        </address>
+        <h2>Usage notes</h2>
+        <ul>
+            <li>
+                The <code>&lt;address&gt;</code> element can only be used to represent the contact information 
+                for its nearest <code>&lt;article&gt;</code> or <code>&lt;body&gt;</code> element ancestor.
+            </li>
+            <li>
+                This element should not contain more information than the contact information, like a 
+                publication date (which belongs in a <code>&lt;time&gt;</code> element).
+            </li>
+            <li>
+                Typically an <code>&lt;address&gt;</code> element can be placed inside the <code>&lt;footer&gt;</code> 
+                element of the current section, if any.
+            </li>
+        </ul>
+        <h2>Examples</h2>
+        <address>
+            You can contact author at <a href="http://www.example.com/contact">www.example.com</a>.<br />
+            If you see any bugs, please <a href="mailto:webmaster@example.com">contact webmaster</a>.<br />
+            You may also want to visit us:<br />
+            Mozilla Foundation<br />
+            331 E Evelyn Ave<br />
+            Mountain View, CA 94041<br />
+            USA
+        </address>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/address">MDN address</a>
+        </p>
+    </body>
+</html>

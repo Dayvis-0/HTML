@@ -1,0 +1,31 @@
+:root {
+    color-scheme: light dark;
+    padding: 100px;
+}
+
+.logo {
+    background: left / cover
+        url("Images/pokemon.jpg");
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    font: 
+        bold calc(1em + 2 * (100vw - 120px) / 100) "Daning Script";
+    color: #00ff00;
+    text-shadow: black 2px 2px 0.2rem;
+}
+
+header > h1 {
+    margin-bottom: 0;
+}
+
+header > time {
+    font: italic 0.7rem sans serif;
+}
+
+/*Example 1*/
+.ex-1 {
+    color: #000000;
+    background-color: #ffffff;
+}

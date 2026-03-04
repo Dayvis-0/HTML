@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>&lt;dfn&gt;</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>&lt;dfn&gt;</h1>
+        <!--El elemento HTML <dfn> indica un término a definir.-->
+        <p>
+            The <strong><code>&lt;dfn&gt;</code></strong> HTML element indicates a term to be defined. The 
+            <code>&lt;dfn&gt;</code> element should be used in a complete definition statement, where the 
+            full definition of the term can be one of the following:
+        </p>
+        <ul>
+            <li>
+                The ancestor paragraph (a block of text, sometimes marked by a <code>&lt;p&gt;</code> 
+                element)
+            </li>
+            <li>The <code>&lt;dt&gt;</code>/<code>&lt;dd&gt;</code> pairing</li>
+            <li>The nearest section ancestor of the <code>&lt;dfn&gt;</code> element,</li>
+        </ul>
+        <p>
+            A <dfn id="def-validator">validator</dfn> is a program that checks for syntax errors in code 
+            or documents.
+        </p>
+        <h2>Usage notes</h2>
+        <h3>Specifying the term being defined</h3>
+        <p>The term being defined is identified following these rules:</p>
+        <ol>
+            <li>
+                If the <code>&lt;dfn&gt;</code> element has a title attribute, the value of the title attribute 
+                is considered to be the term being defined.
+            </li>
+            <li>
+                If the <code>&lt;dfn&gt;</code> contains a single child element and does not have any text 
+                content of its own, and the child element is an <code>&lt;abbr&gt;</code> element with a title 
+                attribute itself, then the exact value of the <abbr> element's title is the term being defined.
+            </li>
+            <li>
+                Otherwise, the text content of the <code>&lt;dfn&gt;</code> element is the term being defined. 
+                This is shown in the first example below.
+            </li>
+        </ol>
+        <h3>Links to <code>&lt;dfn&gt;</code> elements</h3>
+        <p>
+            If you include an id attribute on the <code>&lt;dfn&gt;</code> element, you can then link to it 
+            using <code>&lt;a&gt;</code> elements. Such links should be uses of the term, with the intent 
+            being that the reader can quickly navigate to the term's definition if they're not already aware 
+            of it, by clicking on the term's link.
+        </p>
+        <h2>Examples</h2>
+        <h3>Basic identification of a term</h3>
+        <p>
+            The <strong>HTML Definition element (<dfn>&lt;dfn&gt;</dfn>)</strong> is used to indicate the 
+            term being defined within the context of a definition phrase or sentence.
+        </p>
+        <h3>Links to definition</h3>
+        <p>
+            The <strong>HTML Definition element (<dfn id="definition-dfn">&lt;dfn&gt;</dfn>)</strong> is 
+            used to indicate the term being defined within the context of a definition phrase or sentence.
+        </p>
+        <p>
+            Because of all of that, we decided to use the <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> 
+            element for this project.
+        </p>
+        <h2>Using abbreviations and definitions together</h2>
+        <p>
+            The <dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn> is among the most productive 
+            scientific instruments ever constructed. It has been in orbit for over 20 years, scanning the 
+            sky and returning data and photographs of unprecedented quality and detail.
+        </p>
+        <p>
+            Indeed, the <abbr title="Hubble Space Telescope">HST</abbr> has arguably done more to advance 
+            science than any device ever built.
+        </p>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dfn">MDN dfn</a>
+        </p>
+    </body>
+</html>
