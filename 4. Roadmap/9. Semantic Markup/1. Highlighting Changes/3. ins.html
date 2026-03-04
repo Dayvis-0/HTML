@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ins</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            del, ins {
+                display: block;
+                text-decoration: none;
+                position: relative;
+            }
+
+            del {
+                background-color: #ffbbbb;
+                color: #000000;
+            }
+
+            ins {
+                background-color: #d4fcbc;
+                color: #000000;
+            }
+
+            /*Accessibility*/
+            ins::before,
+            ins::after {
+                clip-path: inset(100%);
+                clip: rect(1px, 1px, 1px, 1px);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+            }
+
+            ins::before {
+                content: " [insertion start] ";
+            }
+
+            ins::after {
+                content: " [insertion end] ";
+            }
+        </style>
+    </head>
+    <body>
+        <h1><code>&lt;ins&gt;</code></h1>
+        <!--El elemento HTML <ins> representa un rango de texto añadido a un documento.-->
+        <p>
+            The <strong><code>&lt;ins&gt;</code></strong> HTML element represents a range of text that 
+            has been added to a document. You can use the <code>&lt;del&gt;</code> element to similarly 
+            represent a range of text that has been deleted from the document.
+        </p>
+        <p>&ldquo;You're late!&rdquo;</p>
+        <del>
+            <p>&ldquo;I apologize for the delay.&rdquo;</p>
+        </del>
+        <ins cite="../how-to-be-a-wizard.html" datetime="2018-05">
+            <p>&ldquo;A wizard is never late &hellip;&rdquo;</p>
+        </ins>
+        <h2>Attributes</h2>
+        <dl>
+            <dt><code>cite</code></dt>
+            <dd>
+                <p>
+                    This attribute defines the URI of a resource that explains the change, such as a link 
+                    to meeting minutes or a ticket in a troubleshooting system.
+                </p>
+            </dd>
+            <dt><code>datetime</code></dt>
+            <dd>
+                <p>
+                    This attribute indicates the time and date of the change and must be a valid date with 
+                    an optional time string.
+                </p>
+            </dd>
+        </dl>
+        <h2>Accessibility</h2>
+        <p>
+            The presence of the <code>&lt;ins&gt;</code> element is not announced by most screen reading 
+            technology in its default configuration. It can be made to be announced by using the CSS 
+            content property, along with the ::before and ::after pseudo-elements.
+        </p>
+        <h2>Examples</h2>
+        <ins>This text has been inserted</ins>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ins">MDN ins</a>
+        </p>
+    </body>
+</html>

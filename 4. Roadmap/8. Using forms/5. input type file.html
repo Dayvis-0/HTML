@@ -116,10 +116,10 @@
             <div>
                 <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
                 <input 
-                    type="text"
+                    type="file"
                     id="image_uploads"
                     name="image_uploads"
-                    accept=".jpg, jpeg, .png"
+                    accept=".jpg, .jpeg, .png"
                     multiple>
             </div>
             <div class="preview">
@@ -134,11 +134,11 @@
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file">MDN input</a>
         </p>
         <script>
-            const input = document.querySelector("input");
+            const input = document.querySelector("#image_uploads");
             const preview = document.querySelector(".preview");
 
-            input.style.opacity = 0;
             input.addEventListener("change", updateImageDisplay);
+
             function updateImageDisplay() {
                 while (preview.firstChild) {
                     preview.removeChild(preview.firstChild);
@@ -154,24 +154,24 @@
                     preview.appendChild(list);
 
                     for (const file of curFiles) {
-                    const listItem = document.createElement("li");
-                    const para = document.createElement("p");
-                    if (validFileType(file)) {
-                        para.textContent = `File name ${file.name}, file size ${returnFileSize(
-                        file.size,
-                        )}.`;
-                        const image = document.createElement("img");
-                        image.src = URL.createObjectURL(file);
-                        image.alt = image.title = file.name;
+                        const listItem = document.createElement("li");
+                        const para = document.createElement("p");
+                        if (validFileType(file)) {
+                            para.textContent = `File name ${file.name}, file size ${returnFileSize(
+                            file.size,
+                            )}.`;
+                            const image = document.createElement("img");
+                            image.src = URL.createObjectURL(file);
+                            image.alt = image.title = file.name;
 
-                        listItem.appendChild(image);
-                        listItem.appendChild(para);
-                    } else {
-                        para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
-                        listItem.appendChild(para);
-                    }
+                            listItem.appendChild(image);
+                            listItem.appendChild(para);
+                        } else {
+                            para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
+                            listItem.appendChild(para);
+                        }
 
-                    list.appendChild(listItem);
+                        list.appendChild(listItem);
                     }
                 }
             }
@@ -190,17 +190,18 @@
             ];
 
             function validFileType(file) {
-            return fileTypes.includes(file.type);
+                return fileTypes.includes(file.type);
             }
             function returnFileSize(number) {
-            if (number < 1e3) {
-                return `${number} bytes`;
-            } else if (number >= 1e3 && number < 1e6) {
-                return `${(number / 1e3).toFixed(1)} KB`;
-            }
-            return `${(number / 1e6).toFixed(1)} MB`;
+                if (number < 1e3) {
+                    return `${number} bytes`;
+                } else if (number >= 1e3 && number < 1e6) {
+                    return `${(number / 1e3).toFixed(1)} KB`;
+                }
+                return `${(number / 1e6).toFixed(1)} MB`;
             }
             const button = document.querySelector("form button");
+
             button.addEventListener("click", (e) => {
                 e.preventDefault();
                 const para = document.createElement("p");

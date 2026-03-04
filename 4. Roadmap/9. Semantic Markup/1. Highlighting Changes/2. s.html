@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>s</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            /*Accesibility*/
+            s::before,
+            s::after {
+                clip-path: inset(100%);
+                clip: rect(1px, 1px, 1px, 1px);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+            }
+
+            s::before {
+                content: " [start of stricken text] ";
+            }
+
+            s::after {
+                content: " [end of stricken text] ";
+            }
+        </style>
+    </head>
+    <body>
+        <h1><code>&lt;s&gt;</code></h1>
+        <!--El elemento HTML <s> representa el texto tachado o con una linea que lo atraviesa. Utilice 
+        el elemento <s> para representar cosas que ya no son relevantes o que ya no son precisas.-->
+        <p>
+            The <strong><code>&lt;s&gt;</code></strong> HTML element renders text with a strikethrough, 
+            or a line through it. Use the <code>&lt;s&gt;</code> element to represent things that are no 
+            longer relevant or no longer accurate. However, <code>&lt;s&gt;</code> is not appropriate 
+            when indicating document edits; for that, use the <code>&lt;del&gt;</code> and 
+            <code>&lt;ins&gt;</code> elements, as appropriate.
+        </p>
+        <p><s>There will be a few tickets available at the box office tonight.</s></p>
+        <p>SOLD OUT!</p>
+        <h2>Accessibility</h2>
+        <p>
+            The presence of the s element is not announced by most screen reading technology in its default 
+            configuration. It can be made to be announced by using the CSS content property, along with 
+            the <code>::before</code> and <code>::after</code> pseudo-elements.
+        </p>
+        <h2>Example</h2>
+        <s>Today's Special: Salmon</s> SOLD OUT<br>
+        <span class="sold-out">Today's Special: Salmon</span> SOLD OUT
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/s">MDN s</a>
+        </p>
+    </body>
+</html>

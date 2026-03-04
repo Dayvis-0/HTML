@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>del</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            del {
+                text-decoration: line-through;
+                background-color: #ffbbbb;
+                color: #555555;
+            }
+
+            ins {
+                text-decoration: none;
+                background-color: #d4fcbc;
+                color: #000000;
+            }
+
+            blockquote {
+                padding-left: 15px;
+                border-left: 3px solid #d7d7db;
+                font-size: 1rem;
+            }
+
+            /*Accessibility*/
+            del::before,
+            del::after {
+                clip-path: inset(100%);
+                clip: rect(1px, 1px, 1px, 1px);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+            }
+
+            del::before {
+                content: " [deletion start] ";
+            }
+
+            del::after {
+                content: " [deletion end] ";
+            }
+        </style>
+    </head>
+    <body>
+        <h1><code>&lt;del&gt;</code></h1>
+        <!--El elemento HTML <del> representa un rango de texto que ha sido eliminado de un documento.-->
+        <p>
+            The <strong><code>&lt;del&gt;</code></strong> HTML element represents a range of text that has 
+            been deleted from a document. This can be used when rendering "track changes" or source code 
+            diff information, for example. The <code>&lt;ins&gt;</code> element can be used for the 
+            opposite purpose: to indicate text that has been added to the document.
+        </p>
+        <blockquote>
+            There is <del>nothing</del> <ins>no code</ins> either good or bad, but <del>thinking</del> 
+            <ins>running</ins> make it so.
+        </blockquote>
+        <h2>Attributes</h2>
+        <dl>
+            <dt><code>cite</code></dt>
+            <dd>
+                <p>A URI for a resource that explains the change (for example, meeting minutes).</p>
+            </dd>
+
+            <dt><code>datetime</code></dt>
+            <dd>
+                <p>
+                    This attribute indicates the time and date of the change and must be a valid date 
+                    string with an optional time.
+                </p>
+            </dd>
+        </dl>
+        <h2>Examples</h2>
+        <h3>cite</h3>
+        <p>
+            <del cite="https://example.com/old-pricing">Price: $1000</del>
+            <ins cite="https://example.com/new-pricing">Price: $799</ins>
+        </p>
+        <h3>datetime</h3>
+        <p>
+            <del datetime="2024-01-15">Old version</del>
+            <ins datetime="2024-06-20">New version</ins>
+        </p>
+        <h3>Combinados</h3>
+        <p>
+            <del cite="https://example.com/changelog-v1" datetime="2024-01-01">Original text</del>
+            <ins cite="https://example.com/changelog-v2" datetime="2024-06-15">Updated text</ins>
+        </p>
+        <h2>Accessibility</h2>
+        <p>
+            The presence of the del element is not announced by most screen reading technology in its 
+            default configuration. It can be made to be announced by using the CSS content property, 
+            along with the <code>::before</code> and <code>::after</code> pseudo-elements.
+        </p>
+        <h2>Examples</h2>
+        <p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
+        <del><p>This paragraph has been deleted.</p></del>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/del">MDN del</a>
+        </p>
+    </body>
+</html>
