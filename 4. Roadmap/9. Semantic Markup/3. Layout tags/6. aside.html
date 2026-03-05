@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>&lt;aside&gt;</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            code {
+                background-color: light-dark(#edeef0, #2d3034);
+                padding: .125em .25em;
+                border-radius: 0.25rem;
+            }
+
+            aside {
+                width: 40%;
+                padding-left: 0.5rem;
+                margin-left: 0.5rem;
+                float: right;
+                box-shadow: inset 5px 0 5px -5px #ddddff;
+                font-style: italic;
+                color: #ddddff;
+            }
+
+            aside > p {
+                margin: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>&lt;aside&gt;: The Aside element</h1>
+        <!--El elemento HTML <aside> representa una parte de un documento cuyo contenido solo se relaciona 
+        indirectamente con el contenido principal.-->
+        <p>
+            The <strong><code>&lt;aside&gt;</code></strong> HTML element represents a portion of a document 
+            whose content is only indirectly related to the document's main content. Asides are frequently 
+            presented as sidebars or call-out boxes.
+        </p>
+        <p>
+            Salamanders are a group of amphibians with a lizard-like appearance, including short legs and 
+            a tail in both larval and adult forms.
+        </p>
+        <aside>
+            <p>The Rough-skinned Newt defends itself with a deadly neurotoxin.</p>
+        </aside>
+        <p>
+            Several species of salamander inhabit the temperate rainforest of the Pacific Northwest, including 
+            the Ensatina, the Northwestern Salamander and the Rough-skinned Newt. Most salamanders are 
+            nocturnal, and hunt for insects, worms and other small creatures.
+        </p>
+        <h2>Usage notes</h2>
+        <p>
+            Do not use the <code>&lt;aside&gt;</code> element to tag parenthesized text, as this kind of 
+            text is considered part of the main flow.
+        </p>
+        <h2>Examples</h2>
+        <h3>Using <code>&lt;aside&gt;</code></h3>
+        <article>
+            <p>
+                The Disney movie <cite>The Little Mermaid</cite> was first released to theatres in 1989.
+            </p>
+            <aside>
+                <p>The movie earned $87 million during its initial release.</p>
+            </aside>
+            <p>More info about the movie…</p>
+        </article>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/aside">MDN aside</a>
+        </p>
+    </body>
+</html>

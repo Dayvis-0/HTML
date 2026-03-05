@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>&lt;footer&gt;</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+            
+            code {
+                background-color: light-dark(#edeef0, #2d3034);
+                padding: .125em .25em;
+                border-radius: 0.25rem;
+            }
+
+            article {
+                min-height: 100%;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+            }
+
+            footer {
+                display: flex;
+                justify-content: center;
+                padding: 5px;
+                background-color: #45a1ff;
+                color: #ffffff;
+            }
+
+            .footer-ex {
+                text-align: center;
+                background-color: #abbaba;
+                color: #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>&lt;footer&gt;: The Footer element</h1>
+        <!--El elemento HTML <footer> representa el pie de página de su antecesor más cercano, el contenido 
+        de la sección o el elemento raíz de la sección.-->
+        <p>
+            The <strong><code>&lt;footer&gt;</code></strong> HTML element represents a footer for its 
+            nearest ancestor sectioning content or sectioning root element. A <code>&lt;footer&gt;</code> 
+            typically contains information about the author of the section, copyright data or links to 
+            related documents.
+        </p>
+        <article>
+            <h1>How to be a wizard</h1>
+            <ol>
+                <li>Grow a long, majestic beard.</li>
+                <li>Wear a tall, pointed hat.</li>
+                <li>Have I mentioned the beard?</li>
+            </ol>
+            <footer>
+                <p>© 2018 Gandalf</p>
+            </footer>
+        </article>
+        <h2>Usage notes</h2>
+        <ul>
+            <li>
+                Enclose information about the author in an <code>&lt;address&gt;</code> element that can 
+                be included into the <code>&lt;footer&gt;</code> element.
+            </li>
+            <li>
+                When the nearest ancestor sectioning content or sectioning root element is the body element 
+                the footer applies to the whole page.
+            </li>
+            <li>
+                The <code>&lt;footer&gt;</code> element is not sectioning content and therefore doesn't 
+                introduce a new section in the outline.
+            </li>
+        </ul>
+        <h2>Examples</h2>
+        <h3>FIFA World Cup top goalscorers</h3>
+        <ol>
+            <li>Miroslav Klose, 16</li>
+            <li>Ronaldo Nazário, 15</li>
+            <li>Gerd Müller, 14</li>
+        </ol>
+        <footer class="footer-ex">
+            <small>Copyright © 2023 Football History Archives. All Rights Reserved.</small>
+        </footer>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/footer">MDN footer</a>
+        </p>
+    </body>
+</html>
