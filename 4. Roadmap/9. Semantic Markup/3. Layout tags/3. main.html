@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>&lt;main&gt;</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+            
+            header {
+                font: 
+                    bold 7vw "Arial",
+                    sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>&lt;main&gt;</h1>
+        <!--El elemento HTML <main> representa el contenido dominante del <body> de un documento.-->
+        <p>
+            The <strong><code>&lt;main&gt;</code></strong> HTML element represents the dominant content 
+            of the <code>&lt;body&gt;</code> of a document. The main content area consists of content 
+            that is directly related to or expands upon the central topic of a document, or the central 
+            functionality of an application.
+        </p>
+        <header>Gecko facts</header>
+        <main>
+            <p>
+                Geckos are a group of usually small, usually nocturnal lizards. They are
+                found on every continent except Antarctica.
+            </p>
+            <p>
+                Many species of gecko have adhesive toe pads which enable them to climb
+                walls and even windows.
+            </p>
+        </main>
+        <h2>Accessibility</h2>
+        <h3>Landmark</h3>
+        <p>
+            The <code>&lt;main&gt;</code> element behaves like a main landmark role. Landmarks can be used 
+            by assistive technology to quickly identify and navigate to large sections of the document.
+        </p>
+        <h3>Skip navigation</h3>
+        <p>
+            Skip navigation, also known as "skipnav", is a technique that allows an assistive technology 
+            user to quickly bypass large sections of repeated content (main navigation, info banners, 
+            etc.). This lets the user access the main content of the page faster.
+        </p>
+        <p>
+            Adding an id attribute to the <code>&lt;main&gt;</code> element lets it be a target of a skip 
+            navigation link.
+        </p>
+        <pre><code>
+&lt;body&gt;
+&lt;a href="#main-content"&gt;Skip to main content&lt;/a&gt;
+
+    &lt;!-- navigation and header content --&gt;
+
+    &lt;main id="main-content"&gt;
+        &lt;!-- main page content --&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+        </code></pre>
+        <h3>Reader mode</h3>
+        <p>
+            Browser reader mode functionality looks for the presence of the <code>&lt;main&gt;</code> 
+            element, as well as heading and content sectioning elements when converting content into a 
+            specialized reader view.
+        </p>
+        <h2>Examples</h2>
+        <!-- other content -->
+        <main>
+            <h1>Apples</h1>
+            <p>The apple is the pomaceous fruit of the apple tree.</p>
+            <article>
+                <h2>Red Delicious</h2>
+                <p>
+                These bright red apples are the most common found in many supermarkets.
+                </p>
+                <p>…</p>
+                <p>…</p>
+            </article>
+            <article>
+                <h2>Granny Smith</h2>
+                <p>These juicy, green apples make a great filling for apple pies.</p>
+                <p>…</p>
+                <p>…</p>
+            </article>
+        </main>
+        <!-- other content -->
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main">MDN main</a>
+        </p>
+    </body>
+</html>

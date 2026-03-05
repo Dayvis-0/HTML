@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>&lt;section&gt;</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                padding: 100px;
+            }
+
+            h1, h2 {
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>&lt;section&gt;</h1>
+        <!--El elemento HTML <section> representa una sección genérica e independiente de un documento.
+        que no tiene un elemento semántico más específico que la-->
+        <p>
+            The <strong><code>&lt;section&gt;</code></strong> HTML element represents a generic standalone 
+            section of a document, which doesn't have a more specific semantic element to represent it. 
+            Sections should always have a heading, with very few exceptions.
+        </p>
+        <h1>Choosing an Apple</h1>
+        <section>
+            <h2>Introduction</h2>
+            <p>
+                This document provides a guide to help with the important task of choosing
+                the correct Apple.
+            </p>
+        </section>
+        <section>
+            <h2>Criteria</h2>
+            <p>
+                There are many different criteria to be considered when choosing an Apple —
+                size, color, firmness, sweetness, tartness...
+            </p>
+        </section>
+        <h2>Usage notes</h2>
+        <p>
+            As mentioned above, <code>&lt;section&gt;</code> is a generic sectioning element, and should 
+            only be used if there isn't a more specific element to represent it. 
+        </p>
+        <p>Also consider these cases:</p>
+        <ul>
+            <li>
+                If the contents of the element represent a standalone, atomic unit of content that makes 
+                sense syndicated as a standalone piece (e.g., a blog post or blog comment, or a newspaper 
+                article), the <code>&lt;article&gt;</code> element would be a better choice.
+            </li>
+            <li>If the contents represent useful tangential information that works alongside the main 
+                content, but is not directly part of it (like related links, or an author bio), use an
+                <code>&lt;aside&gt;</code>.
+            </li>
+            <li>
+                If the contents represent the main content area of a document, use <code>&lt;main&gt;</code>>.
+            </li>
+            <li>
+                If you are only using the element as a styling wrapper, use a <code>&lt;div&gt;</code> instead.
+            </li>
+        </ul>
+        <h2>Examples</h2>
+        <h3>Basic example usage</h3>
+        <h4>Before</h4>
+        <div>
+            <h2>Heading</h2>
+            <p>Bunch of awesome content</p>
+        </div>
+        <h4>After</h4>
+        <section>
+            <h2>Heading</h2>
+            <p>Bunch of awesome content</p>
+        </section>
+        <h3>Using a section without a heading</h3>
+        <section>
+            <a href="#">Previous article</a>
+            <a href="#">Next article</a>
+        </section>
+        <section>
+            <button class="reply">Reply</button>
+            <button class="reply-all">Reply to all</button>
+            <button class="fwd">Forward</button>
+            <button class="del">Delete</button>
+        </section>
+        <p>
+            Extracted from;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section">MDN section</a>
+        </p>
+    </body>
+</html>
