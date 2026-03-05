@@ -34,53 +34,26 @@ HTML provides elements specifically designed to group and organize content. The 
 ### `<div>` Examples
 
 #### Basic Container
-```html
-<div class="container">
-    <h2>Container Title</h2>
-    <p>Content inside div container.</p>
-</div>
-```
+[CODE REMOVED]
 
 #### Layout Sections
-```html
-<div class="section">
-    <div class="subsection">
-        <p>Subsection content</p>
-    </div>
-</div>
-```
+[CODE REMOVED]
 
 ### `<span>` Examples
 
 #### Text Highlighting
-```html
-<p>This is <span class="highlight">highlighted text</span> within a paragraph.</p>
-```
+[CODE REMOVED]
 
 #### Inline Styling
-```html
-<p>Contact: <span class="phone">555-0123</span> or <span class="email">info@example.com</span></p>
-```
+[CODE REMOVED]
 
 ## 📱 Practical Applications
 
 ### Content Grouping
-```html
-<div class="article">
-    <h3>Article Title</h3>
-    <p>First paragraph with <span class="keyword">important keywords</span>.</p>
-    <p>Second paragraph with <span class="quote">quoted text</span>.</p>
-</div>
-```
+[CODE REMOVED]
 
 ### Navigation Elements
-```html
-<div class="nav">
-    <span class="nav-item active">Home</span>
-    <span class="nav-item">About</span>
-    <span class="nav-item">Contact</span>
-</div>
-```
+[CODE REMOVED]
 
 ## 💡 Pro Tips
 

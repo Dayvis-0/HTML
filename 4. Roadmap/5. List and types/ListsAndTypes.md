@@ -24,13 +24,7 @@ Lists are fundamental HTML elements used to organize content in a sequential or 
 ## 🔢 Ordered Lists (`<ol>`, `<li>`)
 
 ### Basic Structure
-```html
-<ol>
-  <li>First item</li>
-  <li>Second item</li>
-  <li>Third item</li>
-</ol>
-```
+[CODE REMOVED]
 
 ### Purpose
 - Step-by-step instructions
@@ -40,25 +34,10 @@ Lists are fundamental HTML elements used to organize content in a sequential or 
 ## 📌 Unordered Lists (`<ul>`, `<li>`)
 
 ### Basic Structure
-```html
-<ul>
-  <li>Milk</li>
-  <li>Cheese</li>
-  <li>Bread</li>
-</ul>
-```
+[CODE REMOVED]
 
 ### Nesting Support
-```html
-<ul>
-  <li>Cheese
-    <ul>
-      <li>Blue cheese</li>
-      <li>Feta</li>
-    </ul>
-  </li>
-</ul>
-```
+[CODE REMOVED]
 
 ### Purpose
 - Feature lists
@@ -68,14 +47,7 @@ Lists are fundamental HTML elements used to organize content in a sequential or 
 ## 📚 Definition Lists (`<dl>`, `<dt>`, `<dd>`)
 
 ### Basic Structure
-```html
-<dl>
-  <dt>Term 1</dt>
-  <dd>Definition for term 1</dd>
-  <dt>Term 2</dt>
-  <dd>Definition for term 2</dd>
-</dl>
-```
+[CODE REMOVED]
 
 ### Elements
 - **`<dt>`** - Definition Term

@@ -55,68 +55,25 @@ Basic HTML tags are the fundamental building blocks that form the structure of e
 ## 📱 Essential Meta Tags for Modern Web
 
 ### Responsive Design
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-```
+[CODE REMOVED]
 
 ### SEO Meta Tags
-```html
-<meta name="description" content="Page description">
-<meta name="keywords" content="keyword1, keyword2">
-<meta name="author" content="Author name">
-```
+[CODE REMOVED]
 
 ### Character Encoding
-```html
-<meta charset="UTF-8">
-```
+[CODE REMOVED]
 
 ## 🎯 Document Hierarchy
 
-```
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Title</title>
-    <!-- Other head elements -->
-  </head>
-  <body>
-    <!-- Visible content here -->
-  </body>
-</html>
-```
+[CODE REMOVED]
 
 ## 🌐 HTML Versions Evolution
 
 ### HTML5 (Modern)
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>HTML5 Document</title>
-  </head>
-  <body>
-    Content
-  </body>
-</html>
-```
+[CODE REMOVED]
 
 ### HTML 4.01 (Legacy)
-```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>HTML 4.01 Document</title>
-  </head>
-  <body>
-    Content
-  </body>
-</html>
-```
+[CODE REMOVED]
 
 ## 📊 Element Categories
 
@@ -146,16 +103,10 @@ Basic HTML tags are the fundamental building blocks that form the structure of e
 ## 📱 Accessibility Best Practices
 
 ### Language Declaration
-```html
-<html lang="es"> <!-- Spanish -->
-<html lang="en"> <!-- English -->
-```
+[CODE REMOVED]
 
 ### Essential Meta for Accessibility
-```html
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-```
+[CODE REMOVED]
 
 ## 🔍 SEO Considerations
 
@@ -184,6 +135,17 @@ Basic HTML tags are the fundamental building blocks that form the structure of e
 3. **Include viewport meta**: Essential for mobile responsiveness
 4. **Use language attribute**: Helps search engines and screen readers
 5. **Keep `<head>` organized**: Order matters (charset first, then viewport)
+
+## 📊 Quick Comparison
+
+| Element | Purpose | Location | Occurrence |
+|---------|---------|----------|------------|
+| `<!DOCTYPE>` | Document type | First line | Once |
+| `<html>` | Root element | Document root | Once |
+| `<head>` | Metadata container | Inside `<html>` | Once |
+| `<body>` | Content container | After `<head>` | Once |
+| `<meta>` | Metadata | Inside `<head>` | Multiple |
+| `<title>` | Document title | Inside `<head>` | Once |
 
 ## 📁 File Reference
 

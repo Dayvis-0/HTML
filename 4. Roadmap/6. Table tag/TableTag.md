@@ -84,30 +84,29 @@ HTML tables provide a way to structure and display tabular data in rows and colu
 - Proper header associations
 - **File**: `1.11. HTML table accesibility.html`
 
+## 💡 Pro Tips
+
+1. **Use semantic structure**: Always include `thead`, `tbody`, and `tfoot`
+2. **Always add captions**: Helps users understand table context
+3. **Use `scope` attribute**: Links headers to cells for screen readers
+4. **Avoid tables for layout**: Use CSS Grid or Flexbox instead
+5. **Keep it simple**: Complex tables confuse users and screen readers
+
+## 📊 Quick Comparison
+
+| Element | Purpose | Key Attribute | Accessibility |
+|---------|---------|---------------|---------------|
+| `<caption>` | Table title | - | Always include |
+| `<thead>` | Header rows | - | Semantic grouping |
+| `<tbody>` | Body rows | - | Main content |
+| `<tfoot>` | Footer rows | - | Summaries |
+| `<th>` | Header cell | `scope` | Essential |
+| `<td>` | Data cell | `colspan`, `rowspan` | - |
+| `<colgroup>` | Column group | - | Styling columns |
+
 ## 📊 Basic Table Structure
 
-```html
-<table>
-    <caption>Table Title</caption>
-    <thead>
-        <tr>
-            <th scope="col">Header 1</th>
-            <th scope="col">Header 2</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Data 1</td>
-            <td>Data 2</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="2">Footer content</td>
-        </tr>
-    </tfoot>
-</table>
-```
+[CODE REMOVED]
 
 ## 📁 File Organization
 

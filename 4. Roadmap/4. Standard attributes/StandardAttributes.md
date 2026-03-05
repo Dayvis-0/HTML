@@ -31,6 +31,23 @@ HTML attributes provide additional information about HTML elements. This folder 
 - **Example**: `<div style="background: red; color: white;">`
 - **Recommendation**: Use sparingly, prefer external CSS
 
+## 💡 Pro Tips
+
+1. **Use `id` sparingly**: Only use for truly unique elements
+2. **Classes are reusable**: Use classes for styling multiple elements
+3. **`data-*` for JavaScript**: Store application data without DOM manipulation
+4. **Avoid inline styles**: External CSS is more maintainable
+5. **ID uniqueness matters**: Only one element per ID in the document
+
+## 📊 Quick Comparison
+
+| Attribute | Purpose | Reusable | Best Practice |
+|-----------|---------|----------|----------------|
+| `id` | Unique identifier | No | Use for anchors, JavaScript |
+| `class` | Styling hooks | Yes | Use for CSS, multiple elements |
+| `data-*` | Custom data | Yes | Use for JavaScript state |
+| `style` | Inline CSS | No | Avoid, use external CSS |
+
 ## 📁 File Organization
 
 This documentation covers:

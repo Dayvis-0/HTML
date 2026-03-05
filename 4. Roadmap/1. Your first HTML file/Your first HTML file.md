@@ -38,3 +38,25 @@ Understand essential HTML fundamentals:
 2. View source code (Ctrl+U)
 3. Use "Inspect Element" (F12) to see processed DOM
 4. Compare differences between original and rendered code
+
+## 💡 Pro Tips
+
+1. **Always start with DOCTYPE**: Never skip the DOCTYPE declaration
+2. **Set UTF-8 charset**: Prevents character encoding issues
+3. **Use lowercase tags**: While HTML is case-insensitive, lowercase is the standard
+4. **Close all tags**: Missing closing tags can cause rendering issues
+5. **Use HTML entities**: For special characters like `<`, `>`, `&`
+
+## 📊 Quick Comparison
+
+| Feature | Description | Best Practice |
+|---------|-------------|----------------|
+| Tags | HTML elements | Always close them |
+| Attributes | Element modifiers | Use quotes around values |
+| Case Sensitivity | HTML is case-insensitive | Use lowercase |
+| Whitespace | Collapses in rendering | Use entities for exact spacing |
+| Entities | Special character codes | Use `&lt;`, `&gt;`, `&amp;` |
+
+---
+
+**Remember**: Understanding basic HTML structure is essential before moving to more complex topics.
